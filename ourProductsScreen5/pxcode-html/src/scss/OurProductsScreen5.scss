@@ -1,0 +1,665 @@
+/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+@import "utils";
+
+$color_type_0: #000000ff;
+$color_type_1: #ffffffff;
+$color_type_2: rgb(0, 0, 0);
+$color_type_3: rgb(198, 201, 216);
+$color_type_4: rgb(255, 103, 0);
+$color_type_5: rgb(255, 255, 255);
+$color_type_6: rgba(0, 0, 0, 0);
+
+$font_type_0: 500 9.866121292114258px/3.74 "Quicksand", Helvetica, Arial, serif;
+$font_type_1: 500 9.866116523742676px/3.75 "Quicksand", Helvetica, Arial, serif;
+$font_type_2: 500 9.766846656799316px/3.75 "Quicksand", Helvetica, Arial, serif;
+$font_type_3: 700 65px/1.64 "Futura", Helvetica, Arial, serif;
+$font_type_4: 500 64px/0.93 "Futura", Helvetica, Arial, serif;
+$font_type_5: 500 38px/1.57 "Futura", Helvetica, Arial, serif;
+$font_type_6: 500 27.131832122802734px/1.36 "Futura", Helvetica, Arial, serif;
+$font_type_7: 500 27.13182258605957px/1.36 "Futura", Helvetica, Arial, serif;
+$font_type_8: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+$font_type_9: 500 25.542062759399414px/1.43 "Futura", Helvetica, Arial, serif;
+$font_type_10: 700 20px/3 "Quicksand", Helvetica, Arial, serif;
+$font_type_11: 500 20px/1.75 "Quicksand", Helvetica, Arial, serif;
+$font_type_12: 500 20px/1.25 "Quicksand", Helvetica, Arial, serif;
+$font_type_13: 700 20px/1.2 "Quicksand", Helvetica, Arial, serif;
+$font_type_14: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
+$font_type_15: 500 18px/1.66 "Quicksand", Helvetica, Arial, serif;
+$font_type_16: 500 18px/1.33 "Futura", Helvetica, Arial, serif;
+$font_type_17: 700 18px/1.33 "Futura", Helvetica, Arial, serif;
+$font_type_18: 500 15.666217803955078px/1.6 "Quicksand", Helvetica, Arial, serif;
+$font_type_19: 500 12.332651138305664px/1.75 "Quicksand", Helvetica, Arial, serif;
+$font_type_20: 500 12.332646369934082px/1.74 "Quicksand", Helvetica, Arial, serif;
+$font_type_21: 500 12.208559036254883px/1.75 "Quicksand", Helvetica, Arial, serif;
+$font_type_22: 700 1em/1.64 "Futura", Helvetica, Arial, serif;
+
+.our-products-screen5 {
+  &-main {
+    @include flex-column;
+    background-color: $color_type_5;
+  }
+  &-main.layout {
+    position: relative;
+    overflow: hidden;
+  }
+  &-main-item {
+    @include flex-column;
+    position: relative;
+  }
+  &-section1__section1 {
+    @include flex-column;
+  }
+  &-section1__section1.layout {
+    position: relative;
+    height: 542px;
+  }
+  &-section1__cover {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section1__cover.layout {
+    position: absolute;
+    top: 88px;
+    height: 454px;
+    left: 0px;
+    width: 1440px;
+    min-width: 1440px;
+  }
+  &-section1__box {
+    background-color: $color_type_5;
+  }
+  &-section1__box.layout {
+    position: absolute;
+    top: 0px;
+    height: 88px;
+    left: 0px;
+    width: 1440px;
+    min-width: 1440px;
+  }
+  &-section1__image {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section1__image.layout {
+    position: absolute;
+    top: 32px;
+    height: 30px;
+    left: 71px;
+    width: 207px;
+    min-width: 207px;
+  }
+  &-section1__highlights2 {
+    @include font-face($font_type_16, $color_type_2, 0px);
+  }
+  &-section1__highlights2.layout {
+    position: absolute;
+    top: 35px;
+    height: min-content;
+    left: 728px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section1__highlights2.layout1 {
+    position: absolute;
+    top: 35px;
+    height: min-content;
+    left: 834px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section1__highlights3 {
+    @include font-face($font_type_17, $color_type_4, 0px);
+  }
+  &-section1__highlights3.layout {
+    position: absolute;
+    top: 35px;
+    height: min-content;
+    left: 969px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section1__highlights2.layout2 {
+    position: absolute;
+    top: 35px;
+    height: min-content;
+    left: 1138px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section1__highlights21 {
+    @include font-face($font_type_16, $color_type_2, -0.1px);
+  }
+  &-section1__highlights21.layout {
+    position: absolute;
+    top: 35px;
+    height: min-content;
+    left: 1232px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section1__highlights2.layout3 {
+    position: absolute;
+    top: 35px;
+    height: min-content;
+    left: 650px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section1__icon {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section1__icon.layout {
+    position: absolute;
+    top: 40px;
+    height: 14px;
+    left: 1350px;
+    width: 14px;
+    min-width: 14px;
+  }
+  &-section1__block2 {
+    @include flex-column;
+  }
+  &-section1__block2.layout {
+    position: absolute;
+    top: 259px;
+    height: 107px;
+    left: 810px;
+    width: 267px;
+    min-width: 267px;
+  }
+  &-section1__hero-title2 {
+    @include font-face($font_type_4, $color_type_5, 0px);
+  }
+  &-section1__hero-title2.layout {
+    position: absolute;
+    top: 47px;
+    height: min-content;
+    left: 0px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section1__subtitle2 {
+    @include font-face($font_type_12, $color_type_4, 3.600000000000003px);
+  }
+  &-section1__subtitle2.layout {
+    position: absolute;
+    top: 0px;
+    height: min-content;
+    left: 0px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section1__box4 {
+    background-color: $color_type_5;
+  }
+  &-section1__box4.layout {
+    position: absolute;
+    top: -16px;
+    height: 139px;
+    left: -32px;
+    width: 1px;
+  }
+  &-section1__icon1 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section1__icon1.layout {
+    position: absolute;
+    top: 250px;
+    height: 112px;
+    left: 271px;
+    width: 112px;
+    min-width: 112px;
+  }
+  &-section1__image6 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section1__image6.layout {
+    position: absolute;
+    top: 186px;
+    height: 240px;
+    left: 207px;
+    width: 240px;
+    min-width: 240px;
+  }
+  &-section2__section2 {
+    @include flex-column;
+  }
+  &-section2__section2.layout {
+    position: relative;
+    height: 758px;
+  }
+  &-section2__hero-title1 {
+    @include font-face($font_type_5, $color_type_2, 0px);
+  }
+  &-section2__hero-title1.layout {
+    position: absolute;
+    top: 77px;
+    height: min-content;
+    left: 118px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section2__subtitle1-box {
+    width: 100%;
+    height: 100%;
+  }
+  &-section2__subtitle1 {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    @include font-face($font_type_11, $color_type_2, 0px);
+    white-space: pre-wrap;
+  }
+  &-section2__subtitle11 {
+    @include font-face($font_type_11, $color_type_2, 0px);
+    width: 100%;
+    height: 100%;
+  }
+  &-section2__box6 {
+    background-color: $color_type_5;
+    box-shadow: 0px 12.005870819091797px 35.2530517578125px 0px rgba(215, 227, 248, 0.4);
+    border-radius: 7.046086311340332px 7.046086311340332px 7.046086311340332px 7.046086311340332px;
+  }
+  &-section2__box6.layout {
+    position: absolute;
+    top: 416px;
+    height: 296px;
+    left: 761px;
+    width: 561px;
+    min-width: 561px;
+  }
+  &-section2__box6.layout1 {
+    position: absolute;
+    top: 416px;
+    height: 296px;
+    left: 120px;
+    width: 561px;
+    min-width: 561px;
+  }
+  &-section2__image1 {
+    background: var(--src) center center / cover no-repeat;
+    border-radius: 7px 7px 7px 7px;
+  }
+  &-section2__image1.layout {
+    position: absolute;
+    top: 423px;
+    height: 282px;
+    left: 127px;
+    width: 548px;
+    min-width: 548px;
+  }
+  &-section2__image1.layout1 {
+    position: absolute;
+    top: 423px;
+    height: 282px;
+    left: 766px;
+    width: 548px;
+    min-width: 548px;
+  }
+  &-section3__section3 {
+    @include flex-column;
+  }
+  &-section3__section3.layout {
+    position: relative;
+    height: 598px;
+  }
+  &-section3__hero-title1 {
+    @include font-face($font_type_5, $color_type_2, 0px);
+  }
+  &-section3__hero-title1.layout {
+    position: absolute;
+    top: 32px;
+    height: min-content;
+    left: 118px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section3__box5 {
+    background-color: $color_type_5;
+    box-shadow: 0px 12.005870819091797px 35.2530517578125px 0px rgba(215, 227, 248, 0.4);
+    border-radius: 7.046086311340332px 7.046086311340332px 7.046086311340332px 7.046086311340332px;
+  }
+  &-section3__box5.layout {
+    position: absolute;
+    top: 115px;
+    height: 462px;
+    left: 118px;
+    width: 390px;
+    min-width: 390px;
+  }
+  &-section3__box5.layout1 {
+    position: absolute;
+    top: 115px;
+    height: 462px;
+    left: 525px;
+    width: 390px;
+    min-width: 390px;
+  }
+  &-section3__box5.layout2 {
+    position: absolute;
+    top: 115px;
+    height: 462px;
+    left: 932px;
+    width: 390px;
+    min-width: 390px;
+  }
+  &-section3__cover2 {
+    background: var(--src) center center / cover no-repeat;
+    border: 0.8807607889175415px solid rgb(0, 0, 0);
+    border-radius: 6.915361404418945px 6.915361404418945px 6.915361404418945px 6.915361404418945px;
+  }
+  &-section3__cover2.layout {
+    position: absolute;
+    top: 126px;
+    height: 206px;
+    left: 133px;
+    width: 361px;
+    min-width: 361px;
+  }
+  &-section3__cover2.layout1 {
+    position: absolute;
+    top: 126px;
+    height: 206px;
+    left: 540px;
+    width: 361px;
+    min-width: 361px;
+  }
+  &-section3__cover2.layout2 {
+    position: absolute;
+    top: 126px;
+    height: 206px;
+    left: 947px;
+    width: 361px;
+    min-width: 361px;
+  }
+  &-section3__medium-title1 {
+    @include font-face($font_type_9, $color_type_2, 0px);
+    width: 100%;
+    height: 100%;
+  }
+  &-section3__small-paragraph-body {
+    @include font-face($font_type_21, $color_type_2, 0px);
+    width: 100%;
+    height: 100%;
+  }
+  &-section3__box7 {
+    background-color: $color_type_2;
+  }
+  &-section3__box7.layout {
+    position: absolute;
+    top: 476px;
+    height: 66px;
+    left: 154px;
+    width: 0px;
+    min-width: 0px;
+  }
+  &-section3__small-text-body {
+    @include font-face($font_type_2, $color_type_4, 1.7399999999999993px);
+  }
+  &-section3__small-text-body.layout {
+    position: absolute;
+    top: 346px;
+    height: min-content;
+    left: 154px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section3__image2 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section3__image2.layout {
+    position: absolute;
+    top: 166px;
+    height: 126px;
+    left: 1074px;
+    width: 106px;
+    min-width: 106px;
+  }
+  &-section3__medium-title2 {
+    @include font-face($font_type_6, $color_type_2, 0px);
+    width: 100%;
+    height: 100%;
+  }
+  &-section3__small-paragraph-body1 {
+    @include font-face($font_type_19, $color_type_2, 0px);
+    width: 100%;
+    height: 100%;
+  }
+  &-section3__image3 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section3__image3.layout {
+    position: absolute;
+    top: 451px;
+    height: 70px;
+    left: 568px;
+    width: 0px;
+    min-width: 0px;
+  }
+  &-section3__small-text-body1 {
+    @include font-face($font_type_0, $color_type_4, 1.3699999999999992px);
+  }
+  &-section3__small-text-body1.layout {
+    position: absolute;
+    top: 346px;
+    height: min-content;
+    left: 568px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section3__medium-title3 {
+    @include font-face($font_type_7, $color_type_2, -0.4px);
+  }
+  &-section3__medium-title3.layout {
+    position: absolute;
+    top: 388px;
+    height: min-content;
+    left: 963px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section3__small-paragraph-body2 {
+    @include font-face($font_type_20, $color_type_2, 0px);
+    width: 100%;
+    height: 100%;
+  }
+  &-section3__box8 {
+    background-color: $color_type_2;
+  }
+  &-section3__box8.layout {
+    position: absolute;
+    top: 451px;
+    height: 70px;
+    left: 963px;
+    width: 0px;
+    min-width: 0px;
+  }
+  &-section3__small-text-body2 {
+    @include font-face($font_type_1, $color_type_4, 1.5699999999999994px);
+  }
+  &-section3__small-text-body2.layout {
+    position: absolute;
+    top: 346px;
+    height: min-content;
+    left: 963px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section3__image4 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section3__image4.layout {
+    position: absolute;
+    top: 158px;
+    height: 142px;
+    left: 243px;
+    width: 142px;
+    min-width: 142px;
+  }
+  &-section3__image5 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section3__image5.layout {
+    position: absolute;
+    top: 158px;
+    height: 141px;
+    left: 649px;
+    width: 141px;
+    min-width: 141px;
+  }
+  &-section4__section4 {
+    @include flex-column;
+  }
+  &-section4__section4.layout {
+    position: relative;
+    height: 609px;
+  }
+  &-section4__cover1 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section4__cover1.layout {
+    position: absolute;
+    top: 36px;
+    height: 573px;
+    left: 0px;
+    width: 822px;
+    min-width: 822px;
+  }
+  &-section4__block1 {
+    @include flex-column;
+  }
+  &-section4__block1.layout {
+    position: absolute;
+    top: 162px;
+    height: 330px;
+    left: 458px;
+    width: 326px;
+    min-width: 326px;
+  }
+  &-section4__decorator1 {
+    background: var(--src) center center / cover no-repeat;
+  }
+  &-section4__decorator1.layout {
+    position: absolute;
+    top: -41px;
+    height: 330px;
+    left: -75px;
+    width: 326px;
+  }
+  &-section4__hero-title-box {
+    width: 100%;
+    height: 100%;
+  }
+  &-section4__hero-title {
+    @include font-face($font_type_3, $color_type_2, 0px);
+  }
+  &-section4__hero-title-span0 {
+    @include font-face($font_type_22, $color_type_0, 0px);
+  }
+  &-section4__hero-title-span1 {
+    @include font-face($font_type_22, $color_type_1, 0px);
+  }
+  &-section4__subtitle {
+    @include font-face($font_type_10, $color_type_5, 5px);
+  }
+  &-section4__subtitle.layout {
+    position: absolute;
+    top: 102px;
+    height: min-content;
+    left: 79px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section4__box3 {
+    background-color: $color_type_6;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px 5px 5px 5px;
+    opacity: 0;
+  }
+  &-section4__box3.layout {
+    position: absolute;
+    top: 427px;
+    height: 65px;
+    left: 79px;
+    width: 199px;
+    min-width: 199px;
+  }
+  &-section4__subtitle1 {
+    @include font-face($font_type_13, $color_type_5, 0px);
+  }
+  &-section4__subtitle1.layout {
+    position: absolute;
+    top: 448px;
+    height: min-content;
+    left: 126px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section4__medium-title-box {
+    width: 100%;
+    height: 100%;
+  }
+  &-section4__medium-title {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    @include font-face($font_type_8, $color_type_5, 0px);
+    white-space: pre-wrap;
+  }
+  &-section4__medium-title1 {
+    @include font-face($font_type_8, $color_type_5, 0px);
+    width: 100%;
+    height: 100%;
+  }
+  &-section4__highlights-box.layout {
+    position: absolute;
+    top: 286px;
+    height: min-content;
+    left: 894px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section4__highlights {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    @include font-face($font_type_14, $color_type_5, 0px);
+    white-space: pre-wrap;
+  }
+  &-section4__highlights1 {
+    @include v-center-content;
+    @include font-face($font_type_15, $color_type_5, 0px);
+  }
+  &-section4__highlights1.layout {
+    position: absolute;
+    top: 289px;
+    height: min-content;
+    left: 1143px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section4__highlights2 {
+    @include v-center-content;
+    @include font-face($font_type_15, $color_type_5, 0px);
+  }
+  &-section4__highlights2.layout {
+    position: absolute;
+    top: 325px;
+    height: min-content;
+    left: 1142px;
+    min-width: 0px;
+    width: fit-content;
+  }
+  &-section4__highlights11 {
+    @include font-face($font_type_18, $color_type_3, 0px);
+  }
+  &-section4__highlights11.layout {
+    position: absolute;
+    top: 563px;
+    height: min-content;
+    left: 1015px;
+    min-width: 0px;
+    width: fit-content;
+  }
+}

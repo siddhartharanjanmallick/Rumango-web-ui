@@ -1,0 +1,1981 @@
+/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+.careers-application-screen-main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.careers-application-screen-main.layout {
+  position: relative;
+  overflow: hidden;
+}
+.careers-application-screen-main-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.careers-application-screen-section1__section1 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section1__section1.layout {
+  position: relative;
+  height: 415px;
+}
+.careers-application-screen-section1__box {
+  background-color: white;
+}
+.careers-application-screen-section1__box.layout {
+  position: absolute;
+  top: 0px;
+  height: 88px;
+  left: 0px;
+  width: 1440px;
+  min-width: 1440px;
+}
+.careers-application-screen-section1__image {
+	display: flex;
+  flex-direction: column;
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section1__image.layout {
+  position: absolute;
+  top: 32px;
+  height: 30px;
+  left: 79px;
+  width: 207px;
+  
+}
+.careers-application-screen-section1__highlights2 {
+  font: 500 18px/1.33 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section1__highlights2.layout {
+  position: absolute;
+  top: 35px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 730px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section1__highlights2.layout1 {
+  position: absolute;
+  top: 35px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 838px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section1__highlights2.layout2 {
+  position: absolute;
+  top: 35px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 975px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section1__highlights3 {
+  font: 700 18px/1.33 "Futura", Helvetica, Arial, serif;
+  color: #ff6700;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section1__highlights3.layout {
+  position: absolute;
+  top: 35px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1113px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section1__highlights2.layout3 {
+  position: absolute;
+  top: 35px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1232px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section1__highlights2.layout4 {
+  position: absolute;
+  top: 35px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 650px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section1__icon {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section1__icon.layout {
+  position: absolute;
+  top: 40px;
+  height: 14px;
+  left: 1352px;
+  width: 14px;
+  min-width: 14px;
+}
+.careers-application-screen-section1__hero-title1-box.layout {
+  position: absolute;
+  top: 179px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 257px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section1__hero-title1 {
+  font: 500 44px/1.36 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section1__hero-title1-span0 {
+  font: 500 1em/1.36 "Futura", Helvetica, Arial, serif;
+  color: #000000ff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section1__hero-title1-span1 {
+  font: 500 1em/1.36 "Futura", Helvetica, Arial, serif;
+  color: #ff6700ff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section1__highlights5 {
+  display: flex;
+  justify-content: center;
+  font: 18px/1.66 "Quicksand", Helvetica, Arial, serif;
+  color: #7a7a7a;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section1__image7 {
+  background: var(--src) center center/cover no-repeat;
+  border-radius: 7px 7px 7px 7px;
+}
+.careers-application-screen-section1__image7.layout {
+  position: absolute;
+  top: 176px;
+  height: 143px;
+  left: 88px;
+  width: 143px;
+  min-width: 143px;
+}
+.careers-application-screen-section1__image8 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section1__image8.layout {
+  position: absolute;
+  top: 266px;
+  height: 24px;
+  left: 257px;
+  width: 28px;
+  min-width: 28px;
+}
+.careers-application-screen-section1__image9 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section1__image9.layout {
+  position: absolute;
+  top: 266px;
+  height: 24px;
+  left: 471px;
+  width: 18px;
+  min-width: 18px;
+}
+.careers-application-screen-section1__highlights9 {
+  display: flex;
+  justify-content: center;
+  font: 500 18px/1.66 "Quicksand", Helvetica, Arial, serif;
+  color: #7a7a7a;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section1__icon4 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section1__icon4.layout {
+  position: absolute;
+  top: 266px;
+  height: 24px;
+  left: 613px;
+  width: 23px;
+  min-width: 23px;
+}
+.careers-application-screen-section1__highlights91 {
+  display: flex;
+  justify-content: center;
+  font: 500 18px/1.66 "Quicksand", Helvetica, Arial, serif;
+  color: #7a7a7a;
+  text-align: center;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section1__highlights91.layout {
+  position: absolute;
+  top: 263px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 0px;
+  right: 0px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto;
+}
+.careers-application-screen-section1__image10 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section1__image10.layout {
+  position: absolute;
+  top: 266px;
+  height: 24px;
+  left: 770px;
+  width: 27px;
+  min-width: 27px;
+}
+.careers-application-screen-section1__highlights92-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section1__highlights92 {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 18px/1.66 "Quicksand", Helvetica, Arial, serif;
+  color: #7a7a7a;
+  text-align: center;
+  letter-spacing: 0px;
+  white-space: pre-wrap;
+}
+.careers-application-screen-section1__box14 {
+  background-color: #ffd2b4;
+  border-radius: 5px 5px 5px 5px;
+}
+.careers-application-screen-section1__box14.layout {
+  position: absolute;
+  top: 206px;
+  height: 65px;
+  left: 1167px;
+  width: 199px;
+  min-width: 199px;
+}
+.careers-application-screen-section1__subtitle2 {
+  font: 500 20px/1.2 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section1__subtitle2.layout {
+  position: absolute;
+  top: 227px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1216px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section2__section2 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section2__section2.layout {
+  position: relative;
+  height: 1381px;
+}
+.careers-application-screen-section2__big-title-box.layout {
+  position: absolute;
+  top: 55px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 76px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section2__big-title {
+  font: 500 33px/1.81 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section2__big-title-span0 {
+  font: 500 1em/1.81 "Futura", Helvetica, Arial, serif;
+  color: #000000ff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section2__big-title-span1 {
+  font: 500 1em/1.81 "Futura", Helvetica, Arial, serif;
+  color: #ff6700ff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section2__big-title-box.layout1 {
+  position: absolute;
+  top: 1079px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 76px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section2__big-title1-span0 {
+  font: 500 1em/1.81 "Futura", Helvetica, Arial, serif;
+  color: #000000ff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section2__big-title1-span1 {
+  font: 500 1em/1.81 "Futura", Helvetica, Arial, serif;
+  color: #ff6700ff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section2__big-title-box.layout2 {
+  position: absolute;
+  top: 392px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 76px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section2__subtitle1 {
+  font: 500 20px/1.75 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle11-box {
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle11 {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 20px/2 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+  white-space: pre-wrap;
+}
+.careers-application-screen-section2__subtitle12-box {
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle12 {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 20px/2 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+  white-space: pre-wrap;
+}
+.careers-application-screen-section2__box4 {
+  background-color: #ff6700;
+  border-radius: 2px 2px 2px 2px;
+}
+.careers-application-screen-section2__box4.layout {
+  position: absolute;
+  top: 484px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout1 {
+  position: absolute;
+  top: 567px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout2 {
+  position: absolute;
+  top: 606px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout3 {
+  position: absolute;
+  top: 686px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout4 {
+  position: absolute;
+  top: 725px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout5 {
+  position: absolute;
+  top: 845px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout6 {
+  position: absolute;
+  top: 926px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout7 {
+  position: absolute;
+  top: 1007px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout8 {
+  position: absolute;
+  top: 1171px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout9 {
+  position: absolute;
+  top: 1211px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout10 {
+  position: absolute;
+  top: 1251px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box4.layout11 {
+  position: absolute;
+  top: 1331px;
+  height: 11px;
+  left: 82px;
+  width: 11px;
+  min-width: 11px;
+}
+.careers-application-screen-section2__box5 {
+  background-color: #fff7f2;
+  border-radius: 13px 13px 13px 13px;
+}
+.careers-application-screen-section2__box5.layout {
+  position: absolute;
+  top: 37px;
+  height: 862px;
+  left: 968px;
+  width: 398px;
+  min-width: 398px;
+}
+.careers-application-screen-section2__box6 {
+  background-color: #fff7f2;
+  border-radius: 13px 13px 13px 13px;
+}
+.careers-application-screen-section2__box6.layout {
+  position: absolute;
+  top: 923px;
+  height: 233px;
+  left: 968px;
+  width: 398px;
+  min-width: 398px;
+}
+.careers-application-screen-section2__box7 {
+  background-color: #fff7f2;
+  border-radius: 13px 13px 13px 13px;
+}
+.careers-application-screen-section2__box7.layout {
+  position: absolute;
+  top: 1180px;
+  height: 164px;
+  left: 968px;
+  width: 398px;
+  min-width: 398px;
+}
+.careers-application-screen-section2__medium-title1 {
+  display: flex;
+  justify-content: center;
+  font: 700 24px/1.24 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle13 {
+  display: flex;
+  justify-content: center;
+  font: 500 20px/1.49 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle14 {
+  display: flex;
+  justify-content: center;
+  font: 500 20px/1.49 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle15-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle15 {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 20px/1.49 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0px;
+  white-space: pre-wrap;
+}
+.careers-application-screen-section2__subtitle16 {
+  display: flex;
+  justify-content: center;
+  font: 500 20px/1.49 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle17 {
+  display: flex;
+  justify-content: center;
+  font: 500 20px/1.49 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle18 {
+  display: flex;
+  justify-content: center;
+  font: 500 20px/1.49 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__subtitle19 {
+  display: flex;
+  justify-content: center;
+  font: 500 20px/1.49 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__box9 {
+  background-color: white;
+  box-shadow: 0px 3.810585022px 57.1587753296px 0px rgba(0, 0, 0, 0.0274509804);
+  border-radius: 2.8579387665px 2.8579387665px 2.8579387665px 2.8579387665px;
+}
+.careers-application-screen-section2__box9.layout {
+  position: absolute;
+  top: 1021px;
+  height: 39px;
+  left: 995px;
+  width: 91px;
+  min-width: 91px;
+}
+.careers-application-screen-section2__box10 {
+  background-color: white;
+  box-shadow: 0px 3.810585022px 57.1587753296px 0px rgba(0, 0, 0, 0.0274509804);
+  border-radius: 2.8579387665px 2.8579387665px 2.8579387665px 2.8579387665px;
+}
+.careers-application-screen-section2__box10.layout {
+  position: absolute;
+  top: 1279px;
+  height: 35px;
+  left: 1001px;
+  width: 129px;
+  min-width: 129px;
+}
+.careers-application-screen-section2__box11 {
+  background-color: white;
+  box-shadow: 0px 3.810585022px 57.1587753296px 0px rgba(0, 0, 0, 0.0274509804);
+  border-radius: 2.8579387665px 2.8579387665px 2.8579387665px 2.8579387665px;
+}
+.careers-application-screen-section2__box11.layout {
+  position: absolute;
+  top: 1279px;
+  height: 35px;
+  left: 1142px;
+  width: 113px;
+  min-width: 113px;
+}
+.careers-application-screen-section2__box12 {
+  background-color: white;
+  box-shadow: 0px 3.810585022px 57.1587753296px 0px rgba(0, 0, 0, 0.0274509804);
+  border-radius: 2.8579387665px 2.8579387665px 2.8579387665px 2.8579387665px;
+}
+.careers-application-screen-section2__box12.layout {
+  position: absolute;
+  top: 1021px;
+  height: 39px;
+  left: 1097px;
+  width: 114px;
+  min-width: 114px;
+}
+.careers-application-screen-section2__box12.layout1 {
+  position: absolute;
+  top: 1021px;
+  height: 39px;
+  left: 1223px;
+  width: 114px;
+  min-width: 114px;
+}
+.careers-application-screen-section2__box13 {
+  background-color: white;
+  box-shadow: 0px 3.810585022px 57.1587753296px 0px rgba(0, 0, 0, 0.0274509804);
+  border-radius: 2.8579387665px 2.8579387665px 2.8579387665px 2.8579387665px;
+}
+.careers-application-screen-section2__box13.layout {
+  position: absolute;
+  top: 1076px;
+  height: 39px;
+  left: 995px;
+  width: 189px;
+  min-width: 189px;
+}
+.careers-application-screen-section2__highlights6 {
+  display: flex;
+  justify-content: center;
+  font: 500 19.0529251099px/1.49 "Quicksand", Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__highlights7 {
+  display: flex;
+  justify-content: center;
+  font: 500 16px/1.78 "Quicksand", Helvetica, Arial, serif;
+  color: #2f9bff;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__highlights8 {
+  display: flex;
+  justify-content: center;
+  font: 500 16px/1.78 "Quicksand", Helvetica, Arial, serif;
+  color: #00b2ff;
+  text-align: center;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section2__image1 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section2__image1.layout {
+  position: absolute;
+  top: 286px;
+  height: 42px;
+  left: 1008px;
+  width: 32px;
+  min-width: 32px;
+}
+.careers-application-screen-section2__icon1 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section2__icon1.layout {
+  position: absolute;
+  top: 185px;
+  height: 33px;
+  left: 1008px;
+  width: 32px;
+  min-width: 32px;
+}
+.careers-application-screen-section2__image2 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section2__image2.layout {
+  position: absolute;
+  top: 399px;
+  height: 35px;
+  left: 1005px;
+  width: 39px;
+  min-width: 39px;
+}
+.careers-application-screen-section2__icon2 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section2__icon2.layout {
+  position: absolute;
+  top: 821px;
+  height: 39px;
+  left: 1006px;
+  width: 38px;
+  min-width: 38px;
+}
+.careers-application-screen-section2__image3 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section2__image3.layout {
+  position: absolute;
+  top: 498px;
+  height: 41px;
+  left: 1009px;
+  width: 29px;
+  min-width: 29px;
+}
+.careers-application-screen-section2__image4 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section2__image4.layout {
+  position: absolute;
+  top: 712px;
+  height: 40px;
+  left: 1008px;
+  width: 31px;
+  min-width: 31px;
+}
+.careers-application-screen-section2__icon3 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section2__icon3.layout {
+  position: absolute;
+  top: 608px;
+  height: 35px;
+  left: 1006px;
+  width: 36px;
+  min-width: 36px;
+}
+.careers-application-screen-section2__image5 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section2__image5.layout {
+  position: absolute;
+  top: 1288px;
+  height: 18px;
+  left: 1011px;
+  width: 9px;
+  min-width: 9px;
+}
+.careers-application-screen-section2__image6 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section2__image6.layout {
+  position: absolute;
+  top: 1288px;
+  height: 16px;
+  left: 1155px;
+  width: 17px;
+  min-width: 17px;
+}
+.careers-application-screen-section2__big-title1 {
+  font: 500 28px/2.14 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section2__big-title1.layout {
+  position: absolute;
+  top: 61px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1006px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section2__big-title11 {
+  font: 500 28px/2.14 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: -0.2px;
+}
+.careers-application-screen-section2__big-title11.layout {
+  position: absolute;
+  top: 947px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1006px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section2__big-title1.layout1 {
+  position: absolute;
+  top: 1204px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1006px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__section3 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__section3.layout {
+  position: relative;
+  height: 1387px;
+}
+.careers-application-screen-section3__big-title-box.layout {
+  position: absolute;
+  top: 36px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 76px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__big-title {
+  font: 500 33px/1.81 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section3__big-title-span0 {
+  font: 500 1em/1.81 "Futura", Helvetica, Arial, serif;
+  color: #000000ff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section3__big-title-span1 {
+  font: 500 1em/1.81 "Futura", Helvetica, Arial, serif;
+  color: #ff6700ff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section3__highlights4 {
+  font: 500 16px/2.5 "Quicksand", Helvetica, Arial, serif;
+  color: #6d6d6d;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section3__box8 {
+  background-color: #fff7f2;
+  border: 1px dashed #ff6700;
+  border-radius: 13px 13px 13px 13px;
+}
+.careers-application-screen-section3__box8.layout {
+  position: absolute;
+  top: 130px;
+  height: 995px;
+  left: 968px;
+  width: 398px;
+  min-width: 398px;
+}
+.careers-application-screen-section3__box15 {
+  background-color: #ff6700;
+  border-radius: 5px 5px 5px 5px;
+}
+.careers-application-screen-section3__box15.layout {
+  position: absolute;
+  top: 1262px;
+  height: 65px;
+  left: 79px;
+  width: 255px;
+  min-width: 255px;
+}
+.careers-application-screen-section3__subtitle2 {
+  font: 500 20px/1.2 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section3__subtitle2.layout {
+  position: absolute;
+  top: 1283px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 119px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__block2 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block2.layout {
+  position: absolute;
+  top: 131px;
+  height: 61px;
+  left: 76px;
+  width: 276px;
+  min-width: 276px;
+}
+.careers-application-screen-section3__block3 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__block3.layout {
+  position: relative;
+  height: 21px;
+  width: 90px;
+  min-width: 90px;
+  margin: 20px 0px 0px 32px;
+}
+.careers-application-screen-section3__text-body-box {
+  display: flex;
+  align-items: center;
+}
+.careers-application-screen-section3__text-body-box.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__text-body {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+  white-space: pre-wrap;
+}
+.careers-application-screen-section3__block4 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block4.layout {
+  position: absolute;
+  top: 224px;
+  height: 61px;
+  left: 76px;
+  width: 847px;
+  min-width: 847px;
+}
+.careers-application-screen-section3__block5 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__block5.layout {
+  position: relative;
+  height: 21px;
+  width: 50px;
+  min-width: 50px;
+  margin: 20px 0px 0px 32px;
+}
+.careers-application-screen-section3__text-body1 {
+  display: flex;
+  align-items: center;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+}
+.careers-application-screen-section3__text-body1.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__block6 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block6.layout {
+  position: absolute;
+  top: 317px;
+  height: 61px;
+  left: 76px;
+  width: 847px;
+  min-width: 847px;
+}
+.careers-application-screen-section3__block7 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__block7.layout {
+  position: relative;
+  height: 21px;
+  width: 138px;
+  min-width: 138px;
+  margin: 20px 0px 0px 32px;
+}
+.careers-application-screen-section3__text-body2 {
+  display: flex;
+  align-items: center;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+}
+.careers-application-screen-section3__text-body2.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__block8 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block8.layout {
+  position: absolute;
+  top: 410px;
+  height: 61px;
+  left: 76px;
+  width: 847px;
+  min-width: 847px;
+}
+.careers-application-screen-section3__block9 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__block9.layout {
+  position: relative;
+  height: 21px;
+  width: 284px;
+  min-width: 284px;
+  margin: 20px 0px 0px 32px;
+}
+.careers-application-screen-section3__text-body3 {
+  display: flex;
+  align-items: center;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+}
+.careers-application-screen-section3__text-body3.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__block10 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block10.layout {
+  position: absolute;
+  top: 573px;
+  height: 61px;
+  left: 76px;
+  width: 847px;
+  min-width: 847px;
+}
+.careers-application-screen-section3__block11 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__block11.layout {
+  position: relative;
+  height: 21px;
+  width: 68px;
+  min-width: 68px;
+  margin: 20px 0px 0px 32px;
+}
+.careers-application-screen-section3__text-body4 {
+  display: flex;
+  align-items: center;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+}
+.careers-application-screen-section3__text-body4.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__block12 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block12.layout {
+  position: absolute;
+  top: 878px;
+  height: 61px;
+  left: 76px;
+  width: 847px;
+  min-width: 847px;
+}
+.careers-application-screen-section3__block13 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__block13.layout {
+  position: relative;
+  height: 21px;
+  width: 191px;
+  min-width: 191px;
+  margin: 20px 0px 0px 32px;
+}
+.careers-application-screen-section3__text-body5 {
+  display: flex;
+  align-items: center;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+}
+.careers-application-screen-section3__text-body5.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__block14 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block14.layout {
+  position: absolute;
+  top: 971px;
+  height: 61px;
+  left: 76px;
+  width: 847px;
+  min-width: 847px;
+}
+.careers-application-screen-section3__block15 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__block15.layout {
+  position: relative;
+  height: 21px;
+  width: 344px;
+  min-width: 344px;
+  margin: 20px 0px 0px 32px;
+}
+.careers-application-screen-section3__text-body6 {
+  display: flex;
+  align-items: center;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+}
+.careers-application-screen-section3__text-body6.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__block8.layout1 {
+  position: absolute;
+  top: 1064px;
+  height: 61px;
+  left: 76px;
+  width: 847px;
+  min-width: 847px;
+}
+.careers-application-screen-section3__text-body7 {
+  display: flex;
+  align-items: center;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+}
+.careers-application-screen-section3__text-body7.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__block16 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block16.layout {
+  position: absolute;
+  top: 660px;
+  height: 186px;
+  left: 76px;
+  width: 847px;
+  min-width: 847px;
+}
+.careers-application-screen-section3__big-title1 {
+  font: 500 28px/2.14 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section3__big-title1.layout {
+  position: relative;
+  margin: 20px 32px 0px;
+}
+.careers-application-screen-section3__block17 {
+  display: flex;
+  flex-direction: column;
+  background-color: #ff6700;
+  border-radius: 5px 5px 5px 5px;
+}
+.careers-application-screen-section3__block17.layout {
+  position: relative;
+  width: 23.49%;
+  margin: 14px 72.73% 27px 3.78%;
+}
+.careers-application-screen-section3__subtitle2.layout1 {
+  position: relative;
+  flex-grow: 1;
+  margin: 21px 28px 20px 33px;
+}
+.careers-application-screen-section3__block18 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block18.layout {
+  position: absolute;
+  top: 130px;
+  height: 61px;
+  left: 362px;
+  width: 276px;
+  min-width: 276px;
+}
+.careers-application-screen-section3__block19 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__block19.layout {
+  position: relative;
+  height: 21px;
+  width: 101px;
+  min-width: 101px;
+  margin: 20px 0px 0px 32px;
+}
+.careers-application-screen-section3__text-body8 {
+  display: flex;
+  align-items: center;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+}
+.careers-application-screen-section3__text-body8.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__block20 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #b3b3b3;
+  border-radius: 6px 6px 6px 6px;
+}
+.careers-application-screen-section3__block20.layout {
+  position: absolute;
+  top: 130px;
+  height: 61px;
+  left: 648px;
+  width: 276px;
+  min-width: 276px;
+}
+.careers-application-screen-section3__block21 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section3__block21.layout {
+  position: relative;
+  height: 21px;
+  width: 86px;
+  min-width: 86px;
+  margin: 20px 0px 0px 32px;
+}
+.careers-application-screen-section3__text-body9 {
+  display: flex;
+  align-items: center;
+  font: 600 14px/1.5 "Quicksand", Helvetica, Arial, serif;
+  color: #4d4d4d;
+  letter-spacing: 0.07px;
+}
+.careers-application-screen-section3__text-body9.layout {
+  position: relative;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__subtitle3 {
+  font: 500 20px/3 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section3__subtitle3.layout {
+  position: absolute;
+  top: 481px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 76px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__image11 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section3__image11.layout {
+  position: absolute;
+  top: 1145px;
+  height: 85px;
+  left: 76px;
+  width: 309px;
+  min-width: 309px;
+}
+.careers-application-screen-section3__icon5 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section3__icon5.layout {
+  position: absolute;
+  top: 593px;
+  height: 20px;
+  left: 880px;
+  width: 20px;
+  min-width: 20px;
+}
+.careers-application-screen-section3__subtitle3.layout1 {
+  position: absolute;
+  top: 614px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1074px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section3__image12 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section3__image12.layout {
+  position: absolute;
+  top: 601px;
+  height: 10px;
+  left: 1157px;
+  width: 18px;
+  min-width: 18px;
+}
+.careers-application-screen-section3__box17 {
+  background-color: #ff6700;
+  border-radius: 1px;
+}
+.careers-application-screen-section3__box17.layout {
+  position: absolute;
+  top: 601px;
+  height: 21px;
+  left: 1165px;
+  width: 2px;
+  min-width: 2px;
+}
+.careers-application-screen-section3__image13 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section3__image13.layout {
+  position: absolute;
+  top: 581px;
+  height: 35px;
+  left: 1141px;
+  width: 50px;
+  min-width: 50px;
+}
+.careers-application-screen-section4__section4 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section4__section4.layout {
+  position: relative;
+  height: 771px;
+}
+.careers-application-screen-section4__cover {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section4__cover.layout {
+  position: absolute;
+  top: 198px;
+  height: 573px;
+  left: 0px;
+  width: 822px;
+  min-width: 822px;
+}
+.careers-application-screen-section4__block1 {
+  display: flex;
+  flex-direction: column;
+}
+.careers-application-screen-section4__block1.layout {
+  position: absolute;
+  top: 324px;
+  height: 330px;
+  left: 458px;
+  width: 326px;
+  min-width: 326px;
+}
+.careers-application-screen-section4__decorator2 {
+  background: var(--src) center center/cover no-repeat;
+}
+.careers-application-screen-section4__decorator2.layout {
+  position: absolute;
+  top: -41px;
+  height: 330px;
+  left: -75px;
+  width: 326px;
+}
+.careers-application-screen-section4__hero-title-box {
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section4__hero-title {
+  font: 700 65px/1.64 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section4__hero-title-span0 {
+  font: 700 1em/1.64 "Futura", Helvetica, Arial, serif;
+  color: #000000ff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section4__hero-title-span1 {
+  font: 700 1em/1.64 "Futura", Helvetica, Arial, serif;
+  color: #ffffffff;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section4__subtitle {
+  font: 700 20px/3 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 5px;
+}
+.careers-application-screen-section4__subtitle.layout {
+  position: absolute;
+  top: 264px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 79px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section4__box3 {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid white;
+  border-radius: 5px 5px 5px 5px;
+  opacity: 0;
+}
+.careers-application-screen-section4__box3.layout {
+  position: absolute;
+  top: 589px;
+  height: 65px;
+  left: 79px;
+  width: 199px;
+  min-width: 199px;
+}
+.careers-application-screen-section4__subtitle1 {
+  font: 700 20px/1.2 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section4__subtitle1.layout {
+  position: absolute;
+  top: 610px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 126px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section4__medium-title-box {
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section4__medium-title {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+  white-space: pre-wrap;
+}
+.careers-application-screen-section4__medium-title1 {
+  font: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.careers-application-screen-section4__highlights-box.layout {
+  position: absolute;
+  top: 448px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 894px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section4__highlights {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+  white-space: pre-wrap;
+}
+.careers-application-screen-section4__highlights1 {
+  display: flex;
+  align-items: center;
+  font: 500 18px/1.66 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section4__highlights1.layout {
+  position: absolute;
+  top: 451px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1143px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section4__highlights2 {
+  display: flex;
+  align-items: center;
+  font: 500 18px/1.66 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section4__highlights2.layout {
+  position: absolute;
+  top: 487px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1142px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.careers-application-screen-section4__highlights11 {
+  font: 500 15.666217804px/1.6 "Quicksand", Helvetica, Arial, serif;
+  color: #c6c9d8;
+  letter-spacing: 0px;
+}
+.careers-application-screen-section4__highlights11.layout {
+  position: absolute;
+  top: 725px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1015px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.footer-block.layout {
+  position: relative;
+  overflow: hidden;
+  min-height: 810px;
+}
+.footer-cover {
+  background: var(--src) center center/cover no-repeat;
+}
+.footer-cover.layout {
+  position: absolute;
+  top: 358px;
+  height: 452px;
+  left: 0px;
+  width: 1440px;
+  min-width: 1440px;
+}
+.footer-cover1 {
+  background: var(--src) center center/cover no-repeat;
+}
+.footer-cover1.layout {
+  position: absolute;
+  top: 237px;
+  height: 573px;
+  left: 0px;
+  width: 821px;
+  min-width: 821px;
+}
+.footer-hero-title-box {
+  width: 100%;
+  height: 100%;
+}
+.footer-hero-title {
+  font: 700 65px/1.64 "Futura", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+}
+.footer-hero-title-span0 {
+  font: 700 1em/1.64 "Futura", Helvetica, Arial, serif;
+  color: #000000ff;
+  letter-spacing: 0px;
+}
+.footer-hero-title-span1 {
+  font: 700 1em/1.64 "Futura", Helvetica, Arial, serif;
+  color: #ffffffff;
+  letter-spacing: 0px;
+}
+.footer-subtitle {
+  font: 700 20px/3 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 5px;
+}
+.footer-subtitle.layout {
+  position: absolute;
+  top: 329px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 62px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer-box {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid white;
+  border-radius: 5px 5px 5px 5px;
+  opacity: 0;
+}
+.footer-box.layout {
+  position: absolute;
+  top: 654px;
+  height: 65px;
+  left: 62px;
+  width: 199px;
+  min-width: 199px;
+}
+.footer-subtitle1 {
+  font: 700 20px/1.2 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+}
+.footer-subtitle1.layout {
+  position: absolute;
+  top: 675px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 109px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer-block1 {
+  display: flex;
+  flex-direction: column;
+}
+.footer-block1.layout {
+  position: absolute;
+  top: 341px;
+  height: 330px;
+  left: 458px;
+  width: 326px;
+  min-width: 326px;
+}
+.footer-decorator {
+  background: var(--src) center center/cover no-repeat;
+}
+.footer-decorator.layout {
+  position: absolute;
+  top: -41px;
+  height: 330px;
+  left: -75px;
+  width: 326px;
+}
+.footer-medium-title-box {
+  width: 100%;
+  height: 100%;
+}
+.footer-medium-title {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+  white-space: pre-wrap;
+}
+.footer-medium-title1 {
+  font: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+  width: 100%;
+  height: 100%;
+}
+.footer-highlights-box.layout {
+  position: absolute;
+  top: 472px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 900px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer-highlights {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+  white-space: pre-wrap;
+}
+.footer-highlights1 {
+  display: flex;
+  align-items: center;
+  font: 500 18px/1.66 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+}
+.footer-highlights1.layout {
+  position: absolute;
+  top: 475px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1198px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer-highlights2 {
+  display: flex;
+  align-items: center;
+  font: 500 18px/1.66 "Quicksand", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+}
+.footer-highlights2.layout {
+  position: absolute;
+  top: 511px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1197px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.footer-highlights11 {
+  font: 500 15.666217804px/1.6 "Quicksand", Helvetica, Arial, serif;
+  color: #c6c9d8;
+  letter-spacing: 0px;
+}
+.footer-highlights11.layout {
+  position: absolute;
+  top: 762px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 1041px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: red;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.input {
+border: none;
+background-color: transparent;
+resize: none;
+outline: none;
+}
