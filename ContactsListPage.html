@@ -114,8 +114,21 @@
             <div class="box6 layout"></div>
             <h1 class="big_title layout">?</h1>
         </div>
-        <div class="block13 layout"></div>
-        <img src="contactsListPage/web/assets/c7f0928eb79479046c4b56ca6c54192b.png" alt="" class="image3 layout" />
+
+
+        <div class="block13 layout1">
+            <table id="contactsTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+	                <th>Phone No</th>
+	                <th>Message</th>
+                </tr>
+            </table>
+        </div>
+
+
+        <!-- <img src="contactsListPage/web/assets/c7f0928eb79479046c4b56ca6c54192b.png" alt="" class="image3 layout" />
         <div class="block14 layout">
             <div class="text_body2 layout">+33757005467</div>
         </div>
@@ -243,8 +256,10 @@
         <div class="text_body2 layout12">Lorem..</div>
         <div class="block34 layout">
             <div class="text_body2 layout">johndoe2211@gmail.com</div>
-        </div>
-        <px-posize x="291px 35fr 1114fr" y="171px minmax(0px, 15fr) 838fr" absolute="true">
+        </div> -->
+
+
+        <!-- <px-posize x="291px 35fr 1114fr" y="171px minmax(0px, 15fr) 838fr" absolute="true">
             <div class="small_text_body1">Name</div>
         </px-posize><img src="contactsListPage/web/assets/3d836dc934c67ce684b469526f356dbe.png" alt="" class="image5 layout" />
 	<img src="contactsListPage/web/assets/3d836dc934c67ce684b469526f356dbe.png" alt="" class="image5 layout1" />
@@ -256,7 +271,9 @@
         </px-posize><img src="contactsListPage/web/assets/3d836dc934c67ce684b469526f356dbe.png" alt="" class="image5 layout3" />
         <px-posize x="875px 51fr 514fr" y="171px minmax(0px, 15fr) 838fr" absolute="true">
             <div class="small_text_body1">Message</div>
-        </px-posize>
+        </px-posize> -->
+
+
         <div class="block35 layout">
             <h2 class="medium_title layout">Contact list</h2>
         </div>
@@ -264,7 +281,7 @@
             <div class="block36__item">
                 <div class="block37 layout">
                     
-                    <div style="--src:url(../assets/21f8a5dcc9431a42525053b9fd5fa455.svg)" class="block38 layout">
+                    <div  class="block38 layout">
                         <img src="contactsListPage/web/assets/949bdaf521405b99f1bb83433425c2d1.png" alt="" class="icon2 layout" />
                     </div>
                     <div class="box8 layout"></div>
@@ -275,8 +292,11 @@
                 <img src="contactsListPage/web/assets/7889e0a33f6e2d2e06a337c7bc245670.png" alt="" class="icon3 layout" />
             </div>
         </div>
-        <div class="block39 layout">
-            
+
+
+    <div id="myModal" class="modal">
+        <div class="block39 layout"> 
+            <span class="close">&times;</span>           
             <div class="block40 layout">
                 <div class="text_body3 layout">
                     <a href="ReplyPage.html"
@@ -288,10 +308,13 @@
                 
                 <div style="--src:url(../assets/88a08900bc341cc51c8e7323a114744a.png)" class="block42 layout"></div>
                 <px-posize x="32px 44fr 45fr" y="9px minmax(0px, 17fr) 10fr" absolute="true">
-                    <div class="text_body4">Delete</div>
+                    <div class="text_body4" onClick="deleteContact()">Delete</div>
                 </px-posize>
             </div>
         </div>
+    </div>
+
+
         <img src="contactsListPage/web/assets/3d42bc4b2851ee332ef278311b6f93c6.png" alt="" class="icon4 layout" />
         <div class="block43 layout">
             <div class="flex layout1">
@@ -305,7 +328,101 @@
     </div>
     <script type="text/javascript">
         AOS.init();
+
+        let selectedRowIndex, allContacts;
+
+        fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/fetchAllMessagesInfo', {
+         method: 'GET',         
+        }).then(function(response){ 
+             return response.json()}).then(function(data)
+        {
+		  console.log(data);
+		  console.log(data.length);
+		  allContacts=data;
+          for (let i = 0; i < data.length; i++) {
+		     const row = document.createElement('tr');
+		     row.addEventListener('click', () => {
+			     selectedRowIndex = i;
+			     modal.style.display = "block";
+		        });
+		     ['name', 'email', 'phoneNumber', 'message'].forEach(cell => {
+			     const column = data[i][cell];
+			     const columnNode =document.createElement('td');
+			     columnNode.innerHTML = column;
+			     row.appendChild(columnNode);
+		        });
+			 document.getElementById('contactsTable').appendChild(row);
+            }
+        }).catch(error => console.error('Error:', error));
+
+
+    function deleteContact() {
+	 console.log(allContacts[selectedRowIndex].id);
+	 fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/deleteMessageInfoById?id='
+		  +allContacts[selectedRowIndex].id, {
+          method: 'DELETE',         
+        }).catch(error => console.error('Error:', error));
+		   alert('Contact Record Deleted.');		   
+	}
+
+
+        var modal = document.getElementById("myModal");
+		var span = document.getElementsByClassName("close")[0];
+		span.onclick = function() {
+		console.log("inside span onclick");
+          modal.style.display = "none";
+        }
+		window.onclick = function(event) {
+		console.log("inside window onclick");
+            if (event.target == modal) {
+			console.log("inside window onclick if");
+             modal.style.display = "none";
+            }
+        }
+
+
     </script>
 </body>
-
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    </style>
 </html>
