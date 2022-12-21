@@ -72,10 +72,10 @@
         }).then(function(response){ 
         return response.json()}).then(function(data)
         {console.log(data)
-		 //if(data){
-          //window.location.replace("AdminDashboard.html");    
-          //setTimeout("pageRedirect()", 10000);
-		  //}
+		 if(data){
+          window.location.replace("AdminDashboard.html");    
+          setTimeout("pageRedirect()", 10000);
+		  }
         //userName=document.getElementById("title")
         //passWord=document.getElementById("bd")
         //userName.innerHTML = data.userName
