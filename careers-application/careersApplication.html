@@ -86,12 +86,13 @@
           ></div>  -->
           <h1 class="careers-application-screen-section1__hero-title1-box layout">
             <div class="careers-application-screen-section1__hero-title1">
-              <span class="careers-application-screen-section1__hero-title1-span0">UX/UI</span
-              ><span class="careers-application-screen-section1__hero-title1-span1"> [Designer]</span>
+              <span class="careers-application-screen-section1__hero-title1-span0" id="jobTitle"></span
+              >
+              <!-- <span class="careers-application-screen-section1__hero-title1-span1"> [Designer]</span> -->
             </div>
           </h1>
           <px-posize x="293fr minmax(0px, max-content) 993fr" y="263px minmax(0px, max-content) 122fr" absolute="true"
-            ><h4 class="careers-application-screen-section1__highlights5" style="margin-left: 16%;">Lead-UX designer</h4></px-posize
+            ><h4 class="careers-application-screen-section1__highlights5" style="margin-left: 16%;" id="position"></h4></px-posize
           >
 		  <div class="careers-application-screen-section1__image7 layout">
            <img src="../src/assets/4dea43527054c76d4feadf0935e48e72.png"
@@ -121,7 +122,7 @@
             x="496.5fr minmax(0px, max-content) 850.5fr"
             y="263px minmax(0px, max-content) 122fr"
             absolute="true"
-            ><h4 class="careers-application-screen-section1__highlights9" style="margin-left: 32%;">Bangalore</h4>
+            ><h4 class="careers-application-screen-section1__highlights9" style="margin-left: 32%;" id="jobLocation"></h4>
 			</px-posize>
 		   <div class="careers-application-screen-section1__icon4 layout">
            <img src="../src/assets/a278cd52470bd8765fbaa5ddd637a737.png"
@@ -135,7 +136,7 @@
            <img src="../src/assets/af45227ce675909ee392e270fad945e2.png"
 		        style="margin-left: 428%;">
 	      </div>
-          <h4 class="careers-application-screen-section1__highlights91 layout" style="margin-left: 48%;">May 3, 2021</h4>
+          <h4 class="careers-application-screen-section1__highlights91 layout" style="margin-left: 48%;" id="datePost"></h4>
           <!-- <div
             style="--src:url(/assets/af45227ce675909ee392e270fad945e2.png)"
             class="careers-application-screen-section1__image10 layout"
@@ -145,7 +146,7 @@
             y="263px minmax(0px, max-content) 122fr"
             absolute="true"
             ><h4 class="careers-application-screen-section1__highlights92-box">
-              <pre class="careers-application-screen-section1__highlights92" style="margin-left: 43%;">5L-7L /Yearly</pre>
+              <pre class="careers-application-screen-section1__highlights92" style="margin-left: 43%;" id="salary"></pre>
             </h4></px-posize
           >
           <div class="careers-application-screen-section1__box14 layout"></div>
@@ -243,33 +244,33 @@ Present your work to the wider business at Show &amp; Tell sessions.</pre
             x="1073.5fr minmax(0px, max-content) 252.5fr"
             y="209px minmax(0px, max-content) 1142fr"
             absolute="true"
-            ><h3 class="careers-application-screen-section2__subtitle13">May 3, 2021</h3></px-posize
+            ><h3 class="careers-application-screen-section2__subtitle13" id="lastDate"></h3></px-posize
           ><px-posize
             x="1073.5fr minmax(0px, max-content) 263.5fr"
             y="314px minmax(0px, max-content) 1037fr"
             absolute="true"
-            ><h3 class="careers-application-screen-section2__subtitle14">Bangalore</h3></px-posize
+            ><h3 class="careers-application-screen-section2__subtitle14" id="location"></h3></px-posize
           ><px-posize x="1071fr minmax(0px, max-content) 216fr" y="419px minmax(0px, max-content) 932fr" absolute="true"
             ><h3 class="careers-application-screen-section2__subtitle15-box">
-              <pre class="careers-application-screen-section2__subtitle15">5L - 7L / Yearly </pre>
+              <pre class="careers-application-screen-section2__subtitle15" id="annualSalary"> </pre>
             </h3></px-posize
           ><px-posize x="1074fr minmax(0px, max-content) 317fr" y="629px minmax(0px, max-content) 722fr" absolute="true"
-            ><h3 class="careers-application-screen-section2__subtitle16">Both</h3></px-posize
+            ><h3 class="careers-application-screen-section2__subtitle16" id="gender"></h3></px-posize
           ><px-posize
             x="1073.5fr minmax(0px, max-content) 301.5fr"
             y="524px minmax(0px, max-content) 827fr"
             absolute="true"
-            ><h3 class="careers-application-screen-section2__subtitle17">2 Year</h3></px-posize
+            ><h3 class="careers-application-screen-section2__subtitle17" id="exprience"></h3></px-posize
           ><px-posize
             x="1073.5fr minmax(0px, max-content) 202.5fr"
             y="734px minmax(0px, max-content) 617fr"
             absolute="true"
-            ><h3 class="careers-application-screen-section2__subtitle18">Bachelor Degree</h3></px-posize
+            ><h3 class="careers-application-screen-section2__subtitle18" id="qulification"></h3></px-posize
           ><px-posize
             x="1073.5fr minmax(0px, max-content) 272.5fr"
             y="839px minmax(0px, max-content) 512fr"
             absolute="true"
-            ><h3 class="careers-application-screen-section2__subtitle19">Executive</h3></px-posize
+            ><h3 class="careers-application-screen-section2__subtitle19" id="role"></h3></px-posize
           >
           <div class="careers-application-screen-section2__box9 layout"></div>
           <div class="careers-application-screen-section2__box10 layout"></div>
@@ -310,7 +311,8 @@ Present your work to the wider business at Show &amp; Tell sessions.</pre
             y="1027px minmax(0px, max-content) 325fr"
             absolute="true"
             ><h4 class="careers-application-screen-section2__highlights6">UX/UI</h4></px-posize
-          ><px-posize
+          >
+          <px-posize
             x="1021fr minmax(0px, max-content) 281fr"
             y="1081px minmax(0px, max-content) 271fr"
             absolute="true"
@@ -576,6 +578,30 @@ Contact Us</pre
         document.getElementById("mySidenav").style.width = "0";
        }
        console.log("inside script");
+
+       var jobId= localStorage.getItem("jobId");
+console.log(jobId);
+
+fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId='+jobId, {
+         method: 'GET',         
+        }).then(function(response){ 
+             return response.json()}).then(function(data)
+        {
+          console.log(data);
+          document.getElementById("datePost").innerHTML = data.lastDateToApply;
+          document.getElementById("location").innerHTML = data.workLocation;
+          document.getElementById("salary").innerHTML = data.salary + "/Yearly";
+          document.getElementById("position").innerHTML = data.jobTitle;
+          document.getElementById("gender").innerHTML = "Both";
+          document.getElementById("exprience").innerHTML = data.experienceRequired + "year";
+          document.getElementById("qulification").innerHTML = data.qualificationRequired;
+          document.getElementById("role").innerHTML = data.specializationRequired;
+          document.getElementById("jobLocation").innerHTML=data.workLocation;
+          document.getElementById("lastDate").innerHTML=data.lastDateToApply;
+          document.getElementById("annualSalary").innerHTML=data.salary+ "/Yearly";
+          document.getElementById("jobTitle").innerHTML=data.jobTitle;
+        });
+
 	   
         function submit(){
 		console.log("inside submit()");
@@ -586,7 +612,8 @@ Contact Us</pre
 		var mobile = document.getElementById('mobile').value;
 		var sourceId = document.getElementById('sourceId').value;
 		var socialNetworkLink = document.getElementById('socialNetworkLink').value;
-		var resumeLink = resumeURL.data;
+    // console.log(resumeURL);
+		var resumeLink = document.getElementById('resumeLink').value;
 		var joiningTime = document.getElementById('joiningTime').value;
 		//var isReadyToRelocate = document.getElementById('isReadyToRelocate').value;
 		var isReadyToRelocate = true;
