@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
     <link rel="stylesheet" type="text/css" href="ReplyPage.css">
+    <link rel="stylesheet" href="../src/css/common.css">
     <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.6.js"></script>
@@ -133,17 +134,14 @@
             <div class="box7 layout"></div>
             <h1 class="big_title layout">?</h1>
         </div>
-        <h4 class="highlights layout">Srihari</h4>
-        <h5 class="highlights1 layout">Add</h5>
-        <h5 class="highlights1 layout1">CC to</h5>
-        <img src="images/011a1e0fc5295b8571cf336c8a455839.png" alt="" class="icon4 layout" />
-        <div class="box8 layout"></div>
-        <img src="images/0e3441fcefff75884ecb4f00d68f028d.png" alt="" class="image3 layout" />
+        <h4 class="highlights layout" id="name12"></h4>
+        
+        <!-- <img src="images/011a1e0fc5295b8571cf336c8a455839.png" alt="" class="icon4 layout" /> -->
+        <!-- <div class="box8 layout"></div> -->
+        <!-- <img src="images/0e3441fcefff75884ecb4f00d68f028d.png" alt="" class="image3 layout" /> -->
         <div class="block17 layout"></div>
         <div class="block18 layout">
-            <px-posize track-style='{"flexGrow":1}' x="0px 279fr 0fr" y="0px minmax(0px, 18fr) 41fr">
-                <div class="small_text_body1">Enter some reason...</div>
-            </px-posize>
+           <textarea  id="Replymessage" cols="100" rows="50" placeholder="Enter Some Reply Message"></textarea>
         </div>
         <div class="block19 layout">
             <px-posize track-style='{"flexGrow":1}' x="0px 46fr 0fr" y="0px minmax(0px, 20fr) 0fr">
@@ -152,9 +150,7 @@
         </div>
         <div class="block17 layout1"></div>
         <div class="block20 layout">
-            <px-posize track-style='{"flexGrow":1}' x="0px 359fr 0fr" y="0px minmax(0px, 17fr) 42fr">
-                <div class="text_body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
-            </px-posize>
+           <textarea name="" id="MessageReply" cols="100" rows="50" placeholder="Please Enter Reply Message"></textarea>
         </div>
         <div class="block21 layout">
             <px-posize track-style='{"flexGrow":1}' x="0px 69fr 0fr" y="0px minmax(0px, 20fr) 0fr">
@@ -162,16 +158,44 @@
             </px-posize>
         </div>
         <div class="block22 layout">
-            <h4 class="highlights2 layout">Submit</h4>
+            <button class="highlights2 layout btn" onclick="SendMail()" >Submit</button>
         </div>
-        <div class="block23 layout">
-            <div class="small_text_body11 layout">DD/MM/YYYY</div>
-        </div>
+       
         <img src="images/2942380326c1176418fcc85b1e444217.png" alt="" class="icon5 layout" />
     </div>
     <script type="text/javascript">
         AOS.init();
+        let data = [];
         console.log(localStorage.getItem('dta_fromcontactPage'));
+         data = JSON.parse(localStorage.getItem('dta_fromcontactPage'));
+         console.log(data.name)
+        if(data){
+            console.log("inside",);
+            const name = document.getElementById('name12');
+            name.innerHTML =`${data.name}`;
+        }
+        function SendMail(){
+            console.log("inside submit")
+            let message = document.querySelector('#MessageReply').value;
+            let reply = document.querySelector('#Replymessage').value;
+            console.log(message);
+            console.log(reply);
+            console.log(data.email)
+            fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/sendUploadLink?message='+message+'&email='+data.email+'&reply='+reply+'',{
+                method: 'POST',
+                headers: {
+              'Content-type': 'application/json; charset=UTF-8',
+            }
+            }).then(function(response){ 
+        return response.json()}).then((data)=>{
+            console.log(data);
+            if (data.message == 'Upload Message sent successfully.'){
+                alert("Message Sent Succefully")
+                localStorage.removeItem('dta_fromcontactPage');
+                window.location.replace("../admin-dashboard/AdminDashboard.html"); 
+            }
+        })
+        }
     </script>
 </body>
 
