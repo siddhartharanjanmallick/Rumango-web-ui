@@ -2596,10 +2596,12 @@ code {
   /*completed index*/
 input {
     border: 0;
+
     padding-left: 20px;
     outline: none;
-    margin-top: 10px;
+
 }
+
 tr:hover{
     background-color: #5b92ff;
   }
