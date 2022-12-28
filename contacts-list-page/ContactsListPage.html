@@ -114,16 +114,18 @@
 
 
         <div class="block13 layout1">
-            <table id="contactsTable">
-                <tbody>
-                <tr style="position: relative;
-                bottom: 10px; background-color: #5b92ff;">
-                    <th>Name</th>
-                    <th>Email</th>
-	                <th>Phone No</th>
-	                <th>Message</th>
-                </tr>
-            </tbody>
+            <table class="table-contact">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone No</th>
+                        <th>Message </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="contactsTable">
+                </tbody>
             </table>
         </div>
 
@@ -316,7 +318,7 @@
     </div>
 
 
-        <img src="../src/assets/3d42bc4b2851ee332ef278311b6f93c6.png" alt="" class="icon4 layout" />
+         <!-- <img src="../src/assets/3d42bc4b2851ee332ef278311b6f93c6.png" alt="" class="icon4 layout" /> -->
         <div class="block43 layout">
             <div class="flex layout1">
                 <div class="small_text_body2 layout">Search Task</div>
@@ -342,6 +344,7 @@
 		  allContacts=data;
           for (let i = 0; i < data.length; i++) {
 		     const row = document.createElement('tr');
+             
 		     row.addEventListener('click', () => {
 			     selectedRowIndex = i;
                  localStorage.setItem("dta_fromcontactPage" ,JSON.stringify(data[i]) );
@@ -353,6 +356,9 @@
 			     columnNode.innerHTML = column;
 			     row.appendChild(columnNode);
 		        });
+			const columnNode =document.createElement('td');
+            columnNode.innerHTML = '<img src="../admin-dashboard/assets/5644114f1fa7429262c29f40392aa212.png" alt="" class="icon">'
+			row.appendChild(columnNode);
 			 document.getElementById('contactsTable').appendChild(row);
             }
         }).catch(error => console.error('Error:', error));
@@ -426,5 +432,7 @@
       text-decoration: none;
       cursor: pointer;
     }
+
+   
     </style>
 </html>
