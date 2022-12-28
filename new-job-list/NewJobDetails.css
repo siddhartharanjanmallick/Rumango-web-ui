@@ -735,7 +735,7 @@
 .group2.layout {
   position: absolute;
   top: 0px;
-  height: 1362px;
+  height: 1600px;;
   left: 0px;
   width: 252px;
 }
@@ -1066,16 +1066,19 @@
   }
   input{
     border: 0;
-    height: 109%;
-    width: 296%;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
   }
-  textarea {
-    border: none;
-    width: 1074px;
-  }
+
   select{
     border: none;
-    width: 486px;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    outline: none;
+    margin-top: 3%;
+    padding-left: 23px;
   }
   input::file-selector-button {
     font-weight: bold;
@@ -1084,4 +1087,118 @@
     border: thin solid grey;
     border-radius: 5px;
     background-color: #ff6700 ;
+}
+.onestcolomnclass{
+  width: 100%;
+  height: 14%;
+}
+.widthforform{
+  width: 34%;
+  height: 100%;
+}
+textarea{
+  border: none;
+  outline: none;
+  width: 215%;
+  border-radius: 10px;
+  height: 100%;
+  padding-top: 9%;
+  margin-top: 3%;
+}
+.addordesclass{
+  margin-top: 11%;
+  height: 33%;
+}
+.qualification{
+  width: 100%;
+    margin-top: 11%;
+    height: 14%;
+}
+.special{
+  height: 14%;
+  margin-top: 10%;
+}
+.sal{
+  margin-top: 10%;
+  height: 14%;
+}
+.workmode{
+  margin-top: 10%;
+  height: 14%;
+}
+.keySl{
+  margin-top: 10%;
+  height: 35%;
+}
+.companyNm{
+  margin-top: 10%;
+  height: 14%;
+}
+.WebSiter{
+  margin-top: 10%;
+  height: 14%;
+}
+.rightcontainer{
+  width: 39%;
+  margin-left: 2%;
+}
+.noofpost{
+  height: 14%;
+}
+.expclass{
+  margin-top: 41%;
+  height: 14%;
+}
+.lastdt{
+  margin-top: 8%;
+  height: 14%;
+}
+.jbtype{
+  margin-top: 8%;
+  height: 14%;
+}
+.worklocaion{
+  margin-top: 9%;
+  height: 14%;
+}
+.logo{
+  margin-top: 41%;
+  height: 14%;
+}
+.whitebc{
+  background-color: white;
+  height: 100%;
+  padding: 0;
+
+}
+.email{
+  margin-top: 7%;
+  height: 14%;
+}
+.addressw{
+  margin-top: 10%;
+  height: 35%;
+}
+.country11{
+  margin-top: 10%;
+    height: 14%;
+}
+.state12{
+  margin-top: 40%;
+    height: 14%;
+}
+
+.btnsbt{
+  margin-top: 17%;
+  margin-left: 4%;
+  background-color: ff6700;
+  height: 17%;
+  width: 40%;
+  /* text-align: center; */
+  border-radius: 11px;
+}
+.btnsbt h3{
+color: white;
+padding-top: 9%;
+padding-left: 32%;
 }
