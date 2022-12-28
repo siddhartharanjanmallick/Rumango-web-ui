@@ -2594,9 +2594,9 @@ code {
     z-index: 100;
   }
   /*completed index*/
-input {
+/* input {
     border: 0;
-}
+} */
 tr:hover{
     background-color: #5b92ff;
   }
