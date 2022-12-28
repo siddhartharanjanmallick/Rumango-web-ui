@@ -118,21 +118,21 @@ Bengaluru, Karnataka, India
 Pincode 560043</pre
             >
           </h3>
-          <h3 class="contact-us-screen-section2__subtitle2-box layout1" style="left: 70px;">
+          <h3 class="contact-us-screen-section2__subtitle2-box layout1" style="left: -50px;">
             <pre class="contact-us-screen-section2__subtitle2">Open a chat or give us call at </pre>
           </h3>
           <px-posize
             x="1101.5fr minmax(0px, max-content) 167.5fr"
             y="283px minmax(0px, max-content) 142fr"
             absolute="true"
-            ><h3 class="contact-us-screen-section2__subtitle21" style="margin-left: 43%;">24/7 Mail support</h3></px-posize
+            ><h3 class="contact-us-screen-section2__subtitle21" style="margin-left: -50%;">24/7 Mail support</h3></px-posize
           >
-          <h3 class="contact-us-screen-section2__subtitle5 layout" style="left: 90px;">+91 8041177768</h3>
+          <h3 class="contact-us-screen-section2__subtitle5 layout" style="left: -50px;">+91 8041177768</h3>
           <px-posize
             x="1090.5fr minmax(0px, max-content) 155.5fr"
             y="329px minmax(0px, max-content) 96fr"
             absolute="true"
-            ><h3 class="contact-us-screen-section2__subtitle51" style="margin-left: 38%;">info@rumango.com</h3></px-posize
+            ><h3 class="contact-us-screen-section2__subtitle51" style="margin-left: -45%;">info@rumango.com</h3></px-posize
           >
           <h1 class="contact-us-screen-section2__big-title1-box layout">
             <div class="contact-us-screen-section2__big-title1">
@@ -392,6 +392,11 @@ function submit(){
       }).then(function(data)
         {
           console.log(data)
+          if(data){
+            document.getElementById('name').value = '';
+document.getElementById('email').value = '';
+document.getElementById('message').value = '';
+          }
 		      //if(data){
           //window.location.replace("AdminDashboard.html");    
           //setTimeout("pageRedirect()", 10000);

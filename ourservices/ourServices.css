@@ -230,7 +230,7 @@ code {
     top: 0px;
     height: 418px;
     left: 0px;
-    width: 1440px;
+    width: 100%;
     min-width: 1440px;
   }
   .our-services-screen-section1__box {
@@ -241,7 +241,7 @@ code {
     top: 0px;
     height: 88px;
     left: 0px;
-    width: 1440px;
+    width: 100%;
     min-width: 1440px;
   }
   .our-services-screen-section1__image {

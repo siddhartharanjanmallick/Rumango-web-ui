@@ -407,16 +407,17 @@ Quick [Link]
       AOS.init();
       function createCareerNode (opening) {
         const node = document.createElement('div');
+        
         node.innerHTML = `
           <div class="box" style="display: flex; border: 1px solid; flex-direction: column; margin-bottom:10%; padding: 10%">
             <h1 class="header">${opening.jobTitle}</h1>  
-            <div class="text"> exp: ${opening.experienceRequired}  year</div>
-            <div class="text">${opening.lastDateToApply}</div>
+            <div class="text"> Exp: ${opening.experienceRequired}  year</div>
+            <div class="text">Last Date: ${opening.lastDateToApply}</div>
             <p class="text">
               ${opening.descriptions}
             </p>
             
-            <a href="../careers-apply/careersApplyNow.html" class="applyBtn"
+            <a  onClick="applyNow(${opening.jobId})" class="applyBtn"
 					    style="text-decoration: none; color:white">Apply Now</a></div></px-posize
                 >  
                 <div class="careers-screen3a-section2__image9 layout">
@@ -437,7 +438,7 @@ Quick [Link]
              return response.json()}).then(function(data)
         {
           
-		  // console.log(data);	
+		  console.log(data);	
 		  // console.log(data.length);
       let text = "";
       const careerContainer = document.getElementById('careers');
@@ -456,6 +457,12 @@ Quick [Link]
       
          
         }).catch(error => console.error('Error:', error));
+
+        function applyNow(jobId){
+          console.log("jobId", jobId);
+          localStorage.setItem("jobId", jobId)
+          window.location.href= '../careers-apply/careersApplyNow.html';
+        }
     </script>
   </div>
 

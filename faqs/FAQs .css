@@ -1,4 +1,10 @@
 /* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;600&display=swap'); 
+.arrowkeyCss :hover{
+  display: none;
+}
+
+
 .faqscreen-main {
   display: flex;
   flex-direction: column;
@@ -12,6 +18,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 6px;
 }
 .faqscreen-section1__section1 {
   display: flex;
@@ -19,7 +26,7 @@
 }
 .faqscreen-section1__section1.layout {
   position: relative;
-  height: 585px;
+  height: 543px;
 }
 .faqscreen-section1__cover {
   background: var(--src) center center/cover no-repeat;
@@ -29,8 +36,8 @@
   top: 88px;
   height: 454px;
   left: 0px;
-  width: 100%;
-  min-width: 100%;
+  width: 1440px;
+  min-width: 1440px;
 }
 .faqscreen-section1__box {
   background-color: white;
@@ -41,8 +48,8 @@
   top: 0px;
   height: 88px;
   left: 0px;
-  width: 100%;
-  min-width: 100%;
+  width: 1440px;
+  min-width: 1440px;
 }
 .faqscreen-section1__image {
   background: var(--src) center center/cover no-repeat;
@@ -66,7 +73,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  left: 53%;
+  left: 734px;
   min-width: 0px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -78,7 +85,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  left: 61%;
+  left: 846px;
   min-width: 0px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -90,7 +97,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  left: 71%;
+  left: 987px;
   min-width: 0px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -102,7 +109,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  left: 81%;
+  left: 1129px;
   min-width: 0px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -119,7 +126,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  left: 87%;
+  left: 1229px;
   min-width: 0px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -131,7 +138,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  left: 47%;
+  left: 650px;
   min-width: 0px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -144,7 +151,7 @@
   position: absolute;
   top: 40px;
   height: 14px;
-  left: 98%;
+  left: 1353px;
   width: 14px;
   min-width: 14px;
 }
@@ -813,13 +820,13 @@
   margin-top: 0px;
   margin-bottom: 0px;
   margin: 0px;
-  font: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+  font: 500 20px/1.75 "Futura", Helvetica, Arial, serif;
   color: white;
   letter-spacing: 0px;
   white-space: pre-wrap;
 }
 .footer-medium-title1 {
-  font: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+  font: 500 20px/1.75 "Futura", Helvetica, Arial, serif;
   color: white;
   letter-spacing: 0px;
   width: 100%;
@@ -936,4 +943,41 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+.accordion {
+  background-color: white;
+  /* color: #ff9633; */
+  color: black;
+  cursor: pointer;
+  padding: 30px;
+  width: 100%;
+  margin-top: 25px;
+  border: 0.5px solid white;
+  border-radius: 10px;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  margin-left: 10%;
+  box-shadow: 2px 2px 6px grey;
+  font: 600 25.666217804px/1.6 'poppins',sans-serif;
+}
+.accordion ::after , .accordion:hover,.active{
+  color: #ff6700;
+}
+.active, .accordion:hover {
+  background-color: whitesmoke; 
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  border: 0.5px solid white;
+  width: 90%;
+  height: 30%;
+  background-color: white;
+  margin-left: 11%;
+  overflow: hidden;
+  font: 400 25.666217804px/1.6 'poppins','Montserrat',sans-serif;
+}
+.faqbox{
+  margin-top: 2px;
 }
