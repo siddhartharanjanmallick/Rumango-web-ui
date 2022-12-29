@@ -344,12 +344,6 @@
 		  allContacts=data;
           for (let i = 0; i < data.length; i++) {
 		     const row = document.createElement('tr');
-             
-		     row.addEventListener('click', () => {
-			     selectedRowIndex = i;
-                 localStorage.setItem("dta_fromcontactPage" ,JSON.stringify(data[i]) );
-			     modal.style.display = "block";
-		        });
 		     ['name', 'email', 'phoneNumber', 'message'].forEach(cell => {
 			     const column = data[i][cell];
 			     const columnNode =document.createElement('td');
@@ -357,7 +351,12 @@
 			     row.appendChild(columnNode);
 		        });
 			const columnNode =document.createElement('td');
-            columnNode.innerHTML = '<img src="../admin-dashboard/assets/5644114f1fa7429262c29f40392aa212.png" alt="" class="icon">'
+            columnNode.addEventListener('click', () => {
+			     selectedRowIndex = i;
+                 localStorage.setItem("dta_fromcontactPage" ,JSON.stringify(data[i]) );
+			     modal.style.display = "block";
+		        });
+            columnNode.innerHTML = '<img src="../admin-dashboard/assets/image/5644114f1fa7429262c29f40392aa212.png" alt="" class="icon action-img">'
 			row.appendChild(columnNode);
 			 document.getElementById('contactsTable').appendChild(row);
             }

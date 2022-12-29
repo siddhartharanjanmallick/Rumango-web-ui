@@ -1818,7 +1818,7 @@ code {
     flex: 0 1 20px;
   }
   
-  .icon5 {
+   .icon5 {
     width: 100%;
     height: auto;
     vertical-align: top;
@@ -1826,7 +1826,7 @@ code {
     object-fit: contain;
     -o-object-position: center top;
     object-position: center top;
-  }
+  } 
   
   .icon5.layout {
     position: relative;
