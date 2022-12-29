@@ -1979,3 +1979,44 @@ background-color: transparent;
 resize: none;
 outline: none;
 }
+
+form{
+  margin-top: 7%;
+  margin-left: 5%;
+}
+
+.name{
+  border: 1px, solid;
+  border-radius: 5px;
+    height: 65px;
+    width: 250px;
+    margin-right: 33px;
+
+}
+.emailId{
+  width: 60%;
+  margin-top: 37px;
+  border-radius: 5px;
+  height: 65px;
+}
+
+.sourceId{
+  width: 60%;
+  border-radius: 5px;
+  height: 65px;
+  margin-top: 37px;
+}
+
+.hyperlink{
+  width: 60%;
+  border-radius: 5px;
+  height: 65px;
+  margin-top: 98px;
+}
+
+.joinUs{
+  width: 60%;
+  border-radius: 5px;
+  height: 65px;
+  margin-top: 240px;
+}

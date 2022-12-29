@@ -17,8 +17,8 @@
 
 </head>
 
-<body style="display: flex; flex-direction: column">
-    <div class="new-job-details group layout">
+<body style="display: flex; flex-direction: column; background-color:  #fafafa;">
+   
         
         <div class="group1 layout">
             <div class="txt layout">Add details</div>
@@ -35,178 +35,129 @@
             </div>
             <img src="../src/assets/2942380326c1176418fcc85b1e444217.png" alt="" class="img1 layout" />
         </div>
-        <div class="group1 layout4">
-            <div class="rect1 layout"></div>
-        </div>
-        <div class="group1 layout5">
-            <div class="txt1 layout"><input type="date" id="lastDateToApply" required  min="this.dateForValidation" /></div>
-        </div>
-        <div class="group1 layout6">
-            <div class="txt2 layout" style="width: 140%;">Last Date to Apply <span class="red">*</span></div>
-        </div>
-        <px-posize x="817px 115fr 508fr" y="130px minmax(0px, 14fr) 1104fr" absolute="true">
-            <div class="txt3">Number of Post <span class="red">*</span></div>
-        </px-posize>
-        <div class="rect1 layout1"></div>
-        <px-posize x="837px 156fr 447fr" y="176px minmax(0px, 14fr) 1058fr" absolute="true">
-            <div class="txt4"><input type="text", id="noOfPost" placeholder="Ex:3" required/></div>
-        </px-posize>
-        <px-posize x="817px 115fr 508fr" y="1055px minmax(0px, 14fr) 179fr" absolute="true">
-            <div class="txt3">State <span class="red">*</span></div>
-        </px-posize>
-        <div class="rect1 layout2"></div>
-        <px-posize x="837px 156fr 447fr" y="1101px minmax(0px, 14fr) 133fr" absolute="true">
-            <div class="txt4"><select class="statedrop" id="state"></select></div>
-        </px-posize>
-        <px-posize x="271px 115fr 1054fr" y="1055px minmax(0px, 14fr) 179fr" absolute="true">
-            <div class="txt3">Country <span class="red">*</span></div>
-        </px-posize>
-        <div class="rect1 layout3"></div>
-        <px-posize x="291px 156fr 993fr" y="1101px minmax(0px, 14fr) 133fr" absolute="true">
-            <div class="txt4"><select class="countryDrop"  id="country" onchange="ApiforState()" required>
-             
-            </select></div>
-        </px-posize><img src="../src/assets/89171a1a0301622c90b8864c32e925fd.png" alt="" class="img layout2" />
-	<img src="../src/assets/89171a1a0301622c90b8864c32e925fd.png" alt="" class="img layout3" />
-	<img src="../src/assets/89171a1a0301622c90b8864c32e925fd.png" alt="" class="img layout4" />
-        <px-posize x="272px 115fr 1053fr" y="130px minmax(0px, 14fr) 1104fr" absolute="true">
-            <div class="txt3">Job Title <span class="red">*</span></div>
-        </px-posize>
-        <div class="rect1 layout4"></div>
-        <px-posize x="292px 156fr 992fr" y="176px minmax(0px, 14fr) 1058fr" absolute="true">
-            <div class="txt4"><input type="text", id="jobTitle" placeholder="Ex: Developer" required/></div>
-        </px-posize>
-        <div class="group1 layout7">
-            <div class="rect1 layout5"></div>
-        </div>
-        <div class="group1 layout8">
-            <px-posize track-style='{"flexGrow":1}' x="0px 48fr 0fr" y="0px minmax(0px, 14fr) 0fr">
-                <div class="txt4"><input type="text", id="salary" placeholder="$1200"/></div>
-            </px-posize>
-        </div>
-        <div class="group1 layout9">
-            <div class="txt2 layout">Salary</div>
-        </div>
-        <div class="group1 layout10">
-            <div class="rect1 layout5"></div>
-        </div>
-        <div class="group1 layout11">
-            <div class="txt5 layout"><input type="text", id="companyName" value="Rumango" required/></div>
-        </div>
-        <div class="group1 layout12">
-            <div class="txt2 layout">Company Name <span class="red">*</span></div>
-        </div>
-        <div class="group1 layout13">
-            <div class="rect1 layout5"></div>
-        </div>
-        <div class="group1 layout14">
-            <div class="txt1 layout"><input type="text", id="website" placeholder="http://rumango.com"/></div>
-        </div>
-        <div class="group1 layout15">
-            <div class="txt2 layout">Website</div>
-        </div>
-        <div class="group1 layout16">
-            <div class="rect1 layout6"></div>
-        </div>
-        <div class="group1 layout17">
-            <div class="txt1 layout"><input type="text", id="email" placeholder="you@gmail.com" required/></div>
-        </div>
-        <div class="group1 layout18">
-            <div class="txt2 layout">Email <span class="red">*</span></div>
-        </div>
-        <div class="group1 layout19">
-            <div class="rect1 layout6"><input type="file", id="logoUrl" placeholder="No file chosen"/></div>
-        </div>
-        <div class="group1 layout20">
-            <!-- <div class="txt1 layout"><input type="file", id="logoUrl" placeholder="No file chosen"/></div> -->
-        </div>
-        <div class="group1 layout21">
-            <div class="txt2 layout">Company Logo</div>
-        </div>
-        <!-- <div class="group1 layout22">
+        <form  method="post" class="form-control">
+            <div class="widthforform">
+                <div class="onestcolomnclass">
+                    <label for="jobTitle">Job Title <span class="red">*</span></label>
+                     <input type="text", id="jobTitle" placeholder="Ex: Developer" required/>
+                </div>
+            
+                <div class="addordesclass">
+                    <label for="descriptions">Descriptions <span class="red">*</span></label>
+                    <textarea type="text" id="descriptions" cols="100" rows="10" placeholder="Enter job description"></textarea>
+                </div>
+                <div class="qualification">
+                    <label for="qualificationRequired">Qualification Required <span class="red">*</span></label>
+                    <select  id="qualificationRequired" required>
+                        <option value="BE">B.E</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="Any Degree">Any Degree</option>
+                        <option value="Ph.D">Ph.D</option>
+                      </select>
+
+
+                </div>
+                <div class="special">
+                    <label for="specializationRequired">Specialization Required <span class="red">*</span></label>
+                    <input type="text" id="specializationRequired" placeholder="Enter Specialization" required />
+                </div>
+
+                <div class="sal">
+                    <label for="salary">Salary</label>
+                    <input type="text", id="salary" placeholder="$1200"/>
+                </div>
+                <div class="workmode">
+                    <label for="wkmode">Work Mode<span class="red">*</span></label>
+                    <select  id="wkmode" required>
+                        <option value="Work From Home">Work From Home </option>
+                        <option value="Work From Office ">Work From Office</option>
+                        <option value="Hybrid">Hybrid</option>
+                      </select>
+
+                </div>
+                <div class="keySl">
+                    <label for="keySl">Key Skills  <span class="red">*</span></label>
+                    <textarea  id="keySl" cols="30" rows="10"  required></textarea>
+                    
+                </div>
+                <div class="companyNm">
+                    <label for="companyName">Company Name <span class="red">*</span></label>
+                    <select  id="companyName" required>
+                    <option value="Rumango">Rumango</option>
+                    <option value="Nehish">Nehish</option>
+                   </select>
+                </div>
+                <div class="WebSiter">
+                    <label for="website">Website</label>
+                    <input type="text", id="website" placeholder="http://rumango.com"/>
+
+                </div>
+
+                <div class="addressw">
+                    <label for="address">Address <span class="red">*</span></label>
+                    <textarea type="text" id="address" placeholder="Enter address" required></textarea>
+
+
+                </div>
+                <div class="country11">
+                    <label for="">country <span class="red">*</span></label>
+                    <select class="countryDrop"  id="country" onchange="ApiforState()" required></select>
+
+                </div>
+                <div class="btnsbt" onClick="submit()"> <h3>Add Job</h3></div>
+
+                
+            
+            </div>
+            <div class="rightcontainer">
+                <div class="noofpost">
+                    <label for="noOfPost">Number of Post <span class="red">*</span></label>
+                    <input type="text", id="noOfPost" placeholder="Ex:3" required/>
+                </div>
+                <div class="expclass" >
+                    <label for="experienceRequired">Experience Required <span class="red">*</span></label>
+                    <input type="text" id="experienceRequired" placeholder="Ex: 2 - 5 Years"/>
+                </div>
+                <div class="lastdt">
+                    <label for="lastDateToApply">Last Date to Apply <span class="red">*</span></label>
+                    <input type="date" id="lastDateToApply" required  min="this.dateForValidation" />
+                </div>
+                <div class="jbtype">
+                    <label for="jobType">Job Type <span class="red">*</span></label>
+                    <input type="text" id="jobType" placeholder="Select job type" required/>
+
+                </div>
+                <div class="worklocaion">
+                    <label for="wklocation">Work Location <span class="red">*</span></label>
+                    <select  id="wklocation" required>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Bhubaneswer">Bhubaneswer</option>
+                    </select>
+
+                </div>
+                <div class="logo">
+                    <label for="logoUrl">Company Logo</label>
+                    <input class="whitebc" type="file" id="logoUrl" placeholder="No file chosen"/>
+
+                </div>
+
+                <div class="email">
+                    <label for="email">Email <span class="red">*</span></label>
+                    <input type="email" id="email" placeholder="you@gmail.com" required/>
+
+                </div>
+
+                <div class="state12">
+                    <label for="">State <span class="red">*</span></label>
+                    <select class="statedrop" id="state"></select>
+                </div>
+
+            </div>
            
-            <div class="rect2 layout"></div>
-            <div class="txt6 layout">Choose File</div>
-        </div> -->
-        <div class="group1 layout23">
-           
-            <div class="rect3 layout"></div>
-            <div class="txt7 layout" onClick="submit()">Add Job</div>
-        </div>
-        <img src="../src/assets/c5bac91e26aa4c6067f49789e41026ac.png" alt="" class="img layout5" />
-        <div class="group1 layout24">
-            <div class="rect1 layout7"></div>
-        </div>
-        <div class="group1 layout25">
-            <!-- <px-posize track-style='{"flexGrow":1}' x="0px 279fr 0fr" y="0px minmax(0px, 59fr) 0fr">
-                <div class="txt8">Enter job description<input type="text", id="descriptions"/></div>
-            </px-posize> -->
-            <textarea type="text" id="descriptions" cols="100" rows="10" placeholder="Enter job description"></textarea>
-        </div>
-        <div class="group1 layout26">
-            <px-posize track-style='{"flexGrow":1}' x="0px 99fr 0fr" y="0px minmax(0px, 14fr) 0fr">
-                <div class="txt3">Descriptions <span class="red">*</span></div>
-            </px-posize>
-           
-        </div>
-        <div class="group1 layout27">
-            <div class="rect1 layout7"></div>
-        </div>
-        <div class="group1 layout28">
-            <px-posize track-style='{"flexGrow":1}' x="0px 279fr 0fr" y="0px minmax(0px, 59fr) 0fr">
-                <div class="txt8"><input type="text", id="address" placeholder="Enter address" required/></div>
-            </px-posize>
-        </div>
-        <div class="group1 layout29">
-            <px-posize track-style='{"flexGrow":1}' x="0px 99fr 0fr" y="0px minmax(0px, 14fr) 0fr">
-                <div class="txt3">Address <span class="red">*</span></div>
-            </px-posize>
-        </div>
-        <div class="group1 layout30">
-            <div class="rect1 layout8"></div>
-        </div>
-        <div class="group1 layout31">
-            <px-posize track-style='{"flexGrow":1}' x="0px 48fr 0fr" y="0px minmax(0px, 14fr) 0fr">
-                <!-- <div class="txt4">Ex: BE<input type="text", id="qualificationRequired"/></div> -->
-                <select  id="qualificationRequired">
-                    <option value="BE">B.E</option>
-                    <option value="B.Tech">B.Tech</option>
-                    <option value="M.Tech">M.Tech</option>
-                    <option value="Any Degree">Any Degree</option>
-                    <option value="Ph.D">Ph.D</option>
-                  </select>
-            </px-posize>
-        </div>
-        <div class="group1 layout32">
-            <div class="txt2 layout" style="width: 120%;">Qualification Required <span class="red">*</span></div>
-        </div>
-        <div class="group1 layout33">
-            <div class="rect1 layout8"></div>
-        </div>
-        <div class="group1 layout34">
-            <div class="txt1 layout"><input type="text", id="specializationRequired" placeholder="Enter Specialization"/></div>
-        </div>
-        <div class="group1 layout35">
-            <div class="txt2 layout">Specialization Required <span class="red">*</span></div>
-        </div>
-        <div class="group1 layout36">
-            <div class="rect1 layout"></div>
-        </div>
-        <div class="group1 layout37">
-            <div class="txt1 layout"><input type="text", id="jobType" placeholder="Select job type" required/></div>
-        </div>
-        <div class="group1 layout38">
-            <div class="txt2 layout" style="width: 140%;">Job Type <span class="red">*</span></div>
-        </div>
-        <div class="group1 layout39">
-            <div class="rect1 layout"></div>
-        </div>
-        <div class="group1 layout40">
-            <div class="txt1 layout"><input type="text", id="experienceRequired" placeholder="Ex: 2 - 5 Years"/></div>
-        </div>
-        <div class="group1 layout41">
-            <div class="txt2 layout">Experience Required <span class="red">*</span> </div>
-        </div>
+        </form>
+       
         <div class="group2 layout">
             <img src="../src/assets/9c71b8eadfebaada652a3203c32bb9f5.png" alt="" class="img layout6" />
             <div class="group1 layout42">
@@ -293,7 +244,7 @@
             <div class="rect8 layout"></div>
             <div class="txt12 layout">?</div>
         </div>
-    </div>
+   
     <script type="text/javascript">
         AOS.init();
         window.addEventListener("pageshow", () => {
@@ -401,6 +352,10 @@
 		
 		console.log("inside script");
         function submit(){
+            var wklocation = document.getElementById('wklocation').value;
+            
+            var keySkills = document.getElementById('keySl').value;
+            var wkmode = document.getElementById('wkmode').value;
          var jobTitle = document.getElementById('jobTitle').value;
          var noOfPost = document.getElementById('noOfPost').value;
 		 var descriptions = document.getElementById('descriptions').value;
@@ -418,9 +373,21 @@
 		 var country = document.getElementById('country').value;
 		 var state = document.getElementById('state').value;		
 	     var jobId = localStorage["jobId"];
+         console.log(wklocation);
+         
+         console.log(wkmode);
 	     console.log(jobId);
+         
          console.log(jobTitle);
-         console.log(noOfPost);   
+         console.log(noOfPost);  
+            if(wklocation == ''|| keySkills == ''|| wkmode =='' || jobTitle ==''||noOfPost == ''||descriptions== ''|| qualificationRequired ==''||experienceRequired ==''||specializationRequired == ''||
+            lastDateToApply == '' || jobType == '' || companyName == '' || email == '' || address == '' || country == '' || state ==''){
+                alert("Please Fill All Mendatory Fields To Create A Job");
+            }
+            else{
+
+
+         
          fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/saveOrUpdateJobsInfo', {
              method: 'POST',
              body: JSON.stringify({
@@ -440,7 +407,10 @@
 		     email:email,
 		     address:address,
 		     country:country,
-		     state:state
+		     state:state,
+             workMode:wkmode,
+             keySkills: keySkills ,
+             workLocation : wklocation
             }),
          headers: {
               'Content-type': 'application/json; charset=UTF-8',
@@ -449,6 +419,10 @@
          return response.json()}).then(function(data)
          {
 		 console.log(data);
+         
+            console.log(data.message);
+             
+         
          document.getElementById('jobTitle').value ='';
  document.getElementById('noOfPost').value ='';
  document.getElementById('descriptions').value ='';
@@ -465,14 +439,14 @@
  document.getElementById('address').value = '';
  document.getElementById('country').value = '';
  document.getElementById('state').value = '';
-         
+ 
 		 /*if(data){
 
           window.location.replace("AdminDashboard.html");    
           setTimeout("pageRedirect()", 10000);
 		  }*/
          }).catch(error => console.error('Error:', error));
-           alert('The new job is uploaded successfully.');
+        }
            		
         }
 
