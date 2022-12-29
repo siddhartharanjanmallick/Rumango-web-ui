@@ -392,6 +392,11 @@ function submit(){
       }).then(function(data)
         {
           console.log(data)
+          if(data){
+            document.getElementById('name').value = '';
+document.getElementById('email').value = '';
+document.getElementById('message').value = '';
+          }
 		      //if(data){
           //window.location.replace("AdminDashboard.html");    
           //setTimeout("pageRedirect()", 10000);
