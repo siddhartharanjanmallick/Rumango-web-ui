@@ -2600,6 +2600,7 @@ input {
 tr:hover{
     background-color: #5b92ff;
   }
- tr:nth-child(even) {
+  
+ /* tr:nth-child(even) {
     background-color: #D6EEEE;
-  } 
+  }  */

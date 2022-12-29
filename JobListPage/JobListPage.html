@@ -106,7 +106,7 @@
 		       <img src="images/3e014b751bec254b92667feb27ddf5a7.png" alt="" class="decorator layout1" />
                 <div class="block11 layout">
                     <px-posize track-style='{"flexGrow":1}' x="56fr 28.21% 56fr" y="12.5px minmax(0px, 15fr) 12.5fr">
-                        <div class="small_text_body">Logout</div>
+                        <div class="small_text_body"><a href="../login/loginPage.html" style="text-decoration: none; color: #000;">Logout</a></div>
                     </px-posize>
                 </div>
                 <div style="--src:url(images/5de2224ccd85afb81825eb968620f18d.png)" class="block12 layout">
@@ -119,19 +119,20 @@
         </div>
 
         <div class="block13 layout3">
-            <table id="jobTable">
-                <tr style="position: relative;
-                top: 10px; background-color: #5b92ff;">
-                    <th>Select</th>
+            <table id="jobTable" style="border-collapse: collapse; " class="jobtable">
+               <tr style="position: relative;
+                top: 15px; border-collapse: collapse;">
+                    <th>Select  </th>
                     <th>Job Title</th>
-                    <th>No of Posts</th>
+                    <th>No of Posts </th>
                     <th>Qualification Required</th>
 	                <th>Experience Required</th>
 	                <th>Last Date to Apply</th>
 	                <th>Company</th>
 	                <th>Country</th>
-	                <th>State</th>
-	                <th>Job ID</th>
+	                <th>State </th>
+	                <th>Job ID </th>
+                    <th>Actions</th>
                 </tr>
             </table>
         </div>
@@ -210,6 +211,7 @@
         <h5 class="highlights4 layout">7</h5>
         <img src="jobListPage/web/assets/f4c8b486c285cfb5b4bb486c29a2d1a9.png" alt="" class="image9 layout" />
 		    --->
+           
     </div>
     <script type="text/javascript">
 	
@@ -228,6 +230,8 @@
 		  allJobs=data;
           for (let i = 0; i < data.length; i++) { 
 		     const row = document.createElement('tr');
+             row.className='trow';
+
             //  const columnNode =document.createElement('td');
             //  columnNode.innerHTML = '<input type="checkbox" />';
             const columnNode =document.createElement('td');
@@ -255,11 +259,18 @@
 			     const columnNode =document.createElement('td');
 			     columnNode.innerHTML = column;
 			     row.appendChild(columnNode);
-                 columnNode.addEventListener('click', () => {
-			     selectedRowIndex = i;
-			     modal.style.display = "block";
+                 
 		        });
+
+                const img = document.createElement('td');
+                img.innerHTML='<div>  <input type="image" src="../src/assets/dot.png" style="height:5px; width:20px;"></div>'
+                
+                img.addEventListener('click', () => {
+			    selectedRowIndex = i;
+                modal.style.display = "block";
 		        });
+                row.appendChild(img);
+
 			 document.getElementById('jobTable').appendChild(row);
                /*document.getElementById("jobTitle").innerHTML += data[i].jobTitle +"</br>";
                document.getElementById("noOfPost").innerHTML += data[i].noOfPost+"</br>";
@@ -271,8 +282,10 @@
 			   document.getElementById("state").innerHTML += data[i].state+"</br>";
 			   document.getElementById("jobId").innerHTML += data[i].jobId+"</br>";*/
             }
+            	
+       
         }).catch(error => console.error('Error:', error)); 
-		
+       
 		//getData();
        //async function getData(){
        //const response= await fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchAllJobsInfo’)

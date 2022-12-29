@@ -2120,7 +2120,7 @@ code {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
+/* 
 @mixin tn {
   @media(max-width: 383px) {
     @content;
@@ -2212,4 +2212,4 @@ code {
   font: $font;
   color: $color;
   letter-spacing: $letterSpacing;
-}
+} */
