@@ -58,7 +58,7 @@
   }
   
   .section1__highlights2 {
-    font: 500 18px/1.33 "Futura", Helvetica, Arial, serif;
+    font: 500 17px/1.33 "Futura", Helvetica, Arial, serif;
     color: black;
     letter-spacing: 0px;
     width: 113%;
@@ -150,22 +150,48 @@
     flex-direction: column;
     height: 1335px;
     position: relative;
-  }
-  
+  } 
   .section2__hero_title1 {
     font: 500 38px/1.57 "Futura", Helvetica, Arial, serif;
     color: black;
     letter-spacing: 0px;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
+    margin-left: 45px;
+  }
+
+  .fmossection3{
+    margin-left: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    body{
+      background-color: aqua;
+    }
+    h3{
+      width: 100%;
+    }
+    .section2__subtitle1 {
+      width: 100%;
+    }
   }
   
-  .section2__subtitle1 {
-    font: 500 20px/1.75 "Quicksand", Helvetica, Arial, serif;
+  .section2__subtitle1{
+    font: 500 20px/1.75  "Quicksand", Helvetica, Arial, serif;
     color: black;
     letter-spacing: 0px;
-    width: 100%;
+    width: 45%;
     height: 100%;
+    margin-left: 45px;
+  }
+  .section2__subtitle2{
+    font: 500 20px/1.75  "Quicksand", Helvetica, Arial, serif;
+    color: black;
+    letter-spacing: 0px;
+    width: 45%;
+    margin-top: -16%;
+    margin-right: 45px;
+    float: right;
   }
   
   .section2__rect5 {
@@ -218,17 +244,21 @@
   
   .section2__image1 {
     border-radius: 7px 7px 7px 7px;
-    width: 548px;
-    height: auto;
+    width: 45%;
+    margin-left: 45px;
+    border: 4px solid #ffffff;
+    box-shadow: 2px 12.0058708191px 35.2530517578px 0px rgba(215, 227, 248, 0.4);
+    border-radius: 7.0460863113px 7.0460863113px 7.0460863113px 7.0460863113px;
+    /* height: auto;
     vertical-align: top;
     -o-object-fit: contain;
     object-fit: contain;
     -o-object-position: center top;
-    object-position: center top;
+    object-position: center top; */
     position: absolute;
-    top: 423px;
-    left: 127px;
-    min-width: 548px;
+    /* top: 20%; */
+    /* left: 10%; */
+    /* min-width: 548px; */
   }
   
   .section2__cover2 {
@@ -266,7 +296,7 @@
   }
   
   .section2__medium_title1 {
-    font: 500 25.5420627594px/1.43 "Futura", Helvetica, Arial, serif;
+    font: 500 22.5420627594px/1.43 "Futura", Helvetica, Arial, serif;
     color: black;
     letter-spacing: 0px;
     width: 100%;
@@ -314,7 +344,7 @@
   }
   
   .section2__medium_title2 {
-    font: 500 27.1318225861px/1.36 "Futura", Helvetica, Arial, serif;
+    font: 500 22.1318225861px/1.36 "Futura", Helvetica, Arial, serif;
     color: black;
     letter-spacing: -0.4px;
     width: 100%;
@@ -331,10 +361,10 @@
   
   .section2__rect8 {
     background-color: black;
-    width: 0px;
+    width: 1px;
     height: 70px;
     position: absolute;
-    top: 1209px;
+    top: 1220px;
     left: 963px;
     min-width: 0px;
   }
@@ -348,7 +378,7 @@
   }
   
   .section2__image11 {
-    border-radius: 7px 7px 7px 7px;
+    /* border-radius: 7px 7px 7px 7px;
     width: 548px;
     height: auto;
     vertical-align: top;
@@ -359,7 +389,15 @@
     position: absolute;
     top: 423px;
     left: 766px;
-    min-width: 548px;
+    min-width: 548px; */
+    margin-top: 60px;
+    border-radius: 7px 7px 7px 7px;
+    width: 45%;
+    margin-left:52%;
+    border: 4px solid #ffffff;
+    box-shadow: 2px 12.0058708191px 35.2530517578px 0px rgba(215, 227, 248, 0.4);
+    border-radius: 7.0460863113px 7.0460863113px 7.0460863113px 7.0460863113px;
+    position: absolute;
   }
   
   .section2__icon1 {
@@ -551,7 +589,7 @@
   }
   
   .section3__subtitle1 {
-    font: 700 20px/1.2 "Quicksand", Helvetica, Arial, serif;
+    font: 700 18px/1.2 "Quicksand", Helvetica, Arial, serif;
     color: white;
     letter-spacing: 0px;
     width: 100%;
@@ -559,7 +597,7 @@
   }
   
   .section3__medium_title {
-    font: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+    font: 500 19.7px/1.75 "Futura", Helvetica, Arial, serif;
     color: white;
     letter-spacing: 0px;
     width: 100%;
