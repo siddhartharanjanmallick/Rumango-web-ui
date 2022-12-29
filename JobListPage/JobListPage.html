@@ -333,6 +333,7 @@
 		
 		function editJob() {
 		 console.log(allJobs[selectedRowIndex]);
+         
 		 localStorage["jobId"] = allJobs[selectedRowIndex].jobId;
 		 localStorage["jobTitle"] = allJobs[selectedRowIndex].jobTitle;
 		 localStorage["noOfPost"] = allJobs[selectedRowIndex].noOfPost;
@@ -350,6 +351,8 @@
 		 localStorage["address"] = allJobs[selectedRowIndex].address;
 		 localStorage["state"] = allJobs[selectedRowIndex].state;
 		 localStorage["country"] = allJobs[selectedRowIndex].country;
+         localStorage["keySl"]  = allJobs[selectedRowIndex].keySkills;
+         
 		 location.replace("../new-job-list/NewJobDetails.html");
 		}
 		
