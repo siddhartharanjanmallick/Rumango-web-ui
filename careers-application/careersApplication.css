@@ -2020,3 +2020,7 @@ form{
   height: 65px;
   margin-top: 240px;
 }
+
+input {
+  border: 1px solid black ;
+}
