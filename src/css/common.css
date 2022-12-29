@@ -2602,11 +2602,18 @@ input {
 
 }
 
+/* tr:hover{
+
+
 tr:hover{
+
     background-color: #5b92ff;
   }
  tr:nth-child(even) {
     background-color: #D6EEEE;
+
+  }  */
+
   } 
 
 .form-control{
@@ -2625,3 +2632,4 @@ label {
     color: #030229;
     letter-spacing: 0px;
 }
+
