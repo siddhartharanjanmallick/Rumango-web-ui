@@ -1457,3 +1457,11 @@ code {
     url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular")
       format("svg");
 }
+
+input{
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  width: 300px;
+}
