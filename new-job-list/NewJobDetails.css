@@ -7,7 +7,7 @@
 .group.layout {
   position: relative;
   overflow: hidden;
-  min-height: 1248px;
+  min-height: 1594px;
 }
 
 .group1 {
@@ -171,7 +171,7 @@
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  min-width: 80px;
+  min-width: 469px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -224,13 +224,16 @@
   font: 400 12px/1.2 "Nunito", Helvetica, Arial, serif;
   color: #818181;
   letter-spacing: 0px;
-  width: 100%;
-  height: 100%;
+  width: 298%;
+  height: 73%;
+
 }
 
 .rect1.layout2 {
   position: absolute;
-  top: 1084px;
+  
+  top: 1255px;
+
   height: 50px;
   left: 817px;
   width: 562px;
@@ -239,7 +242,7 @@
 
 .rect1.layout3 {
   position: absolute;
-  top: 1084px;
+  top: 1256px;
   height: 50px;
   left: 271px;
   width: 520px;
@@ -362,7 +365,7 @@
 
 .group1.layout13 {
   position: absolute;
-  top: 826px;
+  top: 996px;
   height: 50px;
   left: 271px;
   width: 528px;
@@ -371,25 +374,25 @@
 
 .group1.layout14 {
   position: absolute;
-  top: 843px;
+  top: 1011px;
   height: 16px;
   left: 291px;
-  width: 32px;
+  width: 188px;
   min-width: 32px;
 }
 
 .group1.layout15 {
   position: absolute;
-  top: 797px;
-  height: 22px;
-  left: 271px;
-  width: 61px;
-  min-width: 61px;
+    top: 961px;
+    height: 22px;
+    left: 271px;
+    width: 61px;
+    min-width: 61px;
 }
 
 .group1.layout16 {
   position: absolute;
-  top: 826px;
+  top: 1362px;
   height: 50px;
   left: 817px;
   width: 562px;
@@ -405,25 +408,26 @@
 
 .group1.layout17 {
   position: absolute;
-  top: 843px;
+  top: 1381px;
   height: 16px;
   left: 837px;
-  width: 54px;
+  width: 269px;
   min-width: 54px;
+
 }
 
 .group1.layout18 {
   position: absolute;
-  top: 797px;
-  height: 22px;
-  left: 817px;
-  width: 60px;
-  min-width: 60px;
+    top: 1319px;
+    height: 22px;
+    left: 817px;
+    width: 60px;
+    min-width: 60px;
 }
 
 .group1.layout19 {
   position: absolute;
-  top: 721px;
+  top: 994px;
   height: 50px;
   left: 817px;
   width: 562px;
@@ -441,11 +445,11 @@
 
 .group1.layout21 {
   position: absolute;
-  top: 692px;
-  height: 22px;
-  left: 817px;
-  width: 130px;
-  min-width: 130px;
+    top: 959px;
+    height: 22px;
+    left: 817px;
+    width: 130px;
+    min-width: 130px;
 }
 
 .group1.layout22 {
@@ -492,7 +496,8 @@
 
 .group1.layout23 {
   position: absolute;
-  top: 1177px;
+  top: 1460px;
+
   height: 54px;
   left: 271px;
   width: 165px;
@@ -586,7 +591,7 @@
 
 .group1.layout27 {
   position: absolute;
-  top: 930px;
+  top: 1089px;
   height: 98px;
   left: 272px;
   width: 1108px;
@@ -595,7 +600,7 @@
 
 .group1.layout28 {
   position: absolute;
-  top: 949px;
+  top: 1102px;
   height: 59px;
   left: 292px;
   width: 279px;
@@ -604,7 +609,7 @@
 
 .group1.layout29 {
   position: absolute;
-  top: 901px;
+  top: 1056px;
   height: 14px;
   left: 272px;
   width: 99px;
@@ -629,10 +634,10 @@
 
 .group1.layout31 {
   position: absolute;
-  top: 423px;
-  height: 14px;
+  top: 406px;
+  height: 5px;
   left: 292px;
-  width: 48px;
+  width: 491px;
   min-width: 48px;
 }
 
@@ -713,7 +718,7 @@
   top: 423px;
   height: 16px;
   left: 837px;
-  width: 77px;
+  width: 267px;
   min-width: 77px;
 }
 
@@ -1088,117 +1093,40 @@
     border-radius: 5px;
     background-color: #ff6700 ;
 }
-.onestcolomnclass{
-  width: 100%;
-  height: 14%;
-}
-.widthforform{
-  width: 34%;
-  height: 100%;
-}
+
 textarea{
   border: none;
-  outline: none;
-  width: 215%;
-  border-radius: 10px;
-  height: 100%;
-  padding-top: 9%;
-  margin-top: 3%;
+    outline: none;
+    width: 383%;
+    border-radius: 10px;
+    height: 99%;
+    padding-top: 0%;
+    margin-top: 3%;
 }
-.addordesclass{
-  margin-top: 11%;
-  height: 33%;
-}
-.qualification{
-  width: 100%;
-    margin-top: 11%;
-    height: 14%;
-}
-.special{
-  height: 14%;
-  margin-top: 10%;
-}
-.sal{
-  margin-top: 10%;
-  height: 14%;
-}
-.workmode{
-  margin-top: 10%;
-  height: 14%;
+.wokmde {
+  width: 34%;
+    position: absolute;
+    left: 18%;
+    height: 53px;
+    top: 687px;
 }
 .keySl{
-  margin-top: 10%;
-  height: 35%;
-}
-.companyNm{
-  margin-top: 10%;
-  height: 14%;
-}
-.WebSiter{
-  margin-top: 10%;
-  height: 14%;
-}
-.rightcontainer{
-  width: 39%;
-  margin-left: 2%;
-}
-.noofpost{
-  height: 14%;
-}
-.expclass{
-  margin-top: 41%;
-  height: 14%;
-}
-.lastdt{
-  margin-top: 8%;
-  height: 14%;
-}
-.jbtype{
-  margin-top: 8%;
-  height: 14%;
+  position: absolute;
+  left: 18%;
+  height: 122px;
+  width: 19%;
+  top: 795px;
 }
 .worklocaion{
-  margin-top: 9%;
-  height: 14%;
+  position: absolute;
+    left: 54%;
+    top: 685px;
+    height: 50px;
+    width: 37%;
 }
-.logo{
-  margin-top: 41%;
-  height: 14%;
-}
-.whitebc{
-  background-color: white;
-  height: 100%;
-  padding: 0;
-
-}
-.email{
-  margin-top: 7%;
-  height: 14%;
-}
-.addressw{
-  margin-top: 10%;
-  height: 35%;
-}
-.country11{
-  margin-top: 10%;
-    height: 14%;
-}
-.state12{
-  margin-top: 40%;
-    height: 14%;
-}
-
-.btnsbt{
-  margin-top: 17%;
-  margin-left: 4%;
-  background-color: ff6700;
-  height: 17%;
-  width: 40%;
-  /* text-align: center; */
-  border-radius: 11px;
-}
-.btnsbt h3{
-color: white;
-padding-top: 9%;
-padding-left: 32%;
+.companyNm{
+  position: absolute;
+    left: 18%;
+    top: 1330px;
+    width: 34%;
 }
