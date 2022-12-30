@@ -66,7 +66,14 @@
         var userName = document.getElementById('userName').value;
         var password = document.getElementById('password').value;  
         console.log(userName);
-        console.log(password);   
+        console.log(password);
+        if(password==='' && userName===''){
+            alert("Please enter email and Password")
+        } else if(password!=='' && userName===''){
+            alert("Please enter email")
+        } else if(password==='' && userName!==''){
+            alert("Please enter Password")
+        }else{
         fetch('http://192.168.0.14:8081/RumangoWebsite/login-api/authentication', {
         method: 'POST',
         body: JSON.stringify({
@@ -78,7 +85,8 @@
             }
         }).then(function(response){ 
         return response.json()}).then(function(data)
-        {console.log(data)
+        {
+            console.log(data)
 		 if(data){
           window.location.replace("../admin-dashboard/AdminDashboard.html");    
         //   setTimeout("pageRedirect()", 10000);
@@ -87,9 +95,9 @@
         //passWord=document.getElementById("bd")
         //userName.innerHTML = data.userName
         //password.innerHTML = data.password  
-        }).catch(error => console.error('Error:', error)); 
+        }).catch(error => alert("Invalid Credentials")); 
       }
-    
+        }
 
     </script>
 </body>
