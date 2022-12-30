@@ -207,7 +207,7 @@
   font: 600 16px/1.2 "Nunito", Helvetica, Arial, serif;
   color: #030229;
   letter-spacing: 0px;
-  width: 120%;
+  width: 135%;
   height: 100%;
 }
 
@@ -1104,29 +1104,29 @@ textarea{
     margin-top: 3%;
 }
 .wokmde {
-  width: 34%;
+  width: 39%;
     position: absolute;
-    left: 18%;
+    left: 272px;
     height: 53px;
     top: 687px;
 }
 .keySl{
   position: absolute;
-  left: 18%;
+  left: 272px;
   height: 122px;
   width: 19%;
   top: 795px;
 }
 .worklocaion{
   position: absolute;
-    left: 54%;
+  left: 817px;
     top: 685px;
     height: 50px;
     width: 37%;
 }
 .companyNm{
   position: absolute;
-    left: 18%;
-    top: 1330px;
-    width: 34%;
+  left: 272px;
+  top: 1330px;
+  width: 38.5%;
 }
