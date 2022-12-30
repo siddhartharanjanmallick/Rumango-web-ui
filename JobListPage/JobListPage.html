@@ -260,8 +260,8 @@
             const columnNode =document.createElement('td');
             columnNode.innerHTML = '<input type="checkbox" id="clickedcheckbox" "/>';
             columnNode.addEventListener("click", ()=>{
-                 
-                 
+                
+                
                 if(selectedRowJobIds.includes(data[i].jobId)){
                     selectedRowJobIds = selectedRowJobIds.filter(function(item) {
                         return item !== data[i].jobId
@@ -375,6 +375,8 @@
 		 localStorage["state"] = allJobs[selectedRowIndex].state;
 		 localStorage["country"] = allJobs[selectedRowIndex].country;
          localStorage["keySl"]  = allJobs[selectedRowIndex].keySkills;
+         localStorage["worklocation"] = allJobs[selectedRowIndex].workLocation;
+         localStorage["workmode"] = allJobs[selectedRowIndex].workMode;
          
 		 location.replace("../new-job-list/NewJobDetails.html");
 		}
