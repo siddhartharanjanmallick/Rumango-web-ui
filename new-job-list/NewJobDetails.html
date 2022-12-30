@@ -470,26 +470,52 @@
    
     <script type="text/javascript">
         AOS.init();
-//         window.addEventListener("pageshow", () => {
-//   // update hidden input field
-//   console.log("dfgdfg")
-//   document.getElementById('jobTitle').value = '';
-//        document.getElementById('noOfPost').value = '';
-//        document.getElementById('descriptions').value = '';
-//        document.getElementById('qualificationRequired').value = '';
-//        document.getElementById('experienceRequired').value = '';
-//        document.getElementById('specializationRequired').value = '';
-//        document.getElementById('lastDateToApply').value = '';
-//        document.getElementById('salary').value = '';
-//        document.getElementById('jobType').value = '';
-//        document.getElementById('companyName').value = '';
-//        document.getElementById('logoUrl').value = '';
-//        document.getElementById('website').value = '';
-//        document.getElementById('email').value = '';
-//        document.getElementById('address').value = '';
-//        document.getElementById('country').value = '';
-//        document.getElementById('state').value = '';
-// });
+        window.addEventListener("pageshow", () => {
+            if(localStorage.getItem('jobId')){
+                document.getElementById('wklocation').value = localStorage.getItem('worklocation');
+          document.getElementById('keySl').value = localStorage.getItem('keySl') ;
+      document.getElementById('wkmode').value = localStorage.getItem('workmode');
+      document.getElementById('jobTitle').value = localStorage.getItem('jobTitle');
+       document.getElementById('noOfPost').value = localStorage.getItem('noOfPost');
+       document.getElementById('descriptions').value = localStorage.getItem('descriptions');
+       document.getElementById('qualificationRequired').value = localStorage.getItem('qualificationRequired');
+       document.getElementById('experienceRequired').value = localStorage.getItem('experienceRequired');
+       document.getElementById('specializationRequired').value = localStorage.getItem('specializationRequired');
+       document.getElementById('lastDateToApply').value = localStorage.getItem('lastDateToApply');
+       document.getElementById('salary').value = localStorage.getItem('salary');
+       document.getElementById('jobType').value = localStorage.getItem('jobType');
+       document.getElementById('companyName').value = localStorage.getItem('companyName');
+       document.getElementById('logoUrl').value = localStorage.getItem('logoUrl');
+       document.getElementById('website').value = localStorage.getItem('website');
+       document.getElementById('email').value = localStorage.getItem('email');
+       document.getElementById('address').value = localStorage.getItem('address');
+       document.getElementById('country').value = localStorage.getItem('country');
+       document.getElementById('state').value = localStorage.getItem('state');
+            }else{
+  // update hidden input field
+  console.log("dfgdfg")
+ localStorage.removeItem("jobId")
+  document.getElementById('wklocation').value = '';
+document.getElementById('keySl').value = '';
+document.getElementById('wkmode').value = '';
+  document.getElementById('jobTitle').value = '';
+       document.getElementById('noOfPost').value = '';
+       document.getElementById('descriptions').value = '';
+       document.getElementById('qualificationRequired').value = '';
+       document.getElementById('experienceRequired').value = '';
+       document.getElementById('specializationRequired').value = '';
+       document.getElementById('lastDateToApply').value = '';
+       document.getElementById('salary').value = '';
+       document.getElementById('jobType').value = '';
+       document.getElementById('companyName').value = '';
+       document.getElementById('logoUrl').value = '';
+       document.getElementById('website').value = '';
+       document.getElementById('email').value = '';
+       document.getElementById('address').value = '';
+       document.getElementById('country').value = '';
+       document.getElementById('state').value = '';
+            }
+});
         
 console.log(localStorage.getItem('jobId'));
         var countryName = []; 
