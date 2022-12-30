@@ -187,7 +187,7 @@
         <img src="images/f69da57513d04411cc146070ab3f302d.png" alt="" class="image6 layout" />
         <div class="block26 layout">
             <div class="flex layout1">
-                <input type="number" id="jobfortable" placeholder="Search job by ID"  class="jbs">
+                <input type="number" id="jobfortable" placeholder="Search job by ID"  class="jbs" onkeyup="activateTable2()">
                 <div class="flex__item1">
                     <img src="images/9b7cfe300e916466102cf2fa13f9c7f4.png" alt="" class="icon4 layout" onclick="activateTable2()" />
                 </div>
@@ -386,7 +386,7 @@
                 table2.style.display = 'none';
             }
             else{
-
+            
             table2.style.display = 'block';
             document.getElementById('jobTable').style.display = 'none';
             console.log(jobID);
@@ -401,20 +401,8 @@
 
         
             const columnNode =document.createElement('td');
-            // columnNode.innerHTML = '<input type="checkbox" id="clickedcheckbox" "/>';
-            // columnNode.addEventListener("click", ()=>{
-                 
-                 
-            //     if(selectedRowJobIds.includes(data[i].jobId)){
-            //         selectedRowJobIds = selectedRowJobIds.filter(function(item) {
-            //             return item !== data[i].jobId
-            //         })
-            //     }else{
-            //         selectedRowJobIds.push(data[i].jobId);
-            //     }
-            //      console.log(selectedRowJobIds);
-            //  });
-            //  row.appendChild(columnNode);
+              
+             
        
 		     ['jobTitle','noOfPost','qualificationRequired','experienceRequired','lastDateToApply','companyName','country','state','jobId'].forEach(cell => {
 			     const column = data[cell];
@@ -435,7 +423,10 @@
 
 			 document.getElementById('indevidualData').appendChild(row);
             }
-             }).catch(error => console.error('Error:', error)); 
+             }).catch(error =>{
+              console.error('Error:', error);
+              
+             }); 
 
             }
 
