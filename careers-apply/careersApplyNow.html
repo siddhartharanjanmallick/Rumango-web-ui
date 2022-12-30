@@ -168,37 +168,23 @@ Contact Us</pre
         </div>
       </h1>
       <px-posize x="78px 855fr 507fr" y="549px minmax(0px, max-content) 1648fr" absolute="true"
-        ><h3 class="untitled-page-subtitle11">
-          As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and
-          data talent. You will help the team design beautiful interfaces that solve business challenges for our
-          clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions
-          List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big
-          Data arenas.
+        ><h3 class="untitled-page-subtitle11" id="jobDesc">
+        
         </h3></px-posize
       ><px-posize x="109px 855fr 476fr" y="1571px minmax(0px, max-content) 636fr" absolute="true"
         ><h3 class="untitled-page-subtitle12-box">
           <pre class="untitled-page-subtitle12">
-You have at least 3 years’ experience working as a Product Designer.
-You have experience using Sketch and InVision or Framer X
-You have some previous experience working in an agile environment – Think two-week sprints.
-You are familiar using Jira and Confluence in your workflow</pre
-          >
+You have at least <span id="exc"></span> years’ experience working as a <span id="jobRole"></span></pre>
         </h3></px-posize
       ><px-posize x="109px 817fr 514fr" y="886px minmax(0px, max-content) 961fr" absolute="true"
         ><h3 class="untitled-page-subtitle13-box">
-          <pre class="untitled-page-subtitle13">
-Be involved in every step of the product design cycle from discovery to developer handoff and user acceptance testing.
-Work with BAs, product managers and tech teams to lead the Product Design
-Maintain quality of the design process and ensure that when designs are translated into code they accurately reflect the design specifications.
-Accurately estimate design tickets during planning sessions.
-Contribute to sketching sessions involving non-designersCreate, iterate and maintain UI deliverables including sketch files, style guides, high fidelity prototypes, micro interaction specifications and pattern libraries.
-Ensure design choices are data led by identifying assumptions to test each sprint, and work with the analysts in your team to plan moderated usability test sessions.
-Design pixel perfect responsive UI’s and understand that adopting common interface patterns is better for UX than reinventing the wheel
-Present your work to the wider business at Show &amp; Tell sessions.</pre
+          <pre class="untitled-page-subtitle13" id="skills">
+
+            </pre
           >
         </h3></px-posize
       >
-      <div class="untitled-page-box4 layout"></div>
+      <!-- <div class="untitled-page-box4 layout"></div>
       <div class="untitled-page-box4 layout1"></div>
       <div class="untitled-page-box4 layout2"></div>
       <div class="untitled-page-box4 layout3"></div>
@@ -212,7 +198,7 @@ Present your work to the wider business at Show &amp; Tell sessions.</pre
       <div class="untitled-page-box4 layout11"></div>
       <div class="untitled-page-box5 layout"></div>
       <div class="untitled-page-box6 layout"></div>
-      <div class="untitled-page-box7 layout"></div>
+      <div class="untitled-page-box7 layout"></div> -->
       <px-posize x="1073fr minmax(0px, max-content) 218fr" y="584px minmax(0px, max-content) 1793fr" absolute="true"
         >
 		<div style="margin-left:5%">
@@ -399,6 +385,10 @@ fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId=
           document.getElementById("lastDate").innerHTML=data.lastDateToApply;
           document.getElementById("annualSalary").innerHTML=data.salary+ "/Yearly";
           document.getElementById("jobTitle").innerHTML=data.jobTitle;
+          document.getElementById("jobDesc").innerHTML=data.descriptions;
+          document.getElementById("exc").innerHTML=data.experienceRequired;
+          document.getElementById("jobRole").innerHTML=data.jobTitle;
+          document.getElementById("skills").innerHTML=data.keySkills;
         });
 
 
