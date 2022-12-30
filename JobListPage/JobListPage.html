@@ -121,7 +121,28 @@
         <div class="block13 layout3">
             <table id="jobTable" style="border-collapse: collapse; " class="jobtable">
                <tr style="position: relative;
-                top: 15px; border-collapse: collapse;">
+                top: 15px; border-collapse: collapse; display: flex;
+    flex-direction: row;
+    gap: 10px;">
+                    <th>Select  </th>
+                    <th>Job Title</th>
+                    <th>No of Posts </th>
+                    <th>Qualification Required</th>
+	                <th>Experience Required</th>
+	                <th>Last Date to Apply</th>
+	                <th>Company</th>
+	                <th>Country</th>
+	                <th>State </th>
+	                <th>Job ID </th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+            <table id="indevidualData" style="border-collapse: collapse; " class="jobtable">
+               <tr style="position: relative;
+                top: 15px; border-collapse: collapse;     display: flex;
+    flex-direction: row;
+    gap: 10px;
+">
                     <th>Select  </th>
                     <th>Job Title</th>
                     <th>No of Posts </th>
@@ -136,6 +157,7 @@
                 </tr>
             </table>
         </div>
+        
 
         <div class="block20 layout">
             <h2 class="medium_title layout">Job list</h2>
@@ -165,10 +187,9 @@
         <img src="images/f69da57513d04411cc146070ab3f302d.png" alt="" class="image6 layout" />
         <div class="block26 layout">
             <div class="flex layout1">
-                <div class="small_text_body2 layout">Search Task</div>
-                <div class="spacer flex__spacer1"></div>
+                <input type="number" id="jobfortable" placeholder="Search job by ID"  class="jbs" onkeyup="activateTable2()">
                 <div class="flex__item1">
-                    <img src="images/9b7cfe300e916466102cf2fa13f9c7f4.png" alt="" class="icon4 layout" />
+                    <img src="images/9b7cfe300e916466102cf2fa13f9c7f4.png" alt="" class="icon4 layout" onclick="activateTable2()" />
                 </div>
             </div>
         </div>
@@ -216,7 +237,9 @@
     <script type="text/javascript">
 	
     AOS.init();
-	
+    let table2 = document.getElementById('indevidualData');
+    table2.style.display ='none';
+
 	let selectedRowIndex, allJobs;
   let  selectedRowJobIds = [];
  
@@ -355,6 +378,60 @@
          
 		 location.replace("../new-job-list/NewJobDetails.html");
 		}
+
+        function activateTable2 (){
+            let jobID = document.getElementById('jobfortable').value;
+            if(jobID =='' ){
+                document.getElementById('jobTable').style.display = 'block';
+                table2.style.display = 'none';
+            }
+            else{
+            
+            table2.style.display = 'block';
+            document.getElementById('jobTable').style.display = 'none';
+            console.log(jobID);
+            fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId='+jobID, {
+         method: 'GET',         
+        }).then(function(response){ 
+             return response.json()}).then(function(data){
+                console.log(data);
+                for (let i = 0; i < 1; i++) { 
+		     const row = document.createElement('tr');
+             row.className='trow';
+
+        
+            const columnNode =document.createElement('td');
+              
+             
+       
+		     ['jobTitle','noOfPost','qualificationRequired','experienceRequired','lastDateToApply','companyName','country','state','jobId'].forEach(cell => {
+			     const column = data[cell];
+			     const columnNode =document.createElement('td');
+			     columnNode.innerHTML = column;
+			     row.appendChild(columnNode);
+                 
+		        });
+
+                const img = document.createElement('td');
+                img.innerHTML='<div>  <input type="image" src="../src/assets/dot.png" style="height:5px; width:20px;"></div>'
+                
+                img.addEventListener('click', () => {
+			    selectedRowIndex = i;
+                modal.style.display = "block";
+		        });
+                row.appendChild(img);
+
+			 document.getElementById('indevidualData').appendChild(row);
+            }
+             }).catch(error =>{
+              console.error('Error:', error);
+              
+             }); 
+
+            }
+
+
+        }
 		
 		
     </script>
