@@ -149,13 +149,13 @@ $font_type_19: 700 1em/1.64 "Futura", Helvetica, Arial, serif;
 }
 .section2__hero_title1 {
   @include font-face($font_type_4, $color_type_0, 0px);
-  width: 100%;
-  height: 100%;
+ // width: 100%;
+  // height: 100%;
 }
 .section2__subtitle1 {
   @include font-face($font_type_9, $color_type_0, 0px);
-  width: 100%;
-  height: 100%;
+  width: 50% !important;
+ // height: 100%;
 }
 .section2__rect5 {
   background-color: $color_type_3;
