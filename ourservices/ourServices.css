@@ -1381,3 +1381,13 @@ code {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  .for_service{
+    text-decoration: none;
+    position: absolute;
+    /* left: 950px;  */
+    top: 34px;
+    display: inline-block;
+    font: 700 18px/1.33 "Futura", Helvetica, Arial, serif;
+    letter-spacing: 0px;
+  }

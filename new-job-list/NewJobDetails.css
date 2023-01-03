@@ -1104,7 +1104,8 @@ textarea{
     margin-top: 3%;
 }
 .wokmde {
-  width: 39%;
+  /* width: 34%; */
+  width: 520px;
     position: absolute;
     left: 272px;
     height: 53px;
@@ -1128,5 +1129,6 @@ textarea{
   position: absolute;
   left: 272px;
   top: 1330px;
-  width: 38.5%;
+  /* width: 34%; */
+  width: 520px;
 }

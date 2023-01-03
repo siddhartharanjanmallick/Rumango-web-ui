@@ -209,9 +209,14 @@ code {
   }
   
   .block.layout {
+    
     position: relative;
-    overflow: hidden;
-    min-height: 1024px;
+    /* overflow: hidden; */
+    display: flex;
+    /* min-height: min-content; */
+    height: min-content;
+    /* min-height: 1000px; */
+    flex-direction: column;
   }
   
   .block1 {
@@ -785,8 +790,8 @@ code {
   
    .block13.layout1 {
     position: absolute;
-    top: 157px;
-    height: 26px;
+    top: 160px;
+    height: 69px;
     left: 271px;
     width: 1128px;
     min-width: 1128px;
