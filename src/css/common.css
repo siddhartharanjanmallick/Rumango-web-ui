@@ -127,7 +127,27 @@ code {
         display: none;
     }
 }
+@media (max-width:1510px) {
+  
+  .home-combined-screen-section1__box2.layout {
+    width: 100%;
+    
+  }
+}
+@media (max-width:1610px) {
+  
+  .home-combined-screen-section1__box2.layout {
+    width: 100%;
 
+  }
+
+  
+
+
+.home-combined-screen-section1__highlights3.layout{
+  left: 40%;
+}
+}
 @media (max-width: 1399px) {
     .xl\:show {
         display: flex;
@@ -486,7 +506,8 @@ code {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
-    left: 730px;
+    left: 45%;
+
     min-width: 0px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -2616,9 +2637,7 @@ tr:hover{
   }  */
 
 
-  }  */
-
-  } 
+  
 
 .form-control{
   position: absolute;
