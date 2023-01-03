@@ -427,14 +427,14 @@ code {
   .our-services-screen-section2__icon {
     background: var(--src) center center/cover no-repeat;
   }
-  .our-services-screen-section2__icon.layout {
+  /* .our-services-screen-section2__icon.layout {
     position: absolute;
     top: 224px;
     height: 34px;
     left: 127px;
     width: 34px;
     min-width: 34px;
-  }
+  } */
   .our-services-screen-section2__box4 {
     background-color: white;
     box-shadow: 0px 12.0058708191px 35.2530517578px 0px rgba(215, 227, 248, 0.4);
@@ -547,7 +547,7 @@ code {
   .our-services-screen-section2__box5.layout {
     position: absolute;
     top: 64px;
-    height: 165px;
+    height: 166px;
     left: 140px;
     width: 8px;
     min-width: 8px;
@@ -558,88 +558,88 @@ code {
   }
   .our-services-screen-section2__box6.layout {
     position: absolute;
-    top: 407px;
-    height: 218px;
+    top: 252px;
+    height: 374px;
     left: 140px;
     width: 8px;
     min-width: 8px;
   }
   .our-services-screen-section2__box6.layout1 {
     position: absolute;
-    top: 803px;
-    height: 218px;
+    top: 648px;
+    height: 374px;
     left: 140px;
     width: 8px;
     min-width: 8px;
   }
   .our-services-screen-section2__box6.layout2 {
     position: absolute;
-    top: 1199px;
-    height: 218px;
+    top: 1044px;
+    height: 374px;
     left: 140px;
     width: 8px;
     min-width: 8px;
   }
   .our-services-screen-section2__box6.layout3 {
     position: absolute;
-    top: 1595px;
-    height: 218px;
+    top: 1440px;
+    height: 375px;
     left: 140px;
     width: 8px;
     min-width: 8px;
   }
   .our-services-screen-section2__box6.layout4 {
     position: absolute;
-    top: 1986px;
-    height: 218px;
+    top: 1835px;
+    height: 370px;
     left: 140px;
     width: 8px;
     min-width: 8px;
   }
-  .our-services-screen-section2__box5.layout1 {
+  /* .our-services-screen-section2__box5.layout1 {
     position: absolute;
     top: 253px;
     height: 165px;
     left: 140px;
     width: 8px;
     min-width: 8px;
-  }
-  .our-services-screen-section2__box5.layout2 {
+  } */
+  /* .our-services-screen-section2__box5.layout2 {
     position: absolute;
     top: 649px;
     height: 165px;
     left: 140px;
     width: 8px;
     min-width: 8px;
-  }
-  .our-services-screen-section2__box5.layout3 {
+  } */
+  /* .our-services-screen-section2__box5.layout3 {
     position: absolute;
     top: 1045px;
     height: 165px;
     left: 140px;
     width: 8px;
     min-width: 8px;
-  }
-  .our-services-screen-section2__box5.layout4 {
+  } */
+  /* .our-services-screen-section2__box5.layout4 {
     position: absolute;
     top: 1441px;
     height: 165px;
     left: 140px;
     width: 8px;
     min-width: 8px;
-  }
-  .our-services-screen-section2__box5.layout5 {
+  } */
+  /* .our-services-screen-section2__box5.layout5 {
     position: absolute;
     top: 1837px;
     height: 165px;
     left: 140px;
     width: 8px;
     min-width: 8px;
-  }
+  } */
   .our-services-screen-section2__box5.layout6 {
     position: absolute;
-    top: 2228px;
-    height: 165px;
+    top: 2225px;
+    height: 175px;
     left: 140px;
     width: 8px;
     min-width: 8px;
@@ -1281,7 +1281,7 @@ code {
     width: -moz-fit-content;
     width: fit-content;
   }
-  .footer-highlights {
+  /* .footer-highlights {
     overflow: visible;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -1290,7 +1290,7 @@ code {
     color: white;
     letter-spacing: 0px;
     white-space: pre-wrap;
-  }
+  } */
   .footer-highlights1 {
     display: flex;
     align-items: center;
@@ -1304,7 +1304,7 @@ code {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
-    left: 1198px;
+    left: 1140px;
     min-width: 0px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -1323,7 +1323,7 @@ code {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
-    left: 1197px;
+    left: 1140px;
     min-width: 0px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -1340,11 +1340,22 @@ code {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
-    left: 1041px;
+    left: 1000px;
     min-width: 0px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+  .quicklinks1{
+    position: absolute;
+    float: left;
+    white-space: nowrap;
+    font: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
+  }
+  .quicklinks2{
+    position: absolute;
+    white-space: nowrap;
+    font: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
   }
   
   .sidenav {
