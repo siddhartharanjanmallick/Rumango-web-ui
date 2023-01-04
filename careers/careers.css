@@ -221,15 +221,15 @@
 }
 .careers-screen3a-section1__subtitle4.layout {
   position: absolute;
-  top: 525px;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  left: 171px;
-  min-width: 0px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  top: 504px;
+  height: 65px;
+  left: 108px;
+  width: 199px;
+  min-width: 199px;
+  background-color: #ff6700;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
 }
 .careers-screen3a-section2__section2 {
   display: flex;
@@ -624,7 +624,7 @@
   overflow: visible;
   margin-top: 0px;
   margin-bottom: 0px;
-  margin: 0px;
+  margin-left: 60px;
   font: 500 20px/1.75 "Quicksand", Helvetica, Arial, serif;
   color: black;
   text-align: center;
@@ -1159,7 +1159,7 @@
 }
 .footer-cover.layout {
   position: absolute;
-  top: 358px;
+  top: 390px !important;
   height: 452px;
   left: 0px;
   width: 1440px;
@@ -1418,12 +1418,13 @@
   display: flex;
   flex-direction: column;
   background-color: #ff6700;
-  border-radius: 2px 2px 2px 2px;
+  border-radius: 3px 3px 3px 3px;
   padding-bottom: 3%;
   padding-left: 3%;
   margin-top: 28%;
   width: 40%;
   height: 17%;
+  cursor: pointer;
 }
 
 .box{
@@ -1436,8 +1437,8 @@
   top: 150px;
   height: 283px;
   left: 70px;
-  width: 392px;
-  min-width: 392px;
+  width: 360px;
+  /* min-width: 392px; */
 }
 
 .text{
