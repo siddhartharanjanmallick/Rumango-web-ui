@@ -2506,7 +2506,7 @@ code {
     margin-top: 0px;
     margin-bottom: 0px;
     margin: 0px;
-    font: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
+    font: 500 18px/.1 "Quicksand", Helvetica, Arial, serif;
     color: white;
     letter-spacing: 0px;
     white-space: pre-wrap;
@@ -2654,6 +2654,18 @@ label {
   font: 600 16px/1.2 "Nunito", Helvetica, Arial, serif;
     color: #030229;
     letter-spacing: 0px;
+}
+
+.quicklinks1{
+  position: absolute;
+  float: left;
+  white-space: nowrap;
+  font: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
+}
+.quicklinks2{
+  position: absolute;
+  white-space: nowrap;
+  font: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
 }
 
 
