@@ -209,9 +209,14 @@ code {
   }
   
   .block.layout {
+    
     position: relative;
-    overflow: hidden;
-    min-height: 1024px;
+    /* overflow: hidden; */
+    display: flex;
+    /* min-height: min-content; */
+    height: min-content;
+    /* min-height: 1000px; */
+    flex-direction: column;
   }
   
   .block1 {
@@ -783,14 +788,14 @@ code {
     min-width: 99px;
   }
   
-  .block13.layout1 {
+   .block13.layout1 {
     position: absolute;
-    top: 157px;
-    height: 26px;
+    top: 160px;
+    height: 69px;
     left: 271px;
     width: 1128px;
     min-width: 1128px;
-  }
+  } 
   
   .image3.layout1 {
     position: absolute;
@@ -1783,14 +1788,12 @@ code {
     top: 24px;
     height: 52px;
     left: 259px;
-    width: 480px;
-    min-width: 480px;
   }
   
   .flex.layout1 {
     position: relative;
     flex-grow: 1;
-    margin: 14px 28px;
+    margin: 4px 4px;
   }
   
   .small_text_body2 {
@@ -1818,7 +1821,7 @@ code {
     flex: 0 1 20px;
   }
   
-  .icon5 {
+   .icon5 {
     width: 100%;
     height: auto;
     vertical-align: top;
@@ -1826,7 +1829,7 @@ code {
     object-fit: contain;
     -o-object-position: center top;
     object-position: center top;
-  }
+  } 
   
   .icon5.layout {
     position: relative;
@@ -1836,8 +1839,37 @@ code {
     margin: 2px 0px;
   }
 
- td {
-  text-align: center;
- }
-
  
+  .table-contact  {
+    border-collapse:separate; 
+    border-spacing: 0 15px;
+
+  }
+  tr{
+    height: 50px;
+    box-shadow: 0 1px 5px 0 rgba(193, 191, 191, 0.35);
+    border-radius:13px;
+  }
+  .table-contact>thead{
+    text-align: left;
+    
+  }
+  .table-contact>tbody>tr:hover{
+    /* background-color: #f5f5f7; */
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0 5px 10px 0 rgba(50, 50, 50, 0.35);
+    -webkit-box-shadow: 0 5px 8px 0 rgba(50, 50, 50, 0.35);
+    -moz-box-shadow: 0 5px 8px 0 rgba(50, 50, 50, 0.35);
+    border-radius:13px;
+    height: 60px;
+  } 
+  td{
+    padding-left: 5px;
+  }
+  .action-img{
+    width: 15px;
+  /* margin-left: -20px; */
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }

@@ -15,7 +15,7 @@
 
 </head>
 
-<body style="display: flex; flex-direction: column">
+<body style="display: flex; flex-direction: column ; background-color: #fafafa;">
     <div class="contacts-list-page block layout">
         
         <div class="block1 layout">
@@ -101,7 +101,7 @@
 		<img src="../src/assets/3e014b751bec254b92667feb27ddf5a7.png" alt="" class="decorator layout1" />
                 <div class="block11 layout">
                     <px-posize track-style='{"flexGrow":1}' x="56fr 28.21% 56fr" y="12.5px minmax(0px, 15fr) 12.5fr">
-                        <div class="small_text_body">Logout</div>
+                        <div class="small_text_body"><a href="../login/loginPage.html" style="text-decoration: none;color: #000;">Logout</a></div>
                     </px-posize>
                 </div>
                 <div style="--src:url(../src/assets/5de2224ccd85afb81825eb968620f18d.png)" class="block12 layout">
@@ -114,16 +114,18 @@
 
 
         <div class="block13 layout1">
-            <table id="contactsTable">
-                <tbody>
-                <tr style="position: relative;
-                bottom: 10px; background-color: #5b92ff;">
-                    <th>Name</th>
-                    <th>Email</th>
-	                <th>Phone No</th>
-	                <th>Message</th>
-                </tr>
-            </tbody>
+            <table class="table-contact">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone No</th>
+                        <th>Message </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="contactsTable">
+                </tbody>
             </table>
         </div>
 
@@ -290,7 +292,7 @@
             </div>
             <div class="spacer block36__spacer"></div>
             <div class="block36__item">
-                <img src="../src/assets/7889e0a33f6e2d2e06a337c7bc245670.png" alt="" class="icon3 layout" />
+                <img src="../src/assets/2942380326c1176418fcc85b1e444217.png" alt="" class="icon3 layout" />
             </div>
         </div>
 
@@ -316,21 +318,43 @@
     </div>
 
 
-        <img src="../src/assets/3d42bc4b2851ee332ef278311b6f93c6.png" alt="" class="icon4 layout" />
+         <!-- <img src="../src/assets/3d42bc4b2851ee332ef278311b6f93c6.png" alt="" class="icon4 layout" /> -->
         <div class="block43 layout">
             <div class="flex layout1">
-                <div class="small_text_body2 layout">Search Task</div>
-                <div class="spacer flex__spacer1"></div>
-                <div class="flex__item1">
-                    <img src="../src/assets/9b7cfe300e916466102cf2fa13f9c7f4.png" alt="" class="icon5 layout" />
-                </div>
+                <input type="text"  id="myInput"
+                placeholder="Search" title="Type in a name" onkeyup="searchdata()" >
             </div>
-        </div>
     </div>
     <script type="text/javascript">
         AOS.init();
 
         let selectedRowIndex, allContacts;
+        let result;
+        function searchdata(){
+            let inputNm = document.getElementById('myInput').value;
+            console.log(inputNm);
+            this.result = this.allContacts.filter(e=> e.name == inputNm );
+            console.log(this.result);
+            for (let i = 0; i < this.allContacts.length; i++) {
+		     const row = document.createElement('tr');
+		     ['name', 'email', 'phoneNumber', 'message'].forEach(cell => {
+			     const column = this.allContacts[i][cell];
+			     const columnNode =document.createElement('td');
+			     columnNode.innerHTML = column;
+			     row.appendChild(columnNode);
+		        });
+                const columnNode =document.createElement('td');
+            columnNode.addEventListener('click', () => {
+			     selectedRowIndex = i;
+                 localStorage.setItem("dta_fromcontactPage" ,JSON.stringify(this.allContacts[i]) );
+			     modal.style.display = "block";
+		        });
+            columnNode.innerHTML = '<img src="../admin-dashboard/assets/image/5644114f1fa7429262c29f40392aa212.png" alt="" class="icon action-img">'
+			row.appendChild(columnNode);
+			 document.getElementById('contactsTable').appendChild(row);
+            }
+            
+        }
 
         fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/fetchAllMessagesInfo', {
          method: 'GET',         
@@ -339,25 +363,46 @@
         {
 		  console.log(data);
 		  console.log(data.length);
-		  allContacts=data;
+          console.log(data[0]);         
+		  this.allContacts=data;
           for (let i = 0; i < data.length; i++) {
 		     const row = document.createElement('tr');
-		     row.addEventListener('click', () => {
-			     selectedRowIndex = i;
-                 localStorage.setItem("dta_fromcontactPage" ,JSON.stringify(data[i]) );
-			     modal.style.display = "block";
-		        });
 		     ['name', 'email', 'phoneNumber', 'message'].forEach(cell => {
 			     const column = data[i][cell];
 			     const columnNode =document.createElement('td');
 			     columnNode.innerHTML = column;
 			     row.appendChild(columnNode);
 		        });
+			const columnNode =document.createElement('td');
+            columnNode.addEventListener('click', () => {
+			     selectedRowIndex = i;
+                 localStorage.setItem("dta_fromcontactPage" ,JSON.stringify(data[i]) );
+			     modal.style.display = "block";
+		        });
+            columnNode.innerHTML = '<img src="../admin-dashboard/assets/image/5644114f1fa7429262c29f40392aa212.png" alt="" class="icon action-img">'
+			row.appendChild(columnNode);
 			 document.getElementById('contactsTable').appendChild(row);
             }
-        }).catch(error => console.error('Error:', error));
+            console.log(data.length);
+            document.getElementById("myInput").addEventListener("keypress", searchData);
+           
+            
+        }
+  
+    // console.log(data);
+    // for (let i = 0; i < data.length; i++) {
+        
+    //     a = data[i].getElementsByTagName("a")[0];
+    //     txtValue = a.textContent || a.innerText;
+    //     if (txtValue.indexOf(filter) > -1) {
+    //         data[i].style.display = "";
+    //     } else {
+    //         data[i].style.display = "none";
+    //     }
+    // }
+        ).catch(error => console.error('Error:', error));
 
-
+       
     function deleteContact() {
 	 console.log(allContacts[selectedRowIndex].id);
 	 fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/deleteMessageInfoById?id='
@@ -426,5 +471,7 @@
       text-decoration: none;
       cursor: pointer;
     }
+
+   
     </style>
 </html>

@@ -527,7 +527,7 @@
 }
 .contact-us-screen-section3__block2.layout {
   position: absolute;
-  top: 280px;
+  top: 256px;
   height: 64px;
   left: 164px;
   width: 438px;
@@ -556,7 +556,7 @@
 }
 .contact-us-screen-section3__highlights2.layout {
   position: absolute;
-  top: 242px;
+  top: 213px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -574,7 +574,7 @@
 }
 .contact-us-screen-section3__block3.layout {
   position: absolute;
-  top: 524px;
+  top: 600px;
   height: 138px;
   left: 164px;
   width: 438px;
@@ -582,7 +582,7 @@
 }
 .contact-us-screen-section3__highlights2.layout1 {
   position: absolute;
-  top: 486px;
+  top: 563px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -600,7 +600,8 @@
 }
 .contact-us-screen-section3__block4.layout {
   position: absolute;
-  top: 694px;
+  top:  758px;
+  
   height: 65px;
   left: 161px;
   width: 254px;
@@ -624,7 +625,7 @@
 }
 .contact-us-screen-section3__block2.layout1 {
   position: absolute;
-  top: 402px;
+  top: 492px;
   height: 64px;
   left: 164px;
   width: 438px;
@@ -632,7 +633,7 @@
 }
 .contact-us-screen-section3__highlights2.layout2 {
   position: absolute;
-  top: 364px;
+  top: 455px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -1450,4 +1451,30 @@ code {
  .carr {
   color: white;
     text-decoration: none;
+}
+.layout1sid {
+  position: absolute;
+  top: 320px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  left: 164px;
+  min-width: 0px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font: 500 18px/1.77 "Futura", Helvetica, Arial, serif;
+    color: black;
+    letter-spacing: 0px;
+}
+
+.layoutMobile{
+  position: absolute;
+    top: 365px;
+    height: 64px;
+    left: 164px;
+    width: 438px;
+    min-width: 438px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.117);
 }
