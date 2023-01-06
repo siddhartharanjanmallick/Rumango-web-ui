@@ -1788,14 +1788,12 @@ code {
     top: 24px;
     height: 52px;
     left: 259px;
-    width: 480px;
-    min-width: 480px;
   }
   
   .flex.layout1 {
     position: relative;
     flex-grow: 1;
-    margin: 14px 28px;
+    margin: 4px 4px;
   }
   
   .small_text_body2 {

@@ -321,18 +321,40 @@
          <!-- <img src="../src/assets/3d42bc4b2851ee332ef278311b6f93c6.png" alt="" class="icon4 layout" /> -->
         <div class="block43 layout">
             <div class="flex layout1">
-                <div class="small_text_body2 layout">Search Task</div>
-                <div class="spacer flex__spacer1"></div>
-                <div class="flex__item1">
-                    <img src="../src/assets/9b7cfe300e916466102cf2fa13f9c7f4.png" alt="" class="icon5 layout" />
-                </div>
+                <input type="text"  id="myInput"
+                placeholder="Search" title="Type in a name" onkeyup="searchdata()" >
             </div>
-        </div>
     </div>
     <script type="text/javascript">
         AOS.init();
 
         let selectedRowIndex, allContacts;
+        let result;
+        function searchdata(){
+            let inputNm = document.getElementById('myInput').value;
+            console.log(inputNm);
+            this.result = this.allContacts.filter(e=> e.name == inputNm );
+            console.log(this.result);
+            for (let i = 0; i < this.allContacts.length; i++) {
+		     const row = document.createElement('tr');
+		     ['name', 'email', 'phoneNumber', 'message'].forEach(cell => {
+			     const column = this.allContacts[i][cell];
+			     const columnNode =document.createElement('td');
+			     columnNode.innerHTML = column;
+			     row.appendChild(columnNode);
+		        });
+                const columnNode =document.createElement('td');
+            columnNode.addEventListener('click', () => {
+			     selectedRowIndex = i;
+                 localStorage.setItem("dta_fromcontactPage" ,JSON.stringify(this.allContacts[i]) );
+			     modal.style.display = "block";
+		        });
+            columnNode.innerHTML = '<img src="../admin-dashboard/assets/image/5644114f1fa7429262c29f40392aa212.png" alt="" class="icon action-img">'
+			row.appendChild(columnNode);
+			 document.getElementById('contactsTable').appendChild(row);
+            }
+            
+        }
 
         fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/fetchAllMessagesInfo', {
          method: 'GET',         
@@ -341,7 +363,8 @@
         {
 		  console.log(data);
 		  console.log(data.length);
-		  allContacts=data;
+          console.log(data[0]);         
+		  this.allContacts=data;
           for (let i = 0; i < data.length; i++) {
 		     const row = document.createElement('tr');
 		     ['name', 'email', 'phoneNumber', 'message'].forEach(cell => {
@@ -360,9 +383,26 @@
 			row.appendChild(columnNode);
 			 document.getElementById('contactsTable').appendChild(row);
             }
-        }).catch(error => console.error('Error:', error));
+            console.log(data.length);
+            document.getElementById("myInput").addEventListener("keypress", searchData);
+           
+            
+        }
+  
+    // console.log(data);
+    // for (let i = 0; i < data.length; i++) {
+        
+    //     a = data[i].getElementsByTagName("a")[0];
+    //     txtValue = a.textContent || a.innerText;
+    //     if (txtValue.indexOf(filter) > -1) {
+    //         data[i].style.display = "";
+    //     } else {
+    //         data[i].style.display = "none";
+    //     }
+    // }
+        ).catch(error => console.error('Error:', error));
 
-
+       
     function deleteContact() {
 	 console.log(allContacts[selectedRowIndex].id);
 	 fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/deleteMessageInfoById?id='
