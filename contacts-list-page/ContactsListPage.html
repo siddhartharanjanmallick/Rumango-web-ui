@@ -15,7 +15,7 @@
 
 </head>
 
-<body style="display: flex; flex-direction: column ; background-color: #fafafa;">
+<body style="display: inline-block; background-color: #fafafa;">
     <div class="contacts-list-page block layout">
         
         <div class="block1 layout">
@@ -114,18 +114,9 @@
 
 
         <div class="block13 layout1">
-            <table class="table-contact">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone No</th>
-                        <th>Message </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody id="contactsTable">
-                </tbody>
+            <table class="table-contact" id="contactsTable">
+                
+                
             </table>
         </div>
 
@@ -321,7 +312,7 @@
          <!-- <img src="../src/assets/3d42bc4b2851ee332ef278311b6f93c6.png" alt="" class="icon4 layout" /> -->
         <div class="block43 layout">
             <div class="flex layout1">
-                <div class="small_text_body2 layout">Search Task</div>
+                <input type="text" id="contactName" placeholder="Search Contact Name" class="input11"   onkeyup="activateTable()">
                 <div class="spacer flex__spacer1"></div>
                 <div class="flex__item1">
                     <img src="../src/assets/9b7cfe300e916466102cf2fa13f9c7f4.png" alt="" class="icon5 layout" />
@@ -329,66 +320,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        AOS.init();
-
-        let selectedRowIndex, allContacts;
-
-        fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/fetchAllMessagesInfo', {
-         method: 'GET',         
-        }).then(function(response){ 
-             return response.json()}).then(function(data)
-        {
-		  console.log(data);
-		  console.log(data.length);
-		  allContacts=data;
-          for (let i = 0; i < data.length; i++) {
-		     const row = document.createElement('tr');
-		     ['name', 'email', 'phoneNumber', 'message'].forEach(cell => {
-			     const column = data[i][cell];
-			     const columnNode =document.createElement('td');
-			     columnNode.innerHTML = column;
-			     row.appendChild(columnNode);
-		        });
-			const columnNode =document.createElement('td');
-            columnNode.addEventListener('click', () => {
-			     selectedRowIndex = i;
-                 localStorage.setItem("dta_fromcontactPage" ,JSON.stringify(data[i]) );
-			     modal.style.display = "block";
-		        });
-            columnNode.innerHTML = '<img src="../admin-dashboard/assets/image/5644114f1fa7429262c29f40392aa212.png" alt="" class="icon action-img">'
-			row.appendChild(columnNode);
-			 document.getElementById('contactsTable').appendChild(row);
-            }
-        }).catch(error => console.error('Error:', error));
-
-
-    function deleteContact() {
-	 console.log(allContacts[selectedRowIndex].id);
-	 fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/deleteMessageInfoById?id='
-		  +allContacts[selectedRowIndex].id, {
-          method: 'DELETE',         
-        }).catch(error => console.error('Error:', error));
-		   alert('Contact Record Deleted.');		   
-	}
-
-
-        var modal = document.getElementById("myModal");
-		var span = document.getElementsByClassName("close")[0];
-		span.onclick = function() {
-		console.log("inside span onclick");
-          modal.style.display = "none";
-        }
-		window.onclick = function(event) {
-		console.log("inside window onclick");
-            if (event.target == modal) {
-			console.log("inside window onclick if");
-             modal.style.display = "none";
-            }
-        }
-
-
-    </script>
+<script src="ContactsListPage.js"></script>
 </body>
 <style>
     body {font-family: Arial, Helvetica, sans-serif;}

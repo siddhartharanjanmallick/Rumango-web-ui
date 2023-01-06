@@ -1,8 +1,10 @@
 
     AOS.init();
     console.log("insideJs");
-    let table2 = document.getElementById('indevidualData');
-    table2.style.display ='none';
+   
+
+    let jobsarr;
+    
 
 	let selectedRowIndex, allJobs;
   let  selectedRowJobIds = [];
@@ -14,90 +16,105 @@
         {
 		  console.log(data);	
 		  console.log(data.length);
-		  allJobs=data;
-          for (let i = 0; i < data.length; i++) { 
-		     const row = document.createElement('tr');
-             row.className='trow';
+		  this.allJobs=data;
+        //   document.getElementById('jobTable').innerHTML = '';
+          tablecreate(this.allJobs)
 
-            //  const columnNode =document.createElement('td');
-            //  columnNode.innerHTML = '<input type="checkbox" />';
-            const columnNode =document.createElement('td');
-            columnNode.innerHTML = '<input type="checkbox" id="clickedcheckbox" "/>';
-            columnNode.addEventListener("click", ()=>{
-                
-                
-                if(selectedRowJobIds.includes(data[i].jobId)){
-                    selectedRowJobIds = selectedRowJobIds.filter(function(item) {
-                        return item !== data[i].jobId
-                    })
-                }else{
-                    selectedRowJobIds.push(data[i].jobId);
-                }
-                 console.log(selectedRowJobIds);
-             });
-             row.appendChild(columnNode);
-       
-		    //  row.addEventListener('click', () => {
-			//      selectedRowIndex = i;
-			//      modal.style.display = "block";
-		    //     });
-		     ['jobTitle','noOfPost','qualificationRequired','experienceRequired','lastDateToApply','companyName','country','state','jobId'].forEach(cell => {
-			     const column = data[i][cell];
-			     const columnNode =document.createElement('td');
-			     columnNode.innerHTML = column;
-			     row.appendChild(columnNode);
-                 
-		        });
-
-                const img = document.createElement('td');
-                img.innerHTML='<div>  <input type="image" src="../src/assets/dot.png" style="height:5px; width:20px;"></div>'
-                
-                img.addEventListener('click', () => {
-			    selectedRowIndex = i;
-                modal.style.display = "block";
-		        });
-                row.appendChild(img);
-
-			 document.getElementById('jobTable').appendChild(row);
-               /*document.getElementById("jobTitle").innerHTML += data[i].jobTitle +"</br>";
-               document.getElementById("noOfPost").innerHTML += data[i].noOfPost+"</br>";
-               document.getElementById("qualificationRequired").innerHTML += data[i].qualificationRequired+"</br>";
-			   document.getElementById("experienceRequired").innerHTML += data[i].experienceRequired+"</br>";
-			   document.getElementById("lastDateToApply").innerHTML += data[i].lastDateToApply+"</br>";
-			   document.getElementById("companyName").innerHTML += data[i].companyName+"</br>";
-			   document.getElementById("country").innerHTML += data[i].country+"</br>";
-			   document.getElementById("state").innerHTML += data[i].state+"</br>";
-			   document.getElementById("jobId").innerHTML += data[i].jobId+"</br>";*/
-            }
-            	
-       
+        
         }).catch(error => console.error('Error:', error)); 
        
-		//getData();
-       //async function getData(){
-       //const response= await fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchAllJobsInfo’)
-       //console.log(response);
-       //const data= await response.json();
-       //console.log(data);
-       //length=data.drinks.length;
-       //console.log(data);
-       //var temp="";
-       //for(i=0;i<length;i++)
-       //{
-       //   temp+="<tr>";
-        //  temp+="<td>"+data.drinks[i].strDrink+"</td>";
-        //  temp+="<td>"+data.drinks[i].strInstructions+"</td>";
-       //}
-       //document.getElementById("data").innerHTML=temp;
-       //}
-		
+	
+
+       function tablecreate(data){
+        // if(data.length <= 1){}else{}
+        //   document.querySelectorAll('tr').forEach(function(e){e.remove()});
+        document.getElementById('jobTable').innerHTML = '';
+        var table =document.getElementById('jobTable');
+        var row = table.insertRow(0);
+        row.className = 'table_header';
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+        var cell8 = row.insertCell(7);
+        var cell9 = row.insertCell(8);
+        var cell10 = row.insertCell(9);
+        var cell11 = row.insertCell(10);
+        cell1.innerHTML = "Select";
+        cell2.innerHTML = "Job Title";
+        cell3.innerHTML = "No of Posts";
+        cell4.innerHTML = "Qualification Required";
+        cell5.innerHTML = "Experience Required";
+        cell6.innerHTML = "Last Date to Apply";
+        cell7.innerHTML = "Company";
+        cell8.innerHTML = "Country";
+        cell9.innerHTML = "State";
+        cell10.innerHTML = "Job ID";
+        cell11.innerHTML = "Actions";
+        
+        console.log("for !srtrtime ");
+        console.log(data)
+       
+        for (let i = 0; i < data.length; i++) { 
+            const row = document.createElement('tr');
+            row.className='trow';
+
+           //  const columnNode =document.createElement('td');
+           //  columnNode.innerHTML = '<input type="checkbox" />';
+           const columnNode =document.createElement('td');
+           columnNode.innerHTML = '<input type="checkbox" id="clickedcheckbox" "/>';
+           columnNode.addEventListener("click", ()=>{
+               
+               
+               if(selectedRowJobIds.includes(data[i].jobId)){
+                   selectedRowJobIds = selectedRowJobIds.filter(function(item) {
+                       return item !== data[i].jobId
+                   })
+               }else{
+                   selectedRowJobIds.push(data[i].jobId);
+               }
+                console.log(selectedRowJobIds);
+            });
+            row.appendChild(columnNode);
+      
+           //  row.addEventListener('click', () => {
+           //      selectedRowIndex = i;
+           //      modal.style.display = "block";
+           //     });
+            ['jobTitle','noOfPost','qualificationRequired','experienceRequired','lastDateToApply','companyName','country','state','jobId'].forEach(cell => {
+                const column = data[i][cell];
+                const columnNode =document.createElement('td');
+                columnNode.innerHTML = column;
+                row.appendChild(columnNode);
+                
+               });
+
+               const img = document.createElement('td');
+               img.innerHTML='<div>  <input type="image" src="../src/assets/dot.png" style="height:5px; width:20px;"></div>'
+               
+               img.addEventListener('click', () => {
+                
+               this.selectedRowIndex = i;
+               console.log( this.selectedRowIndex);
+               modal.style.display = "block";
+               });
+               row.appendChild(img);
+
+            document.getElementById('jobTable').appendChild(row);
+           }
+       }
 	function deleteJob() {
-	 console.log(allJobs[selectedRowIndex].jobId);
+	 console.log(this.allJobs[this.selectedRowIndex].jobId);
+     console.log( );
 	 fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/deleteJobsInfoById?jobId='
-		  +allJobs[selectedRowIndex].jobId, {
+		  +this.allJobs[this.selectedRowIndex].jobId, {
           method: 'DELETE',         
         }).catch(error => console.error('Error:', error));
-		   alert('Job Record Deleted.');		   
+		   alert('Job Record Deleted.');	
+           window.location.reload();	   
 	}
 		
 		var modal = document.getElementById("myModal");
@@ -148,55 +165,72 @@
 		}
 
         function activateTable2 (){
-            let jobID = document.getElementById('jobfortable').value;
-            if(jobID =='' ){
-                document.getElementById('jobTable').style.display = 'block';
-                table2.style.display = 'none';
-            }
-            else{
+            // document.getElementById('indevidualData').innerHTML='';
+            console.log("inside search");
+            let jobtitle = document.getElementById('jobfortable').value;
+            this.jobsarr = this.allJobs.filter(job => job.jobTitle == jobtitle );
+            console.log(this.jobsarr);
+            document.getElementById('jobTable').innerHTML = '';
+            document.getElementById('jobTable').innerHTML = '';
+        //    previoustable.getElementsByClassName('trow').innerHTML = '';
+            if(this.jobsarr.length == 0){
+                console.log("dfsdnjkfsdfjsdhfjasdhfkj")
+                console.log(this.allJobs);
+                
+                this.tablecreate(this.allJobs);
+            }else{
+           this.tablecreate(this.jobsarr );}
+       
             
-            table2.style.display = 'block';
-            document.getElementById('jobTable').style.display = 'none';
-            console.log(jobID);
-            fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId='+jobID, {
-         method: 'GET',         
-        }).then(function(response){ 
-             return response.json()}).then(function(data){
-                console.log(data);
-                for (let i = 0; i < 1; i++) { 
-		     const row = document.createElement('tr');
-             row.className='trow';
+
+        //     if(jobID =='' ){
+        //         document.getElementById('jobTable').style.display = 'block';
+        //         table2.style.display = 'none';
+        //     }
+        //     else{
+            
+        //     table2.style.display = 'block';
+        //     document.getElementById('jobTable').style.display = 'none';
+        //     console.log(jobID);
+        //     fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId='+jobID, {
+        //  method: 'GET',         
+        // }).then(function(response){ 
+        //      return response.json()}).then(function(data){
+        //         console.log(data);
+        //         for (let i = 0; i < 1; i++) { 
+		//      const row = document.createElement('tr');
+        //      row.className='trow';
 
         
-            const columnNode =document.createElement('td');
+        //     const columnNode =document.createElement('td');
               
              
        
-		     ['jobTitle','noOfPost','qualificationRequired','experienceRequired','lastDateToApply','companyName','country','state','jobId'].forEach(cell => {
-			     const column = data[cell];
-			     const columnNode =document.createElement('td');
-			     columnNode.innerHTML = column;
-			     row.appendChild(columnNode);
+		//      ['jobTitle','noOfPost','qualificationRequired','experienceRequired','lastDateToApply','companyName','country','state','jobId'].forEach(cell => {
+		// 	     const column = data[cell];
+		// 	     const columnNode =document.createElement('td');
+		// 	     columnNode.innerHTML = column;
+		// 	     row.appendChild(columnNode);
                  
-		        });
+		//         });
 
-                const img = document.createElement('td');
-                img.innerHTML='<div>  <input type="image" src="../src/assets/dot.png" style="height:5px; width:20px;"></div>'
+        //         const img = document.createElement('td');
+        //         img.innerHTML='<div>  <input type="image" src="../src/assets/dot.png" style="height:5px; width:20px;"></div>'
                 
-                img.addEventListener('click', () => {
-			    selectedRowIndex = i;
-                modal.style.display = "block";
-		        });
-                row.appendChild(img);
+        //         img.addEventListener('click', () => {
+		// 	    selectedRowIndex = i;
+        //         modal.style.display = "block";
+		//         });
+        //         row.appendChild(img);
 
-			 document.getElementById('indevidualData').appendChild(row);
-            }
-             }).catch(error =>{
-              console.error('Error:', error);
+		// 	 document.getElementById('indevidualData').appendChild(row);
+        //     }
+        //      }).catch(error =>{
+        //       console.error('Error:', error);
               
-             }); 
+        //      }); 
 
-            }
+        //     }
 
 
         }

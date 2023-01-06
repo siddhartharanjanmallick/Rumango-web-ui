@@ -63,64 +63,106 @@ fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId=
     var sourceId = document.getElementById('sourceId').value;
     var socialNetworkLink = document.getElementById('socialNetworkLink').value;
 // console.log(resumeURL);
-    var resumeLink = document.getElementById('resumeLink').value;
+    // var resumeLink = document.getElementById('resumeLink').value;
     var joiningTime = document.getElementById('joiningTime').value;
     //var isReadyToRelocate = document.getElementById('isReadyToRelocate').value;
     var isReadyToRelocate = true;
     var ctc = document.getElementById('ctc').value;		
-    console.log(firstName);
-    console.log(ctc);   
+     var resumeLinkForAPi ;
+    var resumeLink = document.getElementById('resumeLink');
+    let formData = new FormData();           
+    formData.append("file", resumeLink.files[0]);
+     fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/uploadResume', {
+    method: "POST", 
+    body: formData
+   }).then(function(response){ 
+   return response.json()}).then(function(resumeData)
+   {
+    console.log(resumeData);
+    alert(resumeData.message);
+    resumeURL=resumeData;
+    console.log(resumeURL);
+    this.resumeLinkForAPi =resumeURL.data;
+    console.log(resumeURL.data);
     fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/saving', {
-    method: 'POST',
-    body: JSON.stringify({
-    //APPLICANT_ID:'2345',
-    jobId:jobId,
-    firstName:firstName,
-    middleName:middleName,
-    lastName:lastName,
-    email:email,
-    mobile:mobile,
-    sourceId:sourceId,
-    socialNetworkLink:socialNetworkLink,
-    resumeLink:resumeLink,
-    joiningTime:joiningTime,
-    isReadyToRelocate:isReadyToRelocate,
-    ctc:ctc
-    }),
-    headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        }
-    }).then(function(response){ 
-    return response.json()}).then(function(data)
-    {console.log(data)
-     //if(data){
-      //window.location.replace("AdminDashboard.html");    
-      //setTimeout("pageRedirect()", 10000);
-      //}
-    }).catch(error => console.error('Error:', error));
-       alert('The applicant details uploaded successfully.');		
-   }
+      method: 'POST',
+      body: JSON.stringify({
+      //APPLICANT_ID:'2345',
+      jobId:jobId,
+      firstName:firstName,
+      middleName:middleName,
+      lastName:lastName,
+      email:email,
+      mobile:mobile,
+      sourceId:sourceId,
+      socialNetworkLink:socialNetworkLink,
+      resumeLink:resumeURL.data,
+      joiningTime:joiningTime,
+      isReadyToRelocate:isReadyToRelocate,
+      ctc:ctc
+      }),
+      headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          }
+      }).then(function(response){ 
+      return response.json()}).then(function(data)
+      {console.log(data)
+       //if(data){
+        //window.location.replace("AdminDashboard.html");    
+        //setTimeout("pageRedirect()", 10000);
+        //}
+        alert('The applicant details uploaded successfully.');	
+        document.getElementById('firstName').value ='';
+     document.getElementById('middleName').value='';
+     document.getElementById('lastName').value='';
+     document.getElementById('email').value='';
+     document.getElementById('mobile').value='';
+     document.getElementById('sourceId').value='';
+     document.getElementById('socialNetworkLink').value='';
+     document.getElementById('resumeLink').value='';
+     document.getElementById('joiningTime').value='';
+     document.getElementById('isReadyToRelocate').value='';
+     document.getElementById('ctc').value='';	
+      
+      }).catch(error =>{
+
+      console.error('Error:', error)
+      alert(error)
+    });
+        	
+     
+    
+   }).catch(error =>{
+      console.error('Error:', error);
+      alert('Please upload resume only in pdf/doc/docx/jpg/jpeg formats');
+     });    
+       
+    }
   }
-    var resumeURL;
-    async function uploadResume() {
-    console.log("inside uploadResume()");
-    alert('Please upload resume only in pdf/doc/docx/jpg/jpeg formats');
-     //var resumeLink = document.getElementById('resumeLink').value;
-     let formData = new FormData();           
-     formData.append("file", resumeLink.files[0]);
-     await fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/uploadResume', {
-     method: "POST", 
-     body: formData
-    }).then(function(response){ 
-    return response.json()}).then(function(resumeData)
-    {
-     console.log(resumeData);
-     resumeURL=resumeData;
-     console.log(resumeURL);
-     console.log(resumeURL.data);
-    }).catch(error => console.error('Error:', error));    
-    alert('The file has been uploaded successfully.');
-       }
+    // var resumeURL;
+    // async function uploadResume() {
+    // console.log("inside uploadResume()");
+    // // alert('Please upload resume only in pdf/doc/docx/jpg/jpeg formats');
+    //  var resumeLink = document.getElementById('resumeLink');
+    //  let formData = new FormData();           
+    //  formData.append("file", resumeLink.files[0]);
+    //  await fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/uploadResume', {
+    //  method: "POST", 
+    //  body: formData
+    // }).then(function(response){ 
+    // return response.json()}).then(function(resumeData)
+    // {
+    //  console.log(resumeData);
+    //  alert(resumeData.message);
+    //  resumeURL=resumeData;
+    //  console.log(resumeURL);
+    //  console.log(resumeURL.data);
+    // }).catch(error =>{
+    //    console.error('Error:', error);
+    //    alert('Please upload resume only in pdf/doc/docx/jpg/jpeg formats');
+    //   });    
+    // // alert('Please upload resume only in pdf/doc/docx/jpg/jpeg formats');
+    //    }
     
     
     /*		function uploadResume(){

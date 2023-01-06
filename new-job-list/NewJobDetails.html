@@ -40,7 +40,7 @@
             <div class="rect1 layout"></div>
         </div>
         <div class="group1 layout5">
-            <div class="txt1 layout"><input type="date" id="lastDateToApply" required  min="this.dateForValidation" /></div>
+            <div class="txt1 layout"><input type="date" id="lastDateToApply" required  /></div>
         </div>
         <div class="group1 layout6">
             <div class="txt2 layout" style="width: 140%;">Last Date to Apply <span class="red">*</span></div>
@@ -229,7 +229,13 @@
             <div class="rect1 layout"></div>
         </div>
         <div class="group1 layout37">
-            <div class="txt1 layout"><input type="text", id="jobType" placeholder="Select job type" required/></div>
+            <div class="txt1 layout"><select  id="jobType">
+                <option value="Permanent">Permanent </option>
+                <option value="Contract">Contract  </option>
+                <option value="Intent">Intent</option>
+                <option value="consultant">consultant</option>
+            </select></div>
+            <!-- <div class="txt1 layout"><input type="text", id="jobType" placeholder="Select job type" required/></div> -->
         </div>
         <div class="group1 layout38">
             <div class="txt2 layout" style="width: 140%;">Job Type <span class="red">*</span></div>
