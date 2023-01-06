@@ -1813,7 +1813,7 @@ code {
   }
   
   .flex__spacer1 {
-    flex: 0 1 232px;
+    flex: 0 1 95px;
   }
   
   .flex__item1 {
@@ -1849,8 +1849,8 @@ code {
   }
   tr{
     height: 50px;
-    box-shadow: 0 1px 5px 0 rgba(193, 191, 191, 0.35);
-    border-radius:13px;
+    /* box-shadow: 0 1px 5px 0 rgba(193, 191, 191, 0.35);
+    border-radius:13px; */
   }
   .table-contact>thead{
     text-align: left;
@@ -1867,11 +1867,18 @@ code {
     height: 60px;
   } 
   td{
-    padding-left: 5px;
+    /* padding-left: 5px; */
+    text-align: center;
   }
   .action-img{
     width: 15px;
   /* margin-left: -20px; */
     margin-right: 10px;
     margin-bottom: 10px;
+  }
+  .table_header2{
+    font-weight: bold;}
+  .input11{
+    width: 260px;
+    height: 40px;
   }

@@ -1,11 +1,8 @@
 AOS.init();
 console.log("hello");
-console.log(localStorage.getItem("jobid"));
-
-
-
-console.log(localStorage.getItem('jobId'));
-var countryName = []; 
+console.log(localStorage['jobpage']);
+console.log(localStorage["jobId"]);
+let Countryarr = [];
 
     const d = new Date ();
     
@@ -24,6 +21,7 @@ var countryName = [];
 
        this.dateForValidation = [year, month, day].join('-');
     }
+    document.getElementById('lastDateToApply').setAttribute('min',this.dateForValidation);
 console.log(this.dateForValidation)
 const countriesDropDown = document.querySelector(".countryDrop");
 
@@ -34,14 +32,16 @@ method: 'GET',
 return rsp.json()}).then(function(data){
     console.log(data);
    
-    for(var i = 0 ; i< data.length; i++){
-    this.countryName.push(data[i].countryName);
-    }
+    // for(var i = 0 ; i< data.length; i++){
+    // this.countryNameARR.push(data[i]);
+    // }
+    this.Countryarr = data;
+    
     console.log(this.countryName);
     for (let item in data) {
     
     let option = document.createElement("option");
-   option.setAttribute('value',data[item].id);
+   option.setAttribute('value',data[item].countryName);
 
   let optionText = document.createTextNode(data[item].countryName);
    option.appendChild(optionText);
@@ -51,7 +51,10 @@ return rsp.json()}).then(function(data){
     
  });
  function ApiforState(){
-    let countryId = document.querySelector(".countryDrop").value;
+    console.log(this.Countryarr);
+     document.querySelector(".statedrop").innerHTML = '';
+    let countryName = document.querySelector(".countryDrop").value;
+    let countryId = this.Countryarr[this.Countryarr.findIndex(arr=> arr.countryName == countryName )].id;
  console.log(countryId)
  fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchStateInfoByCountryId?countryId='+countryId, {
 method: 'GET',
@@ -59,7 +62,7 @@ method: 'GET',
 }).then(function(rsp){
 return rsp.json()}).then(function(data){
     console.log(data);
-    const statedropdown = document.querySelector(".statedrop");
+   let statedropdown = document.querySelector(".statedrop");
     console.log(statedropdown);
     for (let item in data) {
     
@@ -109,6 +112,9 @@ function submit(){
  var country = document.getElementById('country').value;
  var state = document.getElementById('state').value;		
  var jobId = localStorage["jobId"];
+ console.log(jobId);
+ console.log(localStorage.getItem("jobpage"));
+ 
  this.value2 = true;
  var emailvalid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if(emailvalid.test(email)){
@@ -126,9 +132,77 @@ function submit(){
     }
     else{
 
-
- 
+    if( localStorage['jobpage'] == "fromJobPage") {
+ console.log("inside if ");
  fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/saveOrUpdateJobsInfo', {
+     method: 'POST',
+     body: JSON.stringify({
+     jobId:jobId,
+     jobTitle:jobTitle,
+     noOfPost:noOfPost,
+     descriptions:descriptions,
+     qualificationRequired:qualificationRequired,
+     experienceRequired:experienceRequired,
+     specializationRequired:specializationRequired,
+     lastDateToApply:lastDateToApply,
+     salary:salary,
+     jobType:jobType,
+     companyName:companyName,
+     logoUrl:logoUrl,
+     website:website,
+     email:email,
+     address:address,
+     country:country,
+     state:state,
+     workMode:wkmode,
+     keySkills: keySkills ,
+     workLocation : wklocation
+    }),
+ headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    }
+ }).then(function(response){ 
+ return response.json()}).then(function(data)
+ {
+ console.log(data);
+ 
+    console.log(data.message);
+    if(data.message == undefined){
+        alert("Data Uploaded Succefully");
+    }
+     
+ 
+ document.getElementById('jobTitle').value ='';
+document.getElementById('noOfPost').value ='';
+document.getElementById('descriptions').value ='';
+document.getElementById('qualificationRequired').value ='';
+document.getElementById('experienceRequired').value ='';
+document.getElementById('specializationRequired').value ='';
+document.getElementById('lastDateToApply').value ='';
+document.getElementById('salary').value ='';
+document.getElementById('jobType').value ='';
+document.getElementById('companyName').value ='';
+document.getElementById('logoUrl').value ='';
+document.getElementById('website').value ='';
+document.getElementById('email').value = '';
+document.getElementById('address').value = '';
+document.getElementById('country').value = '';
+document.getElementById('state').value = '';
+document.getElementById('wklocation').value = '';
+document.getElementById('keySl').value = '';
+document.getElementById('wkmode').value = '';
+localStorage["jobpage"] = '';
+localStorage["jobId"]  = '';
+
+ /*if(data){
+
+  window.location.replace("AdminDashboard.html");    
+  setTimeout("pageRedirect()", 10000);
+  }*/
+ }).catch(error => console.error('Error:', error));
+    }else{
+        console.log("inside elase ");
+        fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/saveOrUpdateJobsInfo', {
      method: 'POST',
      body: JSON.stringify({
      
@@ -192,6 +266,7 @@ document.getElementById('wkmode').value = '';
   setTimeout("pageRedirect()", 10000);
   }*/
  }).catch(error => console.error('Error:', error));
+    }
 }
            
 }
@@ -229,7 +304,7 @@ if( localStorage.getItem("jobpage") == "fromJobPage") {
  document.getElementById('lastDateToApply').value = lastDateToApplyValue;
  document.getElementById('salary').value = salaryValue;
  document.getElementById('jobType').value = jobTypeValue;
- if(countryName){
+ if(companyNameValue){
  document.getElementById('companyName').value = companyNameValue;}
 //  if(logoUrlValue){
 //  document.getElementById('logoUrl').value = logoUrlValue;}
@@ -272,7 +347,8 @@ if( localStorage.getItem("jobpage") == "fromJobPage") {
  localStorage["workmode"] = '';
 localStorage["worklocation"] = '';
 localStorage["keySl"] = '';
-localStorage["jobpage"] = '';
+// localStorage["jobpage"] = '';
+// localStorage["jobId"]  = '';
 
 }
 else{

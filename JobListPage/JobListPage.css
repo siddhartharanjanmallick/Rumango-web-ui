@@ -2012,3 +2012,12 @@
     gap: 9px;
     column-gap: 75px;
 }
+.table_header{
+  position: relative;
+  font-weight: bold;
+   top: 15px; 
+   border-collapse: collapse; 
+   display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

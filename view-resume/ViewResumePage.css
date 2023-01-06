@@ -1850,7 +1850,7 @@
 }
 
 .flex__spacer1 {
-  flex: 0 1 232px;
+  flex: 0 1 116px;
 }
 
 .flex__item1 {
@@ -1884,4 +1884,12 @@ tr{
   position: relative;
     top: 42px;
 }
-
+.Search_input{
+  width: 732px;
+  height: 42px;
+}
+.table_header1{
+  position: relative;
+  top: 10px;
+  background-color: #5b92ff;
+}

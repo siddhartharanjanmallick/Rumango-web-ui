@@ -187,7 +187,7 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
 		     class="image8 layout" onClick="downloadAllResumes()"/> -->
         <div class="block52 layout">
             <div class="flex layout1">
-                <div class="small_text_body2 layout">Search Task</div>
+                <input type="text" id="nameOfCandidate" placeholder="Name "  class="Search_input" onkeyup="tabledata()">
                 <div class="spacer flex__spacer1"></div>
                 <div class="flex__item1">
                     <img src="images/9b7cfe300e916466102cf2fa13f9c7f4.png" alt="" class="icon4 layout" />
@@ -195,114 +195,9 @@ integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQV
             </div>
         </div>
     </div>
+	<script src="ViewResumePage.js"></script>
 	
-	
-<script type="text/javascript">
-        
-	AOS.init();
-		
-	let selectedRowIndex, allApplicants, allResumes;
-	
-	function downloadResume() {
-		console.log(allApplicants[selectedRowIndex]);
-		console.log(allApplicants[selectedRowIndex].resumeLink);
-		 window.open(allApplicants[selectedRowIndex].resumeLink);
-		//location.href = allApplicants[selectedRowIndex].resumeLink;
-		alert("Resume Downloaded");
-	}
 
-	function downloadAllResumes() {
-		fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/downloadAllResume', {
-        method: 'GET',         
-        }).then(function(response){ 
-        return response.json()}).then(function(data)
-        {
-		  console.log(data);
-		  allResumes=data;
-		  console.log(allResumes.length);
-	      for(i=0;i<allResumes.length;i++) {		     
-			 //setTimeout(() => {
-			     window.open(allResumes[i]);
-			     //location.href = allResumes[i];
-			    //}, 1000);
-		    }
-        }).catch(error => console.error('Error:', error));
-		   alert('All resumes will be downloaded.');		   
-	}	
-	
-	
-	function deleteApplicant() {
-	 console.log(allApplicants[selectedRowIndex].applicantId);
-	 fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/deleteApplicantsInfoById?applicantId='
-		  +allApplicants[selectedRowIndex].applicantId, {
-          method: 'DELETE',         
-        }).catch(error => console.error('Error:', error));
-		   alert('Applicant Record Deleted.');		   
-	}
-	
-	
-	fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/fetchApplicantsInfo', {
-         method: 'GET',         
-        }).then(function(response){ 
-             return response.json()}).then(function(data)
-        {
-		  console.log(data);
-		  console.log(data.length);
-		  allApplicants=data;
-          for (let i = 0; i < data.length; i++) {
-		     const row = document.createElement('tr');
-		     row.addEventListener('click', () => {
-			     selectedRowIndex = i;
-			    //modal.style.display = "block";
-		        });
-                const sino = document.createElement('td');
-                sino.innerHTML ='<p>'+(i+1)+'</p>';
-                 
-                row.appendChild(sino);
-		     ['firstName', 'jobId', 'email', 'mobile', 'applicantId' ].forEach(cell => {
-			     const column = data[i][cell];
-			     const columnNode =document.createElement('td');
-			     columnNode.innerHTML = column;
-			     row.appendChild(columnNode);
-		        });
-                const node = document.createElement('td');
-                node.innerHTML = '<div><input type="image" src="../src/assets/download.png" style="width:42px; height:21px;" onClick="downloadResume()"/> &nbsp &nbsp &nbsp  <input type="image" src="../src/assets/88a08900bc341cc51c8e7323a114744a.png" onClick="deleteApplicant()"/> </div>';
-                row.appendChild(node);
-
-               
-               
-			 document.getElementById('applicantTable').appendChild(row);
-               /*document.getElementById("firstName").innerHTML += data[i].firstName +"</br>";
-               document.getElementById("jobId").innerHTML += data[i].jobId+"</br>";
-               document.getElementById("email").innerHTML += data[i].email+"</br>";
-			   document.getElementById("mobile").innerHTML += data[i].mobile+"</br>";
-			   document.getElementById("applicantId").innerHTML += data[i].applicantId+"</br>";
-			   applicantResume = data[i].resumeLink;
-			   console.log(applicantResume);
-			   //document.getElementById("resumeLink").innerHTML += data[i].resumeLink+"</br>"; */
-            }
-        }).catch(error => console.error('Error:', error)); 
-		
-		
-		var modal = document.getElementById("myModal");
-		//var btn = document.getElementById("firstName");
-		var span = document.getElementsByClassName("close")[0];
-		/* btn.onclick = function() {
-              modal.style.display = "block";
-        }*/
-		span.onclick = function() {
-		console.log("inside span onclick");
-          modal.style.display = "none";
-        }
-		window.onclick = function(event) {
-		console.log("inside window onclick");
-            if (event.target == modal) {
-			console.log("inside window onclick if");
-             modal.style.display = "none";
-            }
-        }
-		
-</script>
 </body>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
