@@ -46,15 +46,31 @@ fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId=
       document.getElementById('submitbtn').disabled = true;
       console.log(document.getElementById('submitbtn').disabled);
     }
+    
    
     function submit(){
       console.log("inside submit()");
+
+      var emailFlag= true;
+      var emailReg= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(emailReg.test(document.getElementById('email').value)){
+        emailFlag = true;
+    }else{
+        
+        emailFlag = false;
+    } 
 
       if(document.getElementById('ctc').value==='' || document.getElementById('firstName').value==='' || document.getElementById('lastName').value===''
       || document.getElementById('mobile').value==='' || document.getElementById('email').value==='' || document.getElementById('sourceId').value===''
       || document.getElementById('joiningTime').value==='' ){
       alert('Please fill all te manditory field');
-      }else{
+      }else if(!emailFlag){
+        alert("please fill valid email address")
+      }else if(document.getElementById('resumeLink').value===''){
+        alert("please upload resume")
+      }
+      
+      else{
     var firstName = document.getElementById('firstName').value;
     var middleName = document.getElementById('middleName').value;
     var lastName = document.getElementById('lastName').value;
