@@ -71,16 +71,28 @@ AOS.init();
 		  console.log(data);
 		  allResumes=data;
 		  console.log(allResumes.length);
-	      for(i=0;i<allResumes.length;i++) {		     
+		  for (let index = 0; index < allResumes.length; index++) {
+			setTimeout(()=>{
+				console.log(allResumes[index]);
+				window.open(allResumes[index],'_blank');	
+			},500)
+			
+		  }
+	    //   for(i=0;i<allResumes.length;i++) {
+		// 	setTimeout(()=>{
+		// 		console.log(allResumes[1]);
+		// 		window.open(allResumes[1]);	
+		// 	},500)	
+			     
 			 //setTimeout(() => {
-                if(allResumes[i] == null){
-                    alert(''+this.allApplicants[i].firstName+' '+this.allApplicants[i].lastName+ 'Has not Uploaded application')
-			     }else{
-                    window.open(allResumes[i]);
-                 }
+                // if(allResumes[i] == null){
+                //     alert(''+this.allApplicants[i].firstName+' '+this.allApplicants[i].lastName+ 'Has not Uploaded application')
+			    //  }else{
+                //     window.open(allResumes[i]);
+                //  }
 			     //location.href = allResumes[i];
 			    //}, 1000);
-		    }
+		    // }
         }).catch(error => console.error('Error:', error));
 		   alert('All resumes will be downloaded.');		   
 	}	
