@@ -2080,7 +2080,9 @@ code {
   
   .medium_title1.layout {
     position: absolute;
-    top: 664px;
+   
+    top: 695px;
+
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
@@ -3032,22 +3034,44 @@ code {
     transform: translateY(-100%);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.header-report{
+  font: 700 22.117647171px/1.2 "Nunito", Helvetica, Arial, serif;
+    color: #030229;
+    letter-spacing: 0px;
+    opacity: 0.69;
+    padding: 10px;
+    display: inline-block;
+}
+.graph{
+  position: absolute;
+  top: 260px;
+  left: 270px;
+  height: 414px;
+  width: 780px;
+  background-color: white;
+  border-radius: 10px;
+}
 
-@font-face {
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-style: normal;
-  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
-  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0")
-      format("embedded-opentype"),
-    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0")
-      format("woff2"),
-    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0")
-      format("woff"),
-    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0")
-      format("truetype"),
-    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular")
-      format("svg");
+td {
+  text-align: center;
+ }
+tr{
+  position: relative;
+    top: 42px;
+}
+.Search_input{
+  width: 732px;
+  height: 42px;
+}
+.table_header1{
+  position: relative;
+  top: 10px;
+  background-color: #5b92ff;
+}
+.jobs{
+  position: absolute;
+  top: 743px;
+  /* right: 525px; */
+  left: 264px;
+  width: 79%;
 }
