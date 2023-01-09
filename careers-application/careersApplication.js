@@ -6,8 +6,8 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
    }
    console.log("inside script");
-   const url=devUrl;
-   console.log("devUrl", url);
+  //  const url=devUrl;
+  //  console.log("devUrl", url);
    var jobId= localStorage.getItem("jobId");
 console.log(jobId);
 document.getElementById('submitbtn').disabled=true;

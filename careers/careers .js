@@ -1,7 +1,7 @@
 AOS.init();
 
-const url=devUrl;
-   console.log("devUrl", url);
+// const url=devUrl;
+//    console.log("devUrl", url);
 function createCareerNode (opening) {
     const node = document.createElement('div');
     

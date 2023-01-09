@@ -4,8 +4,8 @@ function openNav() {
   
   var jobId= localStorage.getItem("jobId");
   console.log(jobId);
-  const url=devUrl;
-   console.log("devUrl", url);
+  // const url=devUrl;
+  //  console.log("devUrl", url);
   fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId='+jobId, {
            method: 'GET',         
           }).then(function(response){ 

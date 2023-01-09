@@ -7,8 +7,8 @@ function verifyCredentials(){
 var email = document.getElementById('userName').value;
 var password = document.getElementById('password').value;  
 
-const url=devUrl;
-   console.log("devUrl", url);
+// const url=devUrl;
+//    console.log("devUrl", url);
 
 console.log(userName);
 console.log(password);
