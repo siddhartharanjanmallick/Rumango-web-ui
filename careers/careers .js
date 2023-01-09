@@ -29,7 +29,7 @@ function createCareerNode (opening) {
 
  
   // let obj;
-  fetch(url+'/jobs-api/fetchAllJobsInfo', {
+  fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchAllJobsInfo', {
      method: 'GET',         
     }).then(function(response){ 
          return response.json()}).then(function(data)

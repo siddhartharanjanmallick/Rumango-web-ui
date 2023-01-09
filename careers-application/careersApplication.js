@@ -12,7 +12,7 @@ function openNav() {
 console.log(jobId);
 document.getElementById('submitbtn').disabled=true;
 
-fetch(url+'/jobs-api/fetchJobsInfoById?jobId='+jobId, {
+fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId='+jobId, {
      method: 'GET',         
     }).then(function(response){ 
          return response.json()}).then(function(data)
@@ -89,7 +89,7 @@ fetch(url+'/jobs-api/fetchJobsInfoById?jobId='+jobId, {
     var resumeLink = document.getElementById('resumeLink');
     let formData = new FormData();           
     formData.append("file", resumeLink.files[0]);
-     fetch(url+'/applicant-api/uploadResume', {
+     fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/uploadResume', {
     method: "POST", 
     body: formData
    }).then(function(response){ 
@@ -101,7 +101,7 @@ fetch(url+'/jobs-api/fetchJobsInfoById?jobId='+jobId, {
     console.log(resumeURL);
     this.resumeLinkForAPi =resumeURL.data;
     console.log(resumeURL.data);
-    fetch(url+'/applicant-api/saving', {
+    fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/saving', {
       method: 'POST',
       body: JSON.stringify({
       //APPLICANT_ID:'2345',

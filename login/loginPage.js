@@ -19,7 +19,7 @@ if(password==='' && userName===''){
 } else if(password==='' && userName!==''){
     alert("Please enter Password")
 }else{
-fetch(url+'/login-api/authentication', {
+fetch('http://192.168.0.14:8081/RumangoWebsite/login-api/authentication', {
 method: 'POST',
 body: JSON.stringify({
 email:email,

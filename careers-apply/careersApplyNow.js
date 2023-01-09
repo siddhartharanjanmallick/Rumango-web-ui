@@ -6,7 +6,7 @@ function openNav() {
   console.log(jobId);
   const url=devUrl;
    console.log("devUrl", url);
-  fetch(url+'/jobs-api/fetchJobsInfoById?jobId='+jobId, {
+  fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId='+jobId, {
            method: 'GET',         
           }).then(function(response){ 
                return response.json()}).then(function(data)
