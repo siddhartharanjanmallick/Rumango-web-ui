@@ -136,30 +136,31 @@
         }
 		
 		function editJob() {
-		 console.log(allJobs[selectedRowIndex]);
+           
+            console.log(this.allJobs[this.selectedRowIndex]);
 
         localStorage["jobpage"] = "fromJobPage";
          
-		 localStorage["jobId"] = allJobs[selectedRowIndex].jobId;
-		 localStorage["jobTitle"] = allJobs[selectedRowIndex].jobTitle;
-		 localStorage["noOfPost"] = allJobs[selectedRowIndex].noOfPost;
-		 localStorage["descriptions"] = allJobs[selectedRowIndex].descriptions;
-		 localStorage["qualificationRequired"] = allJobs[selectedRowIndex].qualificationRequired;
-		 localStorage["experienceRequired"] = allJobs[selectedRowIndex].experienceRequired;
-		 localStorage["specializationRequired"] = allJobs[selectedRowIndex].specializationRequired;
-		 localStorage["lastDateToApply"] = allJobs[selectedRowIndex].lastDateToApply;
-		 localStorage["salary"] = allJobs[selectedRowIndex].salary;
-		 localStorage["jobType"] = allJobs[selectedRowIndex].jobType;
-		 localStorage["companyName"] = allJobs[selectedRowIndex].companyName;
-		 localStorage["logoUrl"] = allJobs[selectedRowIndex].logoUrl;
-		 localStorage["website"] = allJobs[selectedRowIndex].website;
-		 localStorage["email"] = allJobs[selectedRowIndex].email;
-		 localStorage["address"] = allJobs[selectedRowIndex].address;
-		 localStorage["state"] = allJobs[selectedRowIndex].state;
-		 localStorage["country"] = allJobs[selectedRowIndex].country;
-         localStorage["keySl"]  = allJobs[selectedRowIndex].keySkills;
-         localStorage["worklocation"] = allJobs[selectedRowIndex].workLocation;
-         localStorage["workmode"] = allJobs[selectedRowIndex].workMode;
+		 localStorage["jobId"] = this.allJobs[this.selectedRowIndex].jobId;
+		 localStorage["jobTitle"] = this.allJobs[this.selectedRowIndex].jobTitle;
+		 localStorage["noOfPost"] = this.allJobs[this.selectedRowIndex].noOfPost;
+		 localStorage["descriptions"] = this.allJobs[this.selectedRowIndex].descriptions;
+		 localStorage["qualificationRequired"] = this.allJobs[this.selectedRowIndex].qualificationRequired;
+		 localStorage["experienceRequired"] = this.allJobs[this.selectedRowIndex].experienceRequired;
+		 localStorage["specializationRequired"] = this.allJobs[this.selectedRowIndex].specializationRequired;
+		 localStorage["lastDateToApply"] = this.allJobs[this.selectedRowIndex].lastDateToApply;
+		 localStorage["salary"] = this.allJobs[this.selectedRowIndex].salary;
+		 localStorage["jobType"] = this.allJobs[this.selectedRowIndex].jobType;
+		 localStorage["companyName"] = this.allJobs[this.selectedRowIndex].companyName;
+		 localStorage["logoUrl"] = this.allJobs[this.selectedRowIndex].logoUrl;
+		 localStorage["website"] = this.allJobs[this.selectedRowIndex].website;
+		 localStorage["email"] = this.allJobs[this.selectedRowIndex].email;
+		 localStorage["address"] = this.allJobs[this.selectedRowIndex].address;
+		 localStorage["state"] = this.allJobs[this.selectedRowIndex].state;
+		 localStorage["country"] = this.allJobs[this.selectedRowIndex].country;
+         localStorage["keySl"]  = this.allJobs[this.selectedRowIndex].keySkills;
+         localStorage["worklocation"] = this.allJobs[this.selectedRowIndex].workLocation;
+         localStorage["workmode"] = this.allJobs[this.selectedRowIndex].workMode;
          
 		 location.replace("../new-job-list/NewJobDetails.html");
 		}
