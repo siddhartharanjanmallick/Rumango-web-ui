@@ -6,12 +6,13 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
    }
    console.log("inside script");
-
+   const url=devUrl;
+   console.log("devUrl", url);
    var jobId= localStorage.getItem("jobId");
 console.log(jobId);
 document.getElementById('submitbtn').disabled=true;
 
-fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId='+jobId, {
+fetch(url+'/jobs-api/fetchJobsInfoById?jobId='+jobId, {
      method: 'GET',         
     }).then(function(response){ 
          return response.json()}).then(function(data)
@@ -88,7 +89,7 @@ fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId=
     var resumeLink = document.getElementById('resumeLink');
     let formData = new FormData();           
     formData.append("file", resumeLink.files[0]);
-     fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/uploadResume', {
+     fetch(url+'/applicant-api/uploadResume', {
     method: "POST", 
     body: formData
    }).then(function(response){ 
@@ -100,7 +101,7 @@ fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId=
     console.log(resumeURL);
     this.resumeLinkForAPi =resumeURL.data;
     console.log(resumeURL.data);
-    fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/saving', {
+    fetch(url+'/applicant-api/saving', {
       method: 'POST',
       body: JSON.stringify({
       //APPLICANT_ID:'2345',
@@ -150,7 +151,7 @@ fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId=
     
    }).catch(error =>{
       console.error('Error:', error);
-      alert('Please upload resume only in pdf/doc/docx/jpg/jpeg formats');
+      alert(error);
      });    
        
     }

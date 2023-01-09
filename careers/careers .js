@@ -1,4 +1,7 @@
 AOS.init();
+
+const url=devUrl;
+   console.log("devUrl", url);
 function createCareerNode (opening) {
     const node = document.createElement('div');
     
@@ -26,7 +29,7 @@ function createCareerNode (opening) {
 
  
   // let obj;
-  fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchAllJobsInfo', {
+  fetch(url+'/jobs-api/fetchAllJobsInfo', {
      method: 'GET',         
     }).then(function(response){ 
          return response.json()}).then(function(data)

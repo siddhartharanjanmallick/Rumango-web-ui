@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="loginPage/web/css/common.css" />
     <link rel="stylesheet" type="text/css" href="loginPage/web/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="loginPage/web/css/loginPage.css" /> -->
-   <script src="loginPage.js"></script>
+   
    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
    <script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.6.js"></script>
@@ -56,50 +56,9 @@
     <div>
       
     </div>
-    <script type="text/javascript">
-        AOS.init();
-
+    <script src="../enviroment.js"></script>
+    <script src="loginPage.js" type="text/javascript">
        
-
-        console.log("inside script");
-        function verifyCredentials(){
-        var email = document.getElementById('userName').value;
-        var password = document.getElementById('password').value;  
-        console.log(userName);
-        console.log(password);
-        if(password==='' && userName===''){
-            alert("Please enter email and Password")
-        } else if(password!=='' && userName===''){
-            alert("Please enter email")
-        } else if(password==='' && userName!==''){
-            alert("Please enter Password")
-        }else{
-        // fetch('http://localhost:7172/login-api/authentication', {
-        fetch('http://192.168.0.14:8081/RumangoWebsite/login-api/authentication', {
-        method: 'POST',
-        body: JSON.stringify({
-	    email:email,
-        password:password
-        }),
-        headers: {
-              'Content-type': 'application/json; charset=UTF-8',
-            }
-        }).then(function(response){ 
-        return response.json()}).then(function(data)
-        {
-            console.log(data)
-		 if(data){
-          window.location.replace("../admin-dashboard/AdminDashboard.html");    
-        //   setTimeout("pageRedirect()", 10000);
-		  }
-        //userName=document.getElementById("title")
-        //passWord=document.getElementById("bd")
-        //userName.innerHTML = data.userName
-        //password.innerHTML = data.password  
-        }).catch(error => alert("Invalid Credentials")); 
-      }
-        }
-
     </script>
 </body>
 
