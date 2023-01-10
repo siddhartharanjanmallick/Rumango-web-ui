@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 
 // const url=devUrl;
 //    console.log("devUrl", url);

@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 console.log("Heelo");
 var obj =
 {

@@ -1,5 +1,5 @@
 
-    AOS.init();
+  
     console.log("insideJs");
    
 

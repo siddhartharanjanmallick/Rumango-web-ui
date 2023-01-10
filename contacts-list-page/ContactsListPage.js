@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 console.log("hello");
 let selectedRowIndex, allContacts;
 let filteredMsgContact;

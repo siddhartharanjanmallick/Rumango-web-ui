@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 		console.log("Hello");
 	let selectedRowIndex, allApplicants, allResumes;
 	let namesForTable;

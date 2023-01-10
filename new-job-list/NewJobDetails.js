@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 console.log("hello");
 console.log(localStorage['jobpage']);
 console.log(localStorage["jobId"]);

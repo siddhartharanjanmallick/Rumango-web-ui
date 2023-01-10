@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="ReplyPage.css">
     <link rel="stylesheet" href="../src/css/common.css">
-    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.6.js"></script>
 </head>
@@ -150,7 +150,7 @@
         </div>
         <div class="block17 layout1"></div>
         <div class="block20 layout">
-           <textarea name="" id="MessageReply" cols="100" rows="50" placeholder="Please Enter Reply Message"></textarea>
+           <textarea name="" id="MessageReply" cols="100" rows="50" placeholder="Please Enter Reply Message" readonly></textarea>
         </div>
         <div class="block21 layout">
             <px-posize track-style='{"flexGrow":1}' x="0px 69fr 0fr" y="0px minmax(0px, 20fr) 0fr">
@@ -164,7 +164,7 @@
         <img src="images/2942380326c1176418fcc85b1e444217.png" alt="" class="icon5 layout" />
     </div>
     <script type="text/javascript">
-        AOS.init();
+        // AOS.init();
         let data = [];
         console.log(localStorage.getItem('dta_fromcontactPage'));
          data = JSON.parse(localStorage.getItem('dta_fromcontactPage'));
@@ -173,6 +173,9 @@
             console.log("inside",);
             const name = document.getElementById('name12');
             name.innerHTML =`${data.name}`;
+            const msg = document.getElementById('MessageReply');
+            msg.innerHTML = `${data.message}`
+
         }
         function SendMail(){
             console.log("inside submit")
