@@ -19,9 +19,9 @@ fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/fetchAllMessagesInfo'
 
 
 function deleteContact() {
-console.log(allContacts[selectedRowIndex].id);
+console.log(this.allContacts[selectedRowIndex].id);
 fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/deleteMessageInfoById?id='
-  +allContacts[selectedRowIndex].id, {
+  +this.allContacts[selectedRowIndex].id, {
   method: 'DELETE',         
 }).catch(error => console.error('Error:', error));
    alert('Contact Record Deleted.');		   
