@@ -1,0 +1,43 @@
+.imageDesign1{
+    height: 200px;
+    width: 200px;
+    margin-left: 450px;
+    margin-top: 20px;
+}
+.card-design{
+    width: 95%;
+    background-color: #ff6700;
+    height: 100%;
+    border: none;
+}
+.description{
+    color: white;
+    margin-left: 7%;
+}
+.description1{
+    font: 700 1em/1.64 "Futura", Helvetica, Arial, serif;
+    color: black;
+}
+
+.imageDesign2{
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+.container{
+    max-width: 1370px;
+    padding-left: 0px !important;
+}
+.background1{
+    background-color: black;
+    height: 80%;
+}
+.imageDesign{
+align-items: right;
+}
