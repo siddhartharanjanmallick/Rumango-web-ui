@@ -179,3 +179,26 @@ var obj =
 		   
 		   }
         }
+
+        fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/fetchAllMessagesInfo', {
+ method: 'GET',         
+}).then(function(response){ 
+     return response.json()}).then(function(data)
+{
+  console.log(data);
+  console.log(data.length);
+  this.allContacts=data;
+
+document.getElementById('name1').innerHTML=data[0].name
+document.getElementById('name2').innerHTML=data[1].name
+document.getElementById('name3').innerHTML=data[2].name
+document.getElementById('msg1').innerHTML=data[0].message
+document.getElementById('msg2').innerHTML=data[1].message
+document.getElementById('msg3').innerHTML=data[2].message
+document.getElementById('slice1').innerHTML=data[0].name.slice(0,1)
+document.getElementById('slice2').innerHTML=data[1].name.slice(0,1)
+document.getElementById('slice3').innerHTML=data[2].name.slice(0,1)
+
+
+  
+}).catch(error => console.error('Error:', error));
