@@ -195,23 +195,6 @@ code {
 .headroom--unpinned {
     transform: translateY(-100%);
 }
-/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
-@import "utils";
-
-$color_type_0: rgb(112, 112, 112);
-$color_type_1: rgb(243, 111, 33);
-$color_type_2: rgb(250, 250, 250);
-
-$font_type_0: 400 40.104270935058594px/1.2 "Plus Jakarta Sans", Helvetica, Arial, serif;
-$font_type_1: 400 18.653148651123047px/1.2 "Plus Jakarta Sans", Helvetica, Arial, serif;
-$font_type_2: 500 16.78783416748047px/1.2 "Plus Jakarta Sans", Helvetica, Arial, serif;
-$font_type_3: 300 13.057204246520996px/1.2 "Avenir", Helvetica, Arial, serif;
-$font_type_4: 400 13.057204246520996px/1.2 "Plus Jakarta Sans", Helvetica, Arial, serif;
-
-.block {
-  @include flex-column;
-  background-color: $color_type_2;
-}
 .block.layout {
   position: relative;
   overflow: hidden;
@@ -319,9 +302,9 @@ $font_type_4: 400 13.057204246520996px/1.2 "Plus Jakarta Sans", Helvetica, Arial
   min-width: 0px;
   width: fit-content;
 }
-.box {
+/* .box {
   background-color: $color_type_1;
-}
+} */
 .box.layout {
   position: absolute;
   top: 463px;
