@@ -1108,7 +1108,10 @@ code {
     width: 706px;
     min-width: 706px;
   }
-  
+  .view{
+    padding-left: 32%;
+    padding-top: 21%;
+  }
   .line {
     background-color: #030229;
     opacity: 0.05;
