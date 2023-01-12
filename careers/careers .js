@@ -4,6 +4,7 @@
 //    console.log("devUrl", url);
 function createCareerNode (opening) {
     const node = document.createElement('div');
+    const msg = opening.descriptions.slice(0,100);
     
     node.innerHTML = `
       <div class="box" style="display: flex; border: 1px solid; flex-direction: column; margin-bottom:10%; padding: 10%">
@@ -11,7 +12,7 @@ function createCareerNode (opening) {
         <div class="text"> Exp: ${opening.experienceRequired}  year</div>
         <div class="text">Last Date: ${opening.lastDateToApply}</div>
         <p class="text">
-          ${opening.descriptions}
+          ${msg}....
         </p>
         
         <a  onClick="applyNow(${opening.jobId})" class="applyBtn"
