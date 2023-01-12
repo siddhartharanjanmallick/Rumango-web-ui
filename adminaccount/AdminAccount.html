@@ -55,10 +55,10 @@
         <img class="icon" src="images/2f49a3ba0b6559b63d7979b9a85b0907.png" alt="alt text" />
 		<img class="icon1" src="images/f988458c6e7e4c0768724666ad1d16c6.png" alt="alt text" />
 		<img class="image3" onclick="showPass()" src="images/f7dcde70464f69dbe951d4dd3fa76c69.png" alt="alt text" />
-		<img class="icon2" src="images/90d751b4c96bb0c05eb0f87c919a1662.png" alt="alt text" />
-		<img class="image31" src="images/f7dcde70464f69dbe951d4dd3fa76c69.png" alt="alt text" />
+		<img class="icon2" onclick="showPass()" src="images/90d751b4c96bb0c05eb0f87c919a1662.png" alt="alt text" />
+		<img class="image31" onclick="showConfirmPass()" src="images/f7dcde70464f69dbe951d4dd3fa76c69.png" alt="alt text" />
 		<img class="icon21" onclick="showConfirmPass()" src="images/90d751b4c96bb0c05eb0f87c919a1662.png" alt="alt text" />
-		<img class="image4" src="images/9d3a1a171ecdbe992cddd7e28965243b.png" alt="alt text" />
+		<img class="image4"  src="images/9d3a1a171ecdbe992cddd7e28965243b.png" alt="alt text" />
 		<img class="icon3" src="images/2f49a3ba0b6559b63d7979b9a85b0907.png" alt="alt text" />
         <div class="wrapper2">
             <button style="margin-top: 4%; font-size: 17px;" onClick="submit()" id="continuebtn">CONTINUE</button>
@@ -136,8 +136,11 @@
         return response.json()}).then(function(data)
         {
 		 console.log(data);
-         alert("user created successfully")
-        }).catch(error => console.error('Error:', error)); 
+         if(data.message){
+            alert(data.message);
+         }else{         alert("user created successfully")}
+        }).catch(error => {console.error('Error:', error)
+    alert(error)}); 
 		}
 		
     </script>
