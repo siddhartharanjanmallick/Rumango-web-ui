@@ -891,7 +891,7 @@
 }
 .careers-application-screen-section3__section3.layout {
   position: relative;
-  height: 1387px;
+  height: 1093px;
 }
 .careers-application-screen-section3__big-title-box.layout {
   position: absolute;
@@ -935,7 +935,7 @@
 .careers-application-screen-section3__box8.layout {
   position: absolute;
   top: 130px;
-  height: 995px;
+  height: 814px;
   left: 968px;
   width: 398px;
   min-width: 398px;
@@ -946,7 +946,7 @@
 }
 .careers-application-screen-section3__box15.layout {
   position: absolute;
-  top: 1262px;
+  top: 971px;
   height: 65px;
   left: 79px;
   width: 255px;
@@ -959,7 +959,7 @@
 }
 .careers-application-screen-section3__subtitle2.layout {
   position: absolute;
-  top: 1283px;
+  top: 990px;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -2020,7 +2020,7 @@ form{
   width: 60%;
   border-radius: 5px;
   height: 65px;
-  margin-top: 240px;
+  margin-top: 34px;
 }
 
 input {

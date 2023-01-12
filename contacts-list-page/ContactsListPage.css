@@ -1856,7 +1856,7 @@ code {
     text-align: left;
     
   }
-  .table-contact>tbody>tr:hover{
+  .table-contact>tbody>.throw:hover{
     /* background-color: #f5f5f7; */
     cursor: pointer;
     transform: scale(1);
@@ -1881,4 +1881,7 @@ code {
   .input11{
     width: 260px;
     height: 40px;
+  }
+  .hover{
+    cursor: pointer;
   }

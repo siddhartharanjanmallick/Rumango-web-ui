@@ -3059,22 +3059,29 @@ td {
   text-align: center;
  }
 tr{
-  position: relative;
-    top: 42px;
+  height: 50px;
 }
 .Search_input{
   width: 732px;
   height: 42px;
 }
-.table_header1{
-  position: relative;
-  top: 10px;
-  background-color: #5b92ff;
-}
+
+
 .jobs{
   position: absolute;
   top: 743px;
   /* right: 525px; */
+  border-collapse: separate;
+  border-spacing: 0 15px;
   left: 264px;
   width: 79%;
+}
+.table_header1{
+  font-weight: bold;
+}
+.header_data{
+  background-color: white;
+}
+.table_header1{
+  background-color: white;
 }

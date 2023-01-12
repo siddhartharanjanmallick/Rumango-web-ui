@@ -58,6 +58,7 @@ function table (data){
    
     for (let i = 0; i < data.length; i++) {
         const row = document.createElement('tr');
+        row.className = "throw";
         ['name', 'email', 'phoneNumber', 'message'].forEach(cell => {
             const column = data[i][cell];
             const columnNode =document.createElement('td');

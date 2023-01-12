@@ -1881,15 +1881,16 @@ td {
   text-align: center;
  }
 tr{
-  position: relative;
-    top: 42px;
+  height: 50px;
 }
 .Search_input{
   width: 732px;
   height: 42px;
 }
+.tbl{
+  border-collapse: separate;
+    border-spacing: 0 15px;
+}
 .table_header1{
-  position: relative;
-  top: 10px;
-  background-color: #5b92ff;
+  font-weight: bold;
 }

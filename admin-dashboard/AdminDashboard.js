@@ -155,7 +155,7 @@ var obj =
         cell5.innerHTML = "Phone No";
         cell6.innerHTML = "Applicant ID";
        
-       
+      
 		for (let i = 0; i < data.length; i++) {
 			const row = document.createElement('tr');
 			row.addEventListener('click', () => {
