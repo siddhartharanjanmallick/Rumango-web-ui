@@ -19,7 +19,7 @@ var d = new Date(date),
 console.log( this.dateForValidation);
 var data = JSON.parse(localStorage.getItem('jobDetails'));
 console.log(data);
-var jobId= localStorage.getItem("jobId");
+var jobId= data[0].jobId;
 console.log(jobId);
 // const url=devUrl;
 //  console.log("devUrl", url);
