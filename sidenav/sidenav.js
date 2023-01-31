@@ -12,7 +12,7 @@ sidenavTemplet.innerHTML = `
 </div>
 <div class="sidenav">
 <ul>
-    <li><a href="../admin-dashboard/adminDashboard.html" onClick="sidenavColor('Dashboard')" id='sideUU'  class=" Dashboard dashboard-link">
+    <li><a href="../admin-dashboard/AdminDashboard.html" onClick="sidenavColor('Dashboard')" id='sideUU'  class=" Dashboard dashboard-link">
             <span><img src="../src/assets/dashboard-img.png"/></span>
             <span>Dashboard</span>
         </a></li>
