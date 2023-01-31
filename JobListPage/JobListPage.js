@@ -1,238 +1,453 @@
 
-  
-    console.log("insideJs");
-   
+let display=3;
+let count=1;
+let buttonCount;
+let pageNum=1;
+let buttonNumbers;
+let paginationNumber=document.getElementById("pagination-numbers");
+let searchUserName="";
+let search_data="";
+let tableRecord="";
+let noDataBool=false;
+let sortCol;
+let sortAsc = false;
+let deleteBool=false;
 
-    let jobsarr;
+
+
+
+this.api_url="http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchAllJobsInfo";
+
+async function getapi(url) 
+{
+    // Storing response
+    this.response = await fetch(url);
     
+    // Storing data in form of JSON
+    this.data= await response.json();
+    if(!deleteBool)
+    {
+        getPageNumber();
+    }
+    else
+    {
+         display=3;
+         count=1;
+         pageNum=1;
+        paginationNumber=document.getElementById("pagination-numbers");
+         search_input_txt();
+        
+    }
+    
+}
 
-	let selectedRowIndex, allJobs;
-  let  selectedRowJobIds = [];
- 
-    fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchAllJobsInfo', {
-         method: 'GET',         
-        }).then(function(response){ 
-             return response.json()}).then(function(data)
+document.getElementById("prev_button").setAttribute("disabled",true);
+document.getElementById("table_body").innerHTML=""; 
+
+tableData="<tr><td colspan='6' align= 'center' style='color:blue;font-weight:bolder'>No Record Found</td></tr>";
+
+document.querySelector(".pagination-wrapper").classList.remove("visible");
+document.querySelector(".pagination-wrapper").classList.add("invisible");
+document.getElementById("table_body").innerHTML=tableData; 
+
+// Calling that async function
+getapi(api_url);
+
+
+
+function getPageNumber()
+{
+    document.getElementById("pagination-numbers").innerHTML="";
+    if((!noDataBool) &&(search_data==""))
+    {
+        display=document.getElementById('select_page_size').value;
+    }
+    else if(search_data=="")
+    {
+        display=3; 
+    }
+    else 
+    {
+        display=document.getElementById('select_page_size').value;
+    }
+   
+    document.querySelector(".pagination-wrapper").classList.remove("invisible");
+    document.querySelector(".pagination-wrapper").classList.add("visible");
+    count=1;
+    getData();
+}
+
+
+function getData()
+{
+    if((data.length!==0)&&(search_data=="") && (searchUserName.length==0))
+    {
+        buttonCount=Math.ceil((data.length)/(display));
+    }
+    else if (searchUserName.length!==0)
+    {
+        buttonCount=Math.ceil((searchUserName.length)/(display));
+    }
+    if(buttonCount==1)
+    {
+        document.getElementById("next_button").setAttribute("disabled",true);
+        document.getElementById("prev_button").setAttribute("disabled",true);
+    }
+    for(let i=1;i<=buttonCount;i++)
+    {
+        var button= document.createElement("button");
+        button.innerHTML=i;
+        paginationNumber.append(button);
+    }
+    buttonNumbers =paginationNumber.getElementsByTagName("button");
+    if(buttonCount!==1)
+    {
+        buttonNumbers[count - 1].classList.add("active");
+        for(i=0;i<buttonNumbers.length;i++)
         {
-		  console.log(data);	
-		  console.log(data.length);
-		  this.allJobs=data;
-        //   document.getElementById('jobTable').innerHTML = '';
-          tablecreate(this.allJobs)
-
-        
-        }).catch(error => console.error('Error:', error)); 
-       
-	
-
-       function tablecreate(data){
-        // if(data.length <= 1){}else{}
-        //   document.querySelectorAll('tr').forEach(function(e){e.remove()});
-        document.getElementById('jobTable').innerHTML = '';
-        var table =document.getElementById('jobTable');
-        var row = table.insertRow(0);
-        row.className = 'table_header';
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
-        var cell5 = row.insertCell(4);
-        var cell6 = row.insertCell(5);
-        var cell7 = row.insertCell(6);
-        var cell8 = row.insertCell(7);
-        var cell9 = row.insertCell(8);
-        var cell10 = row.insertCell(9);
-        var cell11 = row.insertCell(10);
-        cell1.innerHTML = "Select";
-        cell2.innerHTML = "Job Title";
-        cell3.innerHTML = "No of Posts";
-        cell4.innerHTML = "Qualification Required";
-        cell5.innerHTML = "Experience Required";
-        cell6.innerHTML = "Last Date to Apply";
-        cell7.innerHTML = "Company";
-        cell8.innerHTML = "Country";
-        cell9.innerHTML = "State";
-        cell10.innerHTML = "Job ID";
-        cell11.innerHTML = "Actions";
-        
-        console.log("for !srtrtime ");
-        console.log(data)
-       
-        for (let i = 0; i < data.length; i++) { 
-            const row = document.createElement('tr');
-            row.className='trow';
-
-           //  const columnNode =document.createElement('td');
-           //  columnNode.innerHTML = '<input type="checkbox" />';
-           const columnNode =document.createElement('td');
-           columnNode.innerHTML = '<input type="checkbox" id="clickedcheckbox" "/>';
-           columnNode.addEventListener("click", ()=>{
-               
-               
-               if(selectedRowJobIds.includes(data[i].jobId)){
-                   selectedRowJobIds = selectedRowJobIds.filter(function(item) {
-                       return item !== data[i].jobId
-                   })
-               }else{
-                   selectedRowJobIds.push(data[i].jobId);
-               }
-                console.log(selectedRowJobIds);
-            });
-            row.appendChild(columnNode);
-      
-           //  row.addEventListener('click', () => {
-           //      selectedRowIndex = i;
-           //      modal.style.display = "block";
-           //     });
-            ['jobTitle','noOfPost','qualificationRequired','experienceRequired','lastDateToApply','companyName','country','state','jobId'].forEach(cell => {
-                const column = data[i][cell];
-                const columnNode =document.createElement('td');
-                columnNode.innerHTML = column;
-                row.appendChild(columnNode);
-                
-               });
-
-               const img = document.createElement('td');
-               img.innerHTML='<div>  <input type="image" src="../src/assets/dot.png" style="height:5px; width:20px;"></div>'
-               
-               img.addEventListener('click', () => {
-                
-               this.selectedRowIndex = i;
-               console.log( this.selectedRowIndex);
-               modal.style.display = "block";
-               });
-               row.appendChild(img);
-
-            document.getElementById('jobTable').appendChild(row);
-           }
-       }
-	function deleteJob() {
-	 console.log(this.allJobs[this.selectedRowIndex].jobId);
-     console.log( );
-	 fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/deleteJobsInfoById?jobId='
-		  +this.allJobs[this.selectedRowIndex].jobId, {
-          method: 'DELETE',         
-        }).catch(error => console.error('Error:', error));
-		   alert('Job Record Deleted.');	
-           window.location.reload();	   
-	}
-		
-		var modal = document.getElementById("myModal");
-		//var btn = document.getElementById("jobTitle");
-		var span = document.getElementsByClassName("close")[0];
-		/* btn.onclick = function() {
-              modal.style.display = "block";
-        }*/
-		span.onclick = function() {
-		console.log("inside span onclick");
-          modal.style.display = "none";
+            buttonNumbers[i].addEventListener('click',buttonClick);
         }
-		window.onclick = function(event) {
-		console.log("inside window onclick");
-            if (event.target == modal) {
-			 console.log("inside window onclick if");
-             modal.style.display = "none";
-            }
+    }
+    else
+    {
+        buttonNumbers[count - 1].classList.remove("active");
+    }
+   showTableData(pageNum);
+}
+
+function showTableData(pageNum)
+{
+    let tableData="";
+    let tableRecord="";
+
+    if((data.length!==0) || (searchUserName.length!==0))
+    { 
+        document.getElementById("table_body").innerHTML=""; 
+        if((data.length!=0)&&(searchUserName.length==0))
+        {
+            tableRecord=  data.filter((row, index) => {
+            nextPage=display*pageNum;
+            prevPage=display*(pageNum-1);         
+            if(index >= prevPage && index < nextPage)
+            {
+               return true;
+            } 
+                
+            })    
         }
-		
-		function editJob() {
+        else if(searchUserName.length!=0)
+        {
+            tableRecord=  searchUserName.filter((row, index) => {
+                nextPage=display*pageNum;
+                prevPage=display*(pageNum-1);         
+                if(index >= prevPage && index < nextPage)
+                {
+                    return true;
+                } 
+                    
+                }) 
+        }
+
+        tableRecord.map((values)=>{
+             tableData+=` <tr class="addrowproperty">
            
-            console.log(this.allJobs[this.selectedRowIndex]);
-
-        localStorage["jobpage"] = "fromJobPage";
-         
-		 localStorage["jobId"] = this.allJobs[this.selectedRowIndex].jobId;
-		 localStorage["jobTitle"] = this.allJobs[this.selectedRowIndex].jobTitle;
-		 localStorage["noOfPost"] = this.allJobs[this.selectedRowIndex].noOfPost;
-		 localStorage["descriptions"] = this.allJobs[this.selectedRowIndex].descriptions;
-		 localStorage["qualificationRequired"] = this.allJobs[this.selectedRowIndex].qualificationRequired;
-		 localStorage["experienceRequired"] = this.allJobs[this.selectedRowIndex].experienceRequired;
-		 localStorage["specializationRequired"] = this.allJobs[this.selectedRowIndex].specializationRequired;
-		 localStorage["lastDateToApply"] = this.allJobs[this.selectedRowIndex].lastDateToApply;
-		 localStorage["salary"] = this.allJobs[this.selectedRowIndex].salary;
-		 localStorage["jobType"] = this.allJobs[this.selectedRowIndex].jobType;
-		 localStorage["companyName"] = this.allJobs[this.selectedRowIndex].companyName;
-		 localStorage["logoUrl"] = this.allJobs[this.selectedRowIndex].logoUrl;
-		 localStorage["website"] = this.allJobs[this.selectedRowIndex].website;
-		 localStorage["email"] = this.allJobs[this.selectedRowIndex].email;
-		 localStorage["address"] = this.allJobs[this.selectedRowIndex].address;
-		 localStorage["state"] = this.allJobs[this.selectedRowIndex].state;
-		 localStorage["country"] = this.allJobs[this.selectedRowIndex].country;
-         localStorage["keySl"]  = this.allJobs[this.selectedRowIndex].keySkills;
-         localStorage["worklocation"] = this.allJobs[this.selectedRowIndex].workLocation;
-         localStorage["workmode"] = this.allJobs[this.selectedRowIndex].workMode;
-         
-		 location.replace("../new-job-list/NewJobDetails.html");
-		}
-
-        function activateTable2 (){
-            // document.getElementById('indevidualData').innerHTML='';
-            console.log("inside search");
-            let jobtitle = document.getElementById('jobfortable').value;
-            this.jobsarr = this.allJobs.filter(job => job.jobTitle == jobtitle );
-            console.log(this.jobsarr);
-            document.getElementById('jobTable').innerHTML = '';
-            document.getElementById('jobTable').innerHTML = '';
-        //    previoustable.getElementsByClassName('trow').innerHTML = '';
-            if(this.jobsarr.length == 0){
-                console.log("dfsdnjkfsdfjsdhfjasdhfkj")
-                console.log(this.allJobs);
-                
-                this.tablecreate(this.allJobs);
-            }else{
-           this.tablecreate(this.jobsarr );}
-       
-            
-
-        //     if(jobID =='' ){
-        //         document.getElementById('jobTable').style.display = 'block';
-        //         table2.style.display = 'none';
-        //     }
-        //     else{
-            
-        //     table2.style.display = 'block';
-        //     document.getElementById('jobTable').style.display = 'none';
-        //     console.log(jobID);
-        //     fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/fetchJobsInfoById?jobId='+jobID, {
-        //  method: 'GET',         
-        // }).then(function(response){ 
-        //      return response.json()}).then(function(data){
-        //         console.log(data);
-        //         for (let i = 0; i < 1; i++) { 
-		//      const row = document.createElement('tr');
-        //      row.className='trow';
-
-        
-        //     const columnNode =document.createElement('td');
-              
+             <td data-title='Job Title'>${values.jobTitle}</td>
+             <td data-title='No of Posts'>${values.noOfPost}</td>
+             <td data-title='Qualification Required'>${values.qualificationRequired}</td>  
+             <td data-title='Experience Required'>${values.experienceRequired}</td> 
+             <td data-title='Last Date to apply'>${values.lastDateToApply}</td>
+             <td data-title='Company'>${values.companyName}</td>
+             <td data-title='Country'>${values.country}</td>
+             <td data-title='State'>${values.state}</td>
+             <td data-title='Job ID'>${values.jobId}</td>
+             <td data-title='Operations'>
+             `
+             if(values)
+             {
+                 tableData+=`<span class="fa fa-pencil-square" style="font-size:20px"
+                 onClick="javascript:return edit(${values.jobId})"></span>` 
+             }
              
-       
-		//      ['jobTitle','noOfPost','qualificationRequired','experienceRequired','lastDateToApply','companyName','country','state','jobId'].forEach(cell => {
-		// 	     const column = data[cell];
-		// 	     const columnNode =document.createElement('td');
-		// 	     columnNode.innerHTML = column;
-		// 	     row.appendChild(columnNode);
-                 
-		//         });
+             tableData+=`&nbsp &nbsp &nbsp &nbsp
+             <span class="fa fa-trash" style="font-size:20px" 
+             onClick="javascript:return deleteApplicant(${values.jobId})"> </span>
+             </td> 
+             </tr>`
 
-        //         const img = document.createElement('td');
-        //         img.innerHTML='<div>  <input type="image" src="../src/assets/dot.png" style="height:5px; width:20px;"></div>'
+           
+         });
+
+    }
+    else
+    {
+        document.getElementById("table_body").innerHTML=""; 
+        tableData+=`<tr><td colspan="6" align="center" style="color:blue;font-weight:bolder">
+        No Record Found</td></tr>`
+    }
+    
+    document.getElementById("table_body").innerHTML=tableData;
+}
+
+document.getElementById('next_button').addEventListener('click', nextPage);
+document.getElementById('prev_button').addEventListener('click', previousPage);
+document.getElementById('select_page_size').addEventListener('change', getPageNumber);
+
+
+
+function buttonClick()
+{   
+    buttonNumbers[count - 1].classList.remove("active");
+    count=this.innerHTML;
+   if(this.innerHTML==buttonCount)
+    {
+        document.getElementById("next_button").setAttribute("disabled",true);
+        document.getElementById("prev_button").removeAttribute("disabled");
+    }
+    else if(this.innerHTML==1)
+    {
+        document.getElementById("prev_button").setAttribute("disabled",true);
+        document.getElementById("next_button").removeAttribute("disabled");
+    }
+    else{
+        document.getElementById("next_button").removeAttribute("disabled");
+        document.getElementById("prev_button").removeAttribute("disabled");
+    }
+    showTableData(count);
+    this.classList.add("active");
+}
+
+function nextPage()
+{
+    document.getElementById('prev_button').removeAttribute("disabled");
+    if(count!=buttonCount)
+    {
+        buttonNumbers[count-1].classList.remove("active");
+        buttonNumbers[count].classList.add("active");
+        count++;
+    }
+    if(count==buttonCount)
+    {
+        document.getElementById("next_button").setAttribute("disabled",true);
+             
+    }
+    showTableData(count);
+}
+function previousPage()
+{
+    buttonNumbers[count-1].classList.remove("active");
+    buttonNumbers[count-2].classList.add("active");
+    document.getElementById("next_button").removeAttribute("disabled");
+    
+    if(count !== 1)
+    {
+        count--;
+        
+    } 
+    if(count==1)
+    {
+        document.getElementById("prev_button").setAttribute("disabled",true);
+    } 
+   showTableData(count);   
+}
+
+function search_input_txt()
+{
+    if(!deleteBool)
+    {
+        search_data=document.getElementById("search_input").value;
+    }    
+    deleteBool=false;
+
+     
+     noDataBool=false;
+     searchUserName=data.filter(userName=>userName.jobTitle.toLowerCase().includes((search_data).toLowerCase()));
+    
+     if(searchUserName.length==0 && search_data!=="")
+    {
+        tableData="";
+        noDataBool=true;
+        document.getElementById("table_body").innerHTML=""; 
+
+        tableData="<tr><td colspan='6' align= 'center' style='color:blue;font-weight:bolder'>No Record Found</td></tr>";
+        
+        document.querySelector(".pagination-wrapper").classList.remove("visible");
+        document.querySelector(".pagination-wrapper").classList.add("invisible");
+        document.getElementById("table_body").innerHTML=tableData; 
+   }
+    else
+    {
+
+       getPageNumber();
+    }
+//          console.log(data);
+// 		  input = document.getElementById("search_input");
+// 		  filter = input.value.toUpperCase();
+// 		  table = document.getElementById("job-table");
+// 		//   tr = table.getElementsByTagName("tr");
                 
-        //         img.addEventListener('click', () => {
-		// 	    selectedRowIndex = i;
-        //         modal.style.display = "block";
-		//         });
-        //         row.appendChild(img);
+//         // Loop through all table rows, and hide those who don't match the search query
+//         for (i = 0; i < data.length; i++) {
+//         td = data[i].firstName;
+//         if (td) {
+//             txtValue = td;
+//             if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//             data[i].style.visibility= "visible";
+//             } else {
+//             data[i].style.visibility= "hidden";
+//             }
+//         }
+//         }
+}
 
-		// 	 document.getElementById('indevidualData').appendChild(row);
-        //     }
-        //      }).catch(error =>{
-        //       console.error('Error:', error);
-              
-        //      }); 
+document.querySelectorAll('#job-table thead tr th').forEach((column) => {
+    
+    column.addEventListener('click', sort, false);
+}); 
 
-        //     }
+function sort(e)
+ {
+    if(!noDataBool)
+    {
 
-
+        let thisSort = e.target.dataset.sort;
+    
+        if(sortCol === thisSort) sortAsc = !sortAsc;
+        sortCol = thisSort;
+        if(searchUserName.length==0)
+        {
+            data.sort((a, b) => {
+                if(a[sortCol] < b[sortCol]) return sortAsc?1:-1;
+                if(a[sortCol] > b[sortCol]) return sortAsc?-1:1;
+                return 0;
+            });
         }
-		
+        else
+        {
+            searchUserName.sort((a, b) => {
+                if(a[sortCol] < b[sortCol]) return sortAsc?1:-1;
+                if(a[sortCol] > b[sortCol]) return sortAsc?-1:1;
+                return 0;
+            });           
+        }
+        getPageNumber();    
+    }
+ }    
+
+ function edit(i)
+ {
+    console.log(i);
+    let dwnResume=data.filter(applicationID=>applicationID.jobId == i);
+    console.log(dwnResume);
+    localStorage.setItem("jobpage","fromJobPage");
+    localStorage["jobId"] = dwnResume[0].jobId;
+    localStorage["jobTitle"] = dwnResume[0].jobTitle;
+    localStorage["noOfPost"] = dwnResume[0].noOfPost;
+    localStorage["descriptions"] = dwnResume[0].descriptions;
+    localStorage["qualificationRequired"] = dwnResume[0].qualificationRequired;
+    localStorage["experienceRequired"] = dwnResume[0].experienceRequired;
+    localStorage["specializationRequired"] = dwnResume[0].specializationRequired;
+    localStorage["lastDateToApply"] = dwnResume[0].lastDateToApply;
+    localStorage["salary"] = dwnResume[0].salary;
+    localStorage["jobType"] = dwnResume[0].jobType;
+    localStorage["companyName"] = dwnResume[0].companyName;
+    localStorage["logoUrl"] = dwnResume[0].logoUrl;
+    localStorage["website"] = dwnResume[0].website;
+    localStorage["email"] = dwnResume[0].email;
+    localStorage["address"] = dwnResume[0].address;
+    localStorage["state"] = dwnResume[0].state;
+    localStorage["country"] = dwnResume[0].country;
+    localStorage["workmode"] = dwnResume[0].workMode;
+   localStorage["worklocation"] = dwnResume[0].workLocation;
+   localStorage["keySl"] = dwnResume[0].keySkills;
+   
+    // localStorage[''] = JSON.stringify(dwnResume);
+    location.replace("../new-job-list/NewJobDetails.html");
+    console.log(dwnResume);
+  
+    
+ }
+ 
+ function downloadAllResumes() {
+    fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/downloadAllResume', {
+    method: 'GET',         
+    }).then(function(response){ 
+    return response.json()}).then(function(data)
+    {
+      console.log(data);
+      allResumes=data;
+      console.log(allResumes.length);
+      for (let index = 0; index < allResumes.length; index++) {
+        setTimeout(()=>{
+            console.log(allResumes[index]);
+            window.open(allResumes[index],'_blank');	
+        },500)
+        
+      }
+    //   for(i=0;i<allResumes.length;i++) {
+    // 	setTimeout(()=>{
+    // 		console.log(allResumes[1]);
+    // 		window.open(allResumes[1]);	
+    // 	},500)	
+             
+         //setTimeout(() => {
+            // if(allResumes[i] == null){
+            //     alert(''+this.allApplicants[i].firstName+' '+this.allApplicants[i].lastName+ 'Has not Uploaded application')
+            //  }else{
+            //     window.open(allResumes[i]);
+            //  }
+             //location.href = allResumes[i];
+            //}, 1000);
+        // }
+    }).catch(error => console.error('Error:', error));
+       alert('All resumes will be downloaded.');		   
+}	
+
+ function deleteApplicant(i) {
+    let deleteCnfMsg;
+    let deleteRecord;
+    if(data.length!=0)
+    {
+        deleteRecord=data.filter(applicationID=>applicationID.id == i);
+    }
+  
+     deleteCnfMsg=confirm("Are you sure you want to delete the applicant " +deleteRecord[0].name+"?");
+    if (deleteCnfMsg==true) {
+            fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/deleteMessageInfoById?id='
+             +i, {
+             method: 'DELETE',         
+         })
+         .then((response)=>{
+            if(response)
+            {
+                if((search_data!="") && (searchUserName.length>1))
+                {
+                    deleteBool=true;
+                    getapi(api_url);     
+                }
+                else
+                {
+                    window.location.reload();
+                }
+                 
+            }
+           
+         }).catch(error =>{ console.error('Error:', error)
+ 
+       });
+     } 
+     else
+     {
+         alert("Applicant not deleted!")
+     }
+ }   
+
+ function createJob() {
+    location.replace('../new-job-list/NewJobDetails.html')
+    
+ }
+ 
+ 
+
+
+
+ 

@@ -1,13 +1,11 @@
 // AOS.init();
 console.log("hello");
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+  function routing(){
+    localStorage["navlink"] = "Careers";
+    window.location.replace("../careers/careers.html");
   }
   
-  function submit(mobNum){
+  function submit(){
    console.log("inside submit()");
    var name = document.getElementById('name').value;       
    var email = document.getElementById('email').value;

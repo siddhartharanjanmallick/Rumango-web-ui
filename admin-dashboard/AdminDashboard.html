@@ -1,295 +1,146 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
 
-     <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> -->
-    <!--<link rel="stylesheet" type="text/css" href="adminDashboard/web/css/common.css" />
-    <link rel="stylesheet" type="text/css" href="adminDashboard/web/css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="adminDashboard/web/css/AdminDashboard.css" />-->
-    <!-- <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-    <!-- <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.6.js"></script>  -->
-    <!-- <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <link rel="stylesheet" href="./AdminDashboard.css">
+
     <script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-</script>
-    <link rel="stylesheet" href="AdminDashboard.css">
-    <link rel="stylesheet" href="AdminDashboard.scss">
-    <link rel="stylesheet" href="../src/css/common.css">
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <script src="../sidenav/sidenav.js"></script>
+
 </head>
 
-<body style="display: flex; flex-direction: column">
-    <div class="admin-dashboard block layout">
-        
-        <div class="block1 layout">
-            <img src="assets/image/9c71b8eadfebaada652a3203c32bb9f5.png" alt="" class="image layout" />
-            <div style="--src:url(assets/image/fad3bb21f0460df1a9d73cdc935618d2.png)" class="block2 layout"></div>
-            <div class="block3 layout">
-                <div class="block4 layout">
-                    <div class="group layout">
-                        <div class="block5 layout">
-                            <div class="block5__item">
-                                <img src="assets/image/beb1bcdc66c86a770977fa261c7d282b.png" alt="" class="icon layout" />
-                            </div>
-                            <div class="spacer block5__spacer"></div>
-                            <div class="text_body layout">Dashboard</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block6 layout">
-                    <div class="flex layout">
-                        <div class="flex__item">
-                            <div class="block7 layout">
-                                <img src="assets/image/2e3698b3a081d14c989ecd23ce11064b.png" alt="" class="icon1 layout" />
-                                <div class="box layout"></div>
-                                <div class="box1 layout"></div>
-                            </div>
-                        </div>
-                        <div class="spacer flex__spacer"></div>
-                        <div class="text_body1 layout">
- 			<a href="../new-job-list/NewJobDetails.html" style="text-decoration: none; color:rgb(138, 169, 182);">New job</a>
-			</div>
-                    </div>
-                </div>
-                <div class="block8 layout">
-                    <div class="group layout">
-                        <div class="block9 layout">
-                            <div class="block9__item">
-                                <img src="assets/image/862296fcd3c41112a7c39e969c5e4fa8.png" alt="" class="icon1 layout1" />
-                            </div>
-                            <div class="spacer block9__spacer"></div>
-                            <div class="text_body1 layout1">
-                              <a href="../JobListPage/JobListPage.html" style="text-decoration: none; color:rgb(138, 169, 182);">Job list</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block8 layout">
-                    <div class="group layout">
-                        <div class="block9 layout">
-                            <div class="block9__item1">
-                                <img src="assets/image/f0bf2e7c6123ebe172530398396c947c.png" alt="" class="icon1 layout1" />
-                            </div>
-                            <div class="spacer block9__spacer1"></div>
-                            <div class="text_body1 layout2">
-                                <a href="../view-resume/ViewResumePage.html" style="text-decoration: none; color:rgb(138, 169, 182);">View resume</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block8 layout">
-                    <div class="group layout">
-                        <div class="block9 layout">
-                            <div class="block9__item2">
-                                <img src="assets/image/bbebb6522097e302bec83deb7c6d2e4b.png" alt="" class="icon1 layout1" />
-                            </div>
-                            <div class="spacer block9__spacer2"></div>
-                            <div class="text_body1 layout3">
-                                <a href="../contacts-list-page/ContactsListPage.html" style="text-decoration: none; color:rgb(138, 169, 182);">Contact list</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="block10 layout">
-                <img src="assets/image/3e014b751bec254b92667feb27ddf5a7.png" alt="" class="decorator layout" />
-		<img src="assets/image/3e014b751bec254b92667feb27ddf5a7.png" alt="" class="decorator layout1" />
-                <div class="block11 layout">
-                    <px-posize track-style='{"flexGrow":1}' x="56fr 28.21% 56fr" y="12.5px minmax(0px, 15fr) 12.5fr">
-                        <div class="small_text_body"><a href="../login/loginPage.html" style="text-decoration: none; color: #000;">Logout</a></div>
-                    </px-posize>
-                </div>
-                <div style="--src:url(assets/image/5de2224ccd85afb81825eb968620f18d.png)" class="block12 layout">
-                    <div class="box4 layout"></div>
-                </div>
-            </div>
-            <div class="box5 layout"></div>
-            <div class="box6 layout"></div>
-            <h1 class="big_title layout">?</h1>
-        </div>
-        <div class="block13 layout">
-            
-            <h3 class="subtitle layout" id="appliedJobs"></h3>
-            <div class="text_body2 layout">Applied Job</div>
-            <div class="block14 layout"></div>
-        </div>
-        <div class="block15 layout">
-           
-            <h3 class="subtitle layout1" id="totalJob"></h3>
-            <div class="text_body2 layout1">Total Job</div>
-        </div>
-        <div class="block16 layout"></div>
-        <div class="box7 layout"></div>
-        <h3 class="subtitle1 layout" id="totalUsr"></h3>
-        <div class="text_body2 layout2">Total User</div>
-        <div class="box10 layout"></div>
-        <img src="assets/image/d2267fc4150e8f2b9a66555df4eb3f31.png" alt="" class="icon1 layout2" />
-        <div class="box7 layout1"></div>
-        <h3 class="subtitle layout2" id="contactUsr"></h3>
-        <div class="text_body2 layout3">Contacted User</div>
-        <div class="box11 layout"></div>
-        <img src="assets/image/c3366d765d050c4d361cba709ab4d383.png" alt="" class="icon2 layout" />
-	<img src="assets/image/8b94143068dd7812a5b814f4559883d6.png" alt="" class="icon3 layout" />
-        <h2 class="medium_title layout">Dashboard</h2>
-        <div class="block17 layout">
-            <div class="block17__item">
-                <div class="block18 layout">
-                    
-                    <div style="--src:url(assets/image/21f8a5dcc9431a42525053b9fd5fa455.svg)" class="block19 layout">
-                        <img src="assets/image/949bdaf521405b99f1bb83433425c2d1.png" alt="" class="icon4 layout" />
-                    </div>
-                    <div class="box12 layout"></div>
-                </div>
-            </div>
-            <div class="spacer block17__spacer"></div>
-            <div class="block17__item">
-                <img src="../src/assets/2942380326c1176418fcc85b1e444217.png" alt="" class="icon5 layout" />
-            </div>
-        </div>
-      <div class="graph">
-        <h3 class="header-report">Reports</h3>
-        <canvas id="chartForCandidate" style="width:100%;max-width:700px"></canvas>
-      </div>
-        <div class="box14 layout"></div>
-        
-        <!-- <px-posize x="289fr minmax(0px, max-content) 1128fr" y="335px minmax(0px, max-content) 675fr" absolute="true">
-            <div class="small_text_body1">100</div>
-        </px-posize>
-        <px-posize x="295fr minmax(0px, max-content) 1128fr" y="382px minmax(0px, max-content) 628fr" absolute="true">
-            <div class="small_text_body1">80</div>
-        </px-posize>
-        <px-posize x="295fr minmax(0px, max-content) 1128fr" y="429px minmax(0px, max-content) 581fr" absolute="true">
-            <div class="small_text_body1">60</div>
-        </px-posize>
-        <px-posize x="295fr minmax(0px, max-content) 1128fr" y="476px minmax(0px, max-content) 534fr" absolute="true">
-            <div class="small_text_body1">40</div>
-        </px-posize>
-        <px-posize x="295fr minmax(0px, max-content) 1128fr" y="523px minmax(0px, max-content) 487fr" absolute="true">
-            <div class="small_text_body1">20</div>
-        </px-posize>
-        <px-posize x="302fr minmax(0px, max-content) 1128fr" y="570px minmax(0px, max-content) 440fr" absolute="true">
-            <div class="small_text_body1">0</div>
-        </px-posize> -->
-       
-      
-      
-       
-        
-        <!-- <div class="block22 layout">
-            
-            <div class="box15 layout"></div>
-            <img src="assets/image/896aee626e6375b924e19237e2ead8c2.png" alt="" class="icon4 layout1" />
-            <div class="block23 layout">
-                <px-posize track-style='{"flexGrow":1}' x="0px 29fr 0fr" y="0px minmax(0px, 16fr) 0fr">
-                    <div class="small_text_body3">Year</div>
-                </px-posize>
-            </div>
-        </div> -->
-        <div class="block24 layout">
-            <div class="block25 layout">
-                <img src="assets/image/085da62b7d1e368ee26e34289a721748.png" alt="" class="icon7 layout" />
-                <div class="block26 layout">
-                    <div class="text_body4 layout" id="name1"></div>
-                    <div class="spacer block26__spacer"></div>
-                    <div class="small_text_body4 layout">1 m Ago</div>
-                </div>
-                <div class="block27 layout">
-                    <div class="small_text_body5 layout" id="msg1"></div>
-                    <div class="spacer block27__spacer"></div>
-                    <div class="block27__item">
-                        <div class="block28 layout">
-                            <img src="assets/image/8ee1fd908537e550c309159f6f181cc9.png" alt="" class="image5 layout" />
-                        </div>
-                    </div>
-                </div>
-                <h3 class="subtitle3 layout" id="slice1"></h3>
-            </div>
-        </div>
-        <img src="assets/image/cf889e0a71c3f5bba1f6e3e0cfb0c138.png" alt="" class="line1 layout" />
-        <div class="block29 layout">
-            <img src="assets/image/13e69e935c60de97e147d99ad8ea9e17.png" alt="" class="icon8 layout" />
-            <div class="block30 layout">
-                <div class="block26 layout1">
-                    <div class="text_body4 layout" id="name2"></div>
-                    <div class="spacer block26__spacer1"></div>
-                    <div class="small_text_body4 layout">2 m Ago</div>
-                </div>
-                <div class="block31 layout">
-                    <div class="small_text_body41 layout" id="msg2"></div>
-                    <div class="spacer block31__spacer"></div>
-                    <div class="block31__item">
-                        <div class="block32 layout">
-                            <img src="assets/image/90e1f71076bca3a90032171fc3834f97.png" alt="" class="image6 layout" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h3 class="subtitle4 layout" id="slice2"></h3>
-        </div>
-        <img src="assets/image/30edd51d20d0af262b7447d1dd7d6953.png" alt="" class="line2 layout" />
-        <div class="block33 layout">
-            <img src="assets/image/95747ffb13dd8c2a58cddf7b00795151.png" alt="" class="icon7 layout1" />
-            <div class="block34 layout">
-                <div class="block26 layout1">
-                    <div class="text_body4 layout" id="name3"></div>
-                    <div class="spacer block26__spacer2"></div>
-                    <div class="small_text_body4 layout">3 m Ago</div>
-                </div>
-                <div class="block35 layout">
-                    <div class="small_text_body5 layout" id="msg3"></div>
-                    <div class="spacer block35__spacer"></div>
-                    <div class="block35__item">
-                        <div class="block36 layout">
-                            <img src="assets/image/8ee1fd908537e550c309159f6f181cc9.png" alt="" class="icon9 layout" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <h3 class="subtitle5 layout" id="slice3"></h3>
-            <a href="../contacts-list-page/ContactsListPage.html" class="view"> View More</a>
-        </div>
-        
-        <px-posize x="1088px 118fr 234fr" y="277px minmax(0px, max-content) 712fr" absolute="true"> 
-            <h3 class="subtitle6">Contact list</h3>
-        </px-posize>
-        <h2 class="medium_title1 layout">Recent Applyed Job</h2> 
-        <table id="dashboard_table" class="jobs">
-            <tr class="header_data">
-                <th>Sl.No</th>
-                <th>First Name</th>
-                <th>Job ID</th>
-                <th>Email</th>
-                <th>Phone No</th>
-                <th>Applicant ID</th>
-              
-                
-            </tr>
+<body>
+    <sidenav-component></sidenav-component>
 
-        </table>
-        
-        <div class="block62 layout">
-            <div class="block62__item">
-                <div class="block63 layout">
-                    <img src="assets/image/e9ddc03fc64c7b095d3732387cbdf268.png" alt="" class="image13 layout" />
-	<img src="assets/image/386a129abe7ec06463b99e001ea7b4d3.png" alt="" class="image14 layout" />
-                </div>
+    <div class="body1">
+
+        <div class="heading">
+            <h2>Add details</h2>
+            <div class="pics">
+                <img src="../src/assets/21f8a5dcc9431a42525053b9fd5fa455.svg" alt="" class="img layout">
+                <img src="../src/assets/949bdaf521405b99f1bb83433425c2d1.png" alt="" class="img layout1">
             </div>
-            <div class="spacer block62__spacer"></div>
-            <div class="block62__item">
-                <div class="block63 layout">
-                   <img src="assets/image/68773900f8a559cd6e4301275d3573b5.png" alt="" class="image13 layout1" />
-		   <img src="assets/image/386a129abe7ec06463b99e001ea7b4d3.png" alt="" class="image14 layout" />
-                </div>
-            </div>
+            <img src="../src/assets/2942380326c1176418fcc85b1e444217.png" alt="" class="img1 layout">
         </div>
-        <img src="assets/image/02ae8c82c92ae3f1c44659f94df93114.png" alt="" class="image15 layout" />
+
+
+        <div class="boxes">
+            <div class="user">
+                <div class="boxicon">
+                    <div class="imga">
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <h3 id="totalUsr"></h3>
+                    <p>Total User</p>
+                </div>
+            </div>
+
+
+            <div class="user1">
+                <div class="boxicon1">
+                    <div class="imga1">
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <h3 id="totalJob"></h3>
+                    <p>Total Job</p>
+                </div>
+            </div>
+
+
+            <div class="user2">
+                <div class="boxicon2">
+                    <div class="imga2">
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <h3 id="appliedJobs"></h3>
+                    <p>Applied Job</p>
+                </div>
+            </div>
+
+            <div class="user3">
+                <div class="boxicon3">
+                    <div class="imga3">
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <h3 id="contactUsr"> </h3>
+                    <p>Contacted User</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="body2">
+
+            <div class="graph">
+                <div class="chartjs-size-monitor">
+                    <div class="chartjs-size-monitor-expand">
+                        <div class=""></div>
+                    </div>
+                    <div class="chartjs-size-monitor-shrink">
+                        <div class=""></div>
+                    </div>
+                </div>
+                <h3 class="header-report">Reports</h3>
+                <canvas id="chartForCandidate" style="width: 100%; max-width: 700px; display: block;" width="875"
+                    height="437" class="chartjs-render-monitor"></canvas>
+            </div>
+            
+            <div class="messages">
+
+
+                
+            </div>
+            
+           
+
+        </div>
+
+        
+            
+        <div class="body3">
+            <h3>Recent Applyed Job</h3>
+
+            <table id="dashboard_table" class="jobs">
+                <tr class="header_data">
+                    <th>Sl.No</th>
+                    <th>First Name</th>
+                    <th>Job ID</th>
+                    <th>Email</th>
+                    <th>Phone No</th>
+                    <th>Applicant ID</th>
+                  
+                    
+                </tr>
+    
+            </table>
+
+
+
+
+
+        </div>
+    
+
     </div>
-   <script src="./AdminDashboard.js"></script>
-  
+
+    <script src="./AdminDashboard.js"></script>
 </body>
 
 </html>

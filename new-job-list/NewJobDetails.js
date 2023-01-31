@@ -290,6 +290,7 @@ emailValue = localStorage["email"];
 addressValue = localStorage["address"];
 stateValue = localStorage["state"];
 countryValue = localStorage["country"];
+console.log(countryValue);
 workMode = localStorage["workmode"] ;
 workLocation = localStorage["worklocation"];
 keySkills = localStorage["keySl"] ;
@@ -314,10 +315,11 @@ if( localStorage.getItem("jobpage") == "fromJobPage") {
  document.getElementById('email').value = emailValue;}
  if(addressValue){
  document.getElementById('address').value = addressValue;}
+ if(countryValue){
+    document.getElementById('country').value = countryValue;}
  if(stateValue){
  document.getElementById('state').value = stateValue;}
- if(countryValue){
- document.getElementById('country').value = countryValue;}
+ 
  if(workMode){
     document.getElementById('wkmode').value = workMode
  }

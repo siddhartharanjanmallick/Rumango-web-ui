@@ -1,0 +1,318 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    z-index: 1;
+}
+    
+.links ul {
+    list-style: none;
+    
+    
+}
+.links h2{
+   font: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+    margin-top: 30px;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    font: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
+}
+
+    
+.links2 ul {
+    list-style: none;
+    padding:0px;
+    color:white;
+    font: 500 18px/2 "Quicksand", Helvetica, Arial, serif;
+}
+.links2 h2{
+    font: 500 25px/1.75 "Futura", Helvetica, Arial, serif;
+
+    margin-top: 30px;
+}
+
+
+
+.contact-us-head{
+    display: flex;
+    flex-flow: column;
+    width:60%;
+    height:auto;
+    background-image: url(../src/assets/cd06de94a44d6533f41646d5f001e079.png);
+    background-size: cover;
+    flex-wrap: wrap;
+
+}
+.contact-us-body{
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.contact-us-head a{
+    font: 700 20px/1.2 "Quicksand", Helvetica, Arial, serif;
+    letter-spacing: 0px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    float: left;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.img{
+    margin-top:30px;
+    width: 90%;
+ 
+    
+}
+
+.links-head{
+    background-color: black;
+    width: 50%;
+    height:auto;
+    float: right;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+h3{
+    margin:0px;
+    margin-left: 50px;
+    margin-top: 20px;
+    font: 700 20px/3 "Quicksand", Helvetica, Arial, serif;
+    color: white;
+    letter-spacing: 5px;
+}
+h1{
+    margin: 0; 
+    font: 700 4em/1.64 "Futura", Helvetica, Arial, serif;
+    color: #000000ff;
+    letter-spacing: 0px;
+    margin-left: 50px;
+    
+}
+h2{
+    font: 700 1em/1.64 "Futura", Helvetica, Arial, serif;
+    color: #ffffffff;
+    letter-spacing: 0px;
+    margin: 0px;
+}
+
+
+  .contact-img {
+    width: 65%;
+
+
+  }
+
+.links-head ul li a:hover{
+color: #ff6700;
+}
+.contact-us-head a:hover{
+    color: black;
+}
+
+.color{
+    color: #ff6700;
+}
+
+.ready{
+    display: flex;
+    flex-flow: column;
+    width: -webkit-fill-available;
+}
+
+
+@media screen and (max-width:1196px) {
+    .navbar{
+        flex-flow: row;
+    }
+    .contact-us-head{
+        height: auto;
+    }
+
+
+
+    .links-head{
+        width: 40%;
+    }
+   
+}
+
+
+
+@media screen and (max-width:1087px) {
+    .links h2{
+        font:500 21px/1.75 "Futura", Helvetica, Arial, serif;
+    }
+    .links2 h2{
+        font:500 21px/1.75 "Futura", Helvetica, Arial, serif;   
+    }
+    .links a{
+        font:500 15px/2 "Quicksand", Helvetica, Arial, serif;
+    }
+    .links2 ul{
+        font:500 15px/2 "Quicksand", Helvetica, Arial, serif;
+    }
+    .contact-us-head a{
+        margin-top: 5px;
+    }   
+    .links ul{
+        padding-left:10px;
+    }
+    .ready h1{
+        font:700 3em/1.64 "Futura", Helvetica, Arial, serif;
+    }
+    .contact-img{
+        display: flex;
+        flex-flow: column;
+    }
+    .contact-us-body{
+        flex-wrap: nowrap;
+    }
+}
+
+
+
+@media only screen and (max-width: 1430px){
+    nav ul li{
+        margin-right: 37px;
+       
+    }
+  
+}
+
+@media only screen and (max-width: 1230px){
+    nav ul li a {
+        font-size: 1em;
+    }
+    .contact-us-body{
+        flex-wrap: nowrap;
+    }
+}
+
+@media only screen and (max-width: 1120px){
+    nav ul li a {
+        font-size: 0.9em;
+    }
+    .companyimg{
+        height: 27px;
+    }
+    .manu{
+        height: 16px;
+        width: 16px;
+    }
+    .contact-us-body{
+        flex-wrap: nowrap;
+    }
+    
+}
+
+@media only screen and (max-width: 1010px){
+    nav ul li a {
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width: 990px){
+    nav ul li a {
+        font-size: 0.7em;
+    }
+    nav ul li{
+        margin-right: 27px;
+       
+    }
+    .companyimg {
+        height: 25px;
+    }
+    .contact-us-body{
+        flex-wrap: nowrap;
+    }
+}
+@media only screen and (max-width: 783px){
+    nav ul li a {
+        font-size: 0.6em;
+    }
+    nav ul li{
+        margin-right: 10px;
+       
+    }
+    .companyimg{
+        height: 22px;
+    }
+    .manu{
+        height: 14px;
+        width: 14px;
+    }
+    
+}
+@media screen and (max-width:720px) {
+    .contact-us-head{
+        height: auto;
+    }
+    .ready h1{
+        font:700 25px/1.50 "Futura", Helvetica, Arial, serif;
+    }
+    .ready h3{
+    letter-spacing: 0px;
+    }
+    .contact-us-head a{
+        font-size: medium;
+    }
+      .links h2{
+        font:500 20px/1.75 "Futura", Helvetica, Arial, serif;
+    }
+    .links2 h2{
+        font:500 20px/1.75 "Futura", Helvetica, Arial, serif;   
+    }
+    .links a{
+        font:500 14px/2 "Quicksand", Helvetica, Arial, serif;
+    }
+    .links2 ul{
+        font:500 14px/2 "Quicksand", Helvetica, Arial, serif;
+    }
+    .contact-us-head a{
+        margin-top: 5px;
+    }
+    .contact-img{
+        justify-content: space-evenly;
+    display: flex;
+    }
+    .ready h3{
+        font: 700 15px/3 "Quicksand", Helvetica, Arial, serif;
+    
+    }
+    .ready{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:675px) {
+    .navbar{
+        flex-flow: column;
+    }
+    .contact-us-head{
+        width: 100%;
+    }
+    .links-head{
+        width: 100%;
+        margin-top: 0px;
+    }
+    .ready h3 {
+        font: 700 18px/3 "Quicksand", Helvetica, Arial, serif;
+    }
+    .ready h1 {
+        font: 700 2em/1.64 "Futura", Helvetica, Arial, serif;
+    }.contact-img{
+        width: 80%;
+    }
+}

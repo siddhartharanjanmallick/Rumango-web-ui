@@ -1,4 +1,6 @@
 // AOS.init();
+
+
 console.log("Heelo");
 var obj =
 {
@@ -155,9 +157,9 @@ var obj =
         cell5.innerHTML = "Phone No";
         cell6.innerHTML = "Applicant ID";
        
-      
 		for (let i = 0; i < data.length; i++) {
 			const row = document.createElement('tr');
+            row.classList.add('addrowproperty')
 			row.addEventListener('click', () => {
 				selectedRowIndex = i;
 			   //modal.style.display = "block";
@@ -188,17 +190,53 @@ var obj =
   console.log(data);
   console.log(data.length);
   this.allContacts=data;
+  let parent = document.querySelector('.messages');
+//   let node = document.createElement('div');
 
-document.getElementById('name1').innerHTML=data[0].name
-document.getElementById('name2').innerHTML=data[1].name
-document.getElementById('name3').innerHTML=data[2].name
-document.getElementById('msg1').innerHTML=data[0].message
-document.getElementById('msg2').innerHTML=data[1].message
-document.getElementById('msg3').innerHTML=data[2].message
-document.getElementById('slice1').innerHTML=data[0].name.slice(0,1)
-document.getElementById('slice2').innerHTML=data[1].name.slice(0,1)
-document.getElementById('slice3').innerHTML=data[2].name.slice(0,1)
+  if(data.length <= 4){
+    let parent = document.querySelector('.messages');
+    for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        console.log(element);
+        let node = document.createElement('div');
 
+        node.className = "msg1";
+        node.innerHTML = `
+        <img src="../src/assets/085da62b7d1e368ee26e34289a721748.png" alt="">
+        <p class="slc">${data[index].name.slice(0,1)}</p>
+        <div class="text_body4 layout" id="name1">${data[index].name} </div>
+        <p class="mesg">${data[index].message.slice(0,15)} ....</p>
+        
+                `
+            parent.appendChild(node);     
+    }
+   
+    let node1 = document.createElement('div');
+    node1.innerHTML=`<div class="anch"><a href="../contacts-list-page/ContactsListPage.html" class="view"> View More</a> </div>`
+    parent.appendChild(node1);
 
+  }else if(data.length > 4){
+    let fector = data.slice(0,5);
+    for (let index = 0; index < fector.length; index++) {
+        const element = fector[index];
+        let parent = document.querySelector('.messages');
+        let node = document.createElement('div');
+        node.className = "msg1";
+        node.innerHTML = `
+        <img src="../src/assets/085da62b7d1e368ee26e34289a721748.png" alt="">
+        <p class="slc">${data[0].name.slice(0,1)}</p>
+        <div class="text_body4 layout" id="name1">${data[index].name} </div>
+        <p class="mesg">${data[index].message.slice(0,3)} ....</p>
+        
+                `
+            parent.appendChild(node);   
+        
+    }
+    let node1 = document.createElement('div');
+    node1.innerHTML=`<div class="anch"><a href="../contacts-list-page/ContactsListPage.html" class="view"> View More</a> </div>`
+    parent.appendChild(node1);
+  }
+//   node.innerHTML=`<div class="anch"><a href="../contacts-list-page/ContactsListPage.html" class="view"> View More</a> </div>`
+//   parent.appendChild(node);
   
 }).catch(error => console.error('Error:', error));

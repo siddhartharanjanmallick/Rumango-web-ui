@@ -1,308 +1,231 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./FAQs .css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="../Header/header.js"></script>
+    <script src="../footer/footer.js"></script>
+</head>
+<body>
+  <header-component></header-component>
+    <section class="container-1 justify-content-center align-items-center d-flex">
+        <div class="row">
+            <div class="col-lg-12 col-12">
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" type="text/css" href="FAQscreen/pxcode-html/src/css/common.css" />
-    <link rel="stylesheet" type="text/css" href="FAQscreen/pxcode-html/src/css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="FAQscreen/pxcode-html/web/css/FAQscreen.css" /> -->
-    <link rel="stylesheet" href="FAQs .css">
-    <link rel="stylesheet" href="../src/css/common.css">
+                <h1 class="msg-1 text-center">FAQ</h1>
+                <br>
+                <h4 class="msg-2">Your privacy is critically important to us.</h4>
 
-    <!-- <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-    <script type="text/javascript" src="https://unpkg.com/headroom.js@0.12.0/dist/headroom.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/px2code/posize/build/v1.00.6.js"></script>
-  </head>
+            </div>          
+        </div>
+    </section> 
 
-  <body style="display: flex; flex-direction: column">
-    <main class="faqscreen faqscreen-main layout">
-      <div class="faqscreen-main-item">
-        <!-- ======= section1 ======= --> 
-        <section class="faqscreen-section1__section1 layout">
-		  <div class="faqscreen-section1__cover layout">
-            <img src="../src/assets/6e75748e2cf2dfb6f0f4e79ccfaa950d.png"
-		         style="height: 100%;  width: 100%;" >
-	      </div>
-          <!-- <div
-            style="--src:url(/assets/6e75748e2cf2dfb6f0f4e79ccfaa950d.png)"
-            class="faqscreen-section1__cover layout"
-          ></div> -->
-          <div class="faqscreen-section1__box layout"></div>
-		  <div class="faqscreen-section1__image layout">
-            <img src="../src/assets/6e39a9350194d31ea0d54435b4c03e11.png"
-		         style="height: 100%;" >
-	      </div>
-          <!-- <div
-            style="--src:url(/assets/6e39a9350194d31ea0d54435b4c03e11.png)"
-            class="faqscreen-section1__image layout"
-          ></div> -->
-          <h4 class="faqscreen-section1__highlights2 layout">
-		   <a href="../about/aboutUs.html"
-			  style="text-decoration: none;">About us</a></h4>
-          <h4 class="faqscreen-section1__highlights2 layout1">
-		   <a href="../ourservices/ourServices.html"
-			  style="text-decoration: none;">Our services</a></h4>
-          <h4 class="faqscreen-section1__highlights2 layout2">
-		   <a href="../index/index.html"
-			  style="text-decoration: none;">Our Products</a></h4>
-          <h4 class="faqscreen-section1__highlights2 layout3">
-		   <a href="../careers/careers.html"
-			  style="text-decoration: none;">Careers</a></h4>
-          <h4 class="faqscreen-section1__highlights21 layout" >
-		   <a href="../contact-us/contactUs.html" 
-			  style="text-decoration: none;">Contact Us</a></h4>
-          <h4 class="faqscreen-section1__highlights2 layout4">
-		   <a href="../index/index.html"
-			  style="text-decoration: none;">Home<a/></h4>
-		  
-		  <div class="faqscreen-section1__icon layout">
-		  
-		   <div id="mySidenav" class="sidenav" >
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			  <a><h4>Navigation</h4></a>
-        <a href="https://www.facebook.com/rumangotech" style="font-size: 18px;">Facebook</a>
-        <a href="#" style="font-size: 18px;">Instagram</a>
-        <a href="https://www.twitter.com/Rumango1" style="font-size: 18px;">Twitter</a>
-        <a href="https://www.linkedin.com/in/rumango-566a62212/" style="font-size: 18px;">LinkedIn</a>
-        <a href="#" style="font-size: 18px;">Terms & Conditions</a>
-        <a href="../privacypolicy/privacyPolicy.html" style="font-size: 18px;">privacy policy</a>
-        <a href="../company-location/companyLocations.html" style="font-size: 18px;">Company Locations</a>
-        <a href="../faqs/FAQs.html" style="font-size: 18px;">Support Portal</a>
-        <a href="../login/loginPage.html" style="font-size: 18px;">Admin Login</a>
-            </div>	
-		  
-		   <span style="font-size:17px;cursor:pointer" onclick="openNav()">
-            <img src="../src/assets/c5edb97a78517cd3b48b50401e6ed3b1.png"
-		         style="height: 130%;margin-left: -230%;" ></span>
-	      </div>
-          <!-- <div
-            style="--src:url(/assets/c5edb97a78517cd3b48b50401e6ed3b1.png)"
-            class="faqscreen-section1__icon layout"
-          ></div> -->
-          <h1 class="faqscreen-section1__hero-title1 layout">FAQ</h1>
-          <h1 class="faqscreen-section1__big-title layout">Your privacy is critically important to us.</h1>
-        </section>
-        <!-- ======= End section1 ======= --> 
+    <br><br>    
 
-      </div>
-      <div class="faqscreen-main-item">
-        <!-- ======= section2 ======= --> 
-        <section class="faqscreen-section2__section2 layout">
+    <section>
 
-          <div class="faqscreen-section2__box4 layout"></div>
-          <h3 class="faqscreen-section2__subtitle1 layout">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
-          </h3>
-          <px-posize x="103px 1235fr 102fr" y="143px minmax(0px, 79fr) 1021fr" absolute="true"
-            ><h5 class="faqscreen-section2__highlights3-box">
-              <pre class="faqscreen-section2__highlights3">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </pre
-              >
-            </h5></px-posize
-          >
-          <div class="faqscreen-section2__block2 layout">
-		  <div class="faqscreen-section2__image1 layout">
-            <img src="../src/assets/fa91831a35b7e7cece49513e31dd6185.png"
-		         style="height: 100%;" >
-	      </div>
-            <!-- <div
-              style="--src:url(/assets/fa91831a35b7e7cece49513e31dd6185.png)"
-              class="faqscreen-section2__image1 layout"
-            ></div> -->
-          </div>
-          <div class="faqscreen-section2__block3 layout">
-		  <div class="faqscreen-section2__image2 layout">
-            <img src="../src/assets/fa91831a35b7e7cece49513e31dd6185.png"
-		         style="height: 100%;" >
-	      </div>
-            <!-- <div
-              style="--src:url(/assets/fa91831a35b7e7cece49513e31dd6185.png)"
-              class="faqscreen-section2__image2 layout"
-            ></div> -->
-          </div>
-          <div class="faqscreen-section2__block3 layout1">
-		  <div class="faqscreen-section2__image2 layout">
-            <img src="../src/assets/fa91831a35b7e7cece49513e31dd6185.png"
-		         style="height: 100%;" >
-	      </div>
-            <!-- <div
-              style="--src:url(/assets/fa91831a35b7e7cece49513e31dd6185.png)"
-              class="faqscreen-section2__image2 layout"
-            ></div> -->
-          </div>
-          <div class="faqscreen-section2__block4 layout">
-		  <div class="faqscreen-section2__image1 layout1">
-            <img src="../src/assets/fa91831a35b7e7cece49513e31dd6185.png"
-		         style="height: 100%;" >
-	      </div>
-            <!-- <div
-              style="--src:url(/assets/fa91831a35b7e7cece49513e31dd6185.png)"
-              class="faqscreen-section2__image1 layout1"
-            ></div> -->
-          </div>
-          <div class="faqscreen-section2__block3 layout2">
-		  <div class="faqscreen-section2__image2 layout">
-            <img src="../src/assets/fa91831a35b7e7cece49513e31dd6185.png"
-		         style="height: 100%;" >
-	      </div>
-            <!-- <div
-              style="--src:url(/assets/fa91831a35b7e7cece49513e31dd6185.png)"
-              class="faqscreen-section2__image2 layout"
-            ></div> -->
-          </div>
-          <div class="faqscreen-section2__block4 layout1">
-		  <div class="faqscreen-section2__image1 layout2">
-            <img src="../src/assets/fa91831a35b7e7cece49513e31dd6185.png"
-		         style="height: 100%;" >
-	      </div>
-            <!-- <div
-              style="--src:url(/assets/fa91831a35b7e7cece49513e31dd6185.png)"
-              class="faqscreen-section2__image1 layout2"
-            ></div> -->
-          </div>
-          <div class="faqscreen-section2__block4 layout2">
-		  <div class="faqscreen-section2__image1 layout3">
-            <img src="../src/assets/fa91831a35b7e7cece49513e31dd6185.png"
-		         style="height: 100%;" >
-	      </div>
-            <!-- <div
-              style="--src:url(/assets/fa91831a35b7e7cece49513e31dd6185.png)"
-              class="faqscreen-section2__image1 layout3"
-            ></div> -->
-          </div>
-          <div class="faqscreen-section2__block3 layout3">
-		  <div class="faqscreen-section2__image2 layout">
-            <img src="../src/assets/fa91831a35b7e7cece49513e31dd6185.png"
-		         style="height: 100%;" >
-	      </div>
-            <!-- <div
-              style="--src:url(/assets/fa91831a35b7e7cece49513e31dd6185.png)"
-              class="faqscreen-section2__image2 layout"
-            ></div> -->
-          </div>
-		  <div class="faqscreen-section2__image3 layout">
-            <img src="../src/assets/329217620530748a59ab13f20ca15d01.png"
-		         style="height: 100%;" >
-	      </div>
-          <!-- <div
-            style="--src:url(/assets/329217620530748a59ab13f20ca15d01.png)"
-            class="faqscreen-section2__image3 layout"
-          ></div> -->
-          <h3 class="faqscreen-section2__subtitle2 layout">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
-          </h3>
-          <h3 class="faqscreen-section2__subtitle2 layout1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
-          </h3>
-          <h3 class="faqscreen-section2__subtitle2 layout2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
-          </h3>
-          <h3 class="faqscreen-section2__subtitle2 layout3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
-          </h3>
-          <h3 class="faqscreen-section2__subtitle2 layout4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
-          </h3>
-          <h3 class="faqscreen-section2__subtitle2 layout5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
-          </h3>
-          <h3 class="faqscreen-section2__subtitle2 layout6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
-          </h3>
-          <h3 class="faqscreen-section2__subtitle2 layout7">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
-          </h3>
-        </section>
-        <!-- ======= End section2 ======= --> 
+    <br><br>
 
-      </div>
-	  
-	  
-<div style="display: flex; flex-direction: column">
-    <div class="footer-block layout" style="margin-top: -44px;">
+                <div class="accordion" id="accordionExample">
+                    
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</h3>
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">                          
+                            <h5>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                            ex ea commodo consequat. 
+                            </h5>                        
+                        </div>
+                      </div>
+                    </div>
 
-	  <div class="footer-cover layout">
-            <img src="../src/assets/8ec2370f640a640a00769756f843222b.png"
-		          >
-	      </div>
-      <!-- <div style="--src:url(/assets/8ec2370f640a640a00769756f843222b.png)" class="footer-cover layout"></div> -->
-	   <div class="footer-cover1 layout">
-            <img src="../src/assets/cd06de94a44d6533f41646d5f001e079.png"
-		         style="height: 575px;" >
-	      </div>
-      <!-- <div style="--src:url(/assets/cd06de94a44d6533f41646d5f001e079.png)" class="footer-cover1 layout"></div> -->
-      <px-posize x="62px 448fr 930fr" y="399px minmax(0px, max-content) 197fr" absolute="true"
-        ><h1 class="footer-hero-title-box">
-          <div class="footer-hero-title">
-            <span class="footer-hero-title-span0">Let’s get to </span
-            ><span class="footer-hero-title-span1">[work]</span>
-          </div>
-        </h1></px-posize
-      >
-      <h3 class="footer-subtitle layout">Ready to do this</h3>
-      <div class="footer-box layout"></div>
-      <h3 class="footer-subtitle1 layout">Contact Us</h3>
-      <div class="footer-block1 layout">
-	  <div class="footer-decorator layout">
-            <img src="../src/assets/8856da0d3d8086d9f05123942941d39c.png"
-		         style="height: 375px; margin-top: 35px; margin-left: 40px;" >
-	      </div>
-        <!-- <div style="--src:url(/assets/8856da0d3d8086d9f05123942941d39c.png)" class="footer-decorator layout"></div> -->
-      </div>
-      <px-posize x="895px 137fr 408fr" y="405px minmax(0px, 44fr) 361fr" absolute="true"
-        ><h2 class="footer-medium-title-box">
-          <pre class="footer-medium-title" style="margin-left: -28px;">
-Quick [Link]
-</pre
-          >
-        </h2></px-posize
-      ><px-posize x="1198px 128fr 114fr" y="405px minmax(0px, 44fr) 361fr" absolute="true"
-        ><h2 class="footer-medium-title1" style="margin-left: -60px;">Say[Hello]</h2></px-posize
-      >
-      <h4 class="footer-highlights-box layout">
-        <pre class="footer-highlights">
+                    <br><br>
 
-        
-          <a href="../index/index.html" style="text-decoration: none; color:white;">
-            <h3 style="margin-top: -125%;">Home</h3></a>
-            <a href="../about/aboutUs.html" style="text-decoration: none; color:white;">
-            <h3 style="margin-top: -105%;">About us</h3></a>
-            <a href="../ourservices/ourServices.html" style="text-decoration: none; color:white;">
-            <h3 style="margin-top: -105%;">Our Services</h3></a>
-            <a href="../ourproducts/ourProducts.html" style="text-decoration: none; color:white;">
-            <h3 style="margin-top: -105%;">Our Products</h3></a>
-            <a href="../careers/careers.html" style="text-decoration: none; color:white;">
-            <h3 style="margin-top: -105%;">Careers</h3></a>
-            <a href="../contact-us/contactUs.html" style="text-decoration: none; color:white;">
-            <h3 style="margin-top: -105%;">Contact Us</h3></a>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</h3>
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h5>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, 
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                                ex ea commodo consequat. 
+                            </h5>
+                        </div>
+                      </div>
+                    </div>
 
-        </pre>
-      </h4>
-      <h4 class="footer-highlights1 layout" style="margin-left: -75px;">info@rumango.com</h4>
-      <h4 class="footer-highlights2 layout" style="margin-left: -65px;">(+91)80 4090 5061</h4>
-      <h5 class="footer-highlights11 layout">Copyright © 2022 rumango</h5>
-    </div>
-  </div>
-	  
-	  
-    </main>
-   <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+                    <br><br>
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-  </body>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</h3>
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h5>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Ut enim ad minim veniam, 
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                                ex ea commodo consequat. 
+                            </h5>
+                        </div>
+                      </div>
+                    </div>
+
+                    <br><br>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</h3>
+                          </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <h5>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                  Ut enim ad minim veniam, 
+                                  quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                                  ex ea commodo consequat. 
+                              </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br><br>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</h3>
+                          </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <h5>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                  Ut enim ad minim veniam, 
+                                  quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                                  ex ea commodo consequat. 
+                              </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br><br>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                              <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</h3>
+                          </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <h5>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                  Ut enim ad minim veniam, 
+                                  quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                                  ex ea commodo consequat. 
+                              </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br><br>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                              <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</h3>
+                          </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <h5>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                  Ut enim ad minim veniam, 
+                                  quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                                  ex ea commodo consequat. 
+                              </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br><br>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEight">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                              <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</h3>
+                          </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <h5>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                  Ut enim ad minim veniam, 
+                                  quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                                  ex ea commodo consequat. 
+                              </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br><br>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingNine">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                              <h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</h3>
+                          </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                              <h5>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                  Ut enim ad minim veniam, 
+                                  quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                                  ex ea commodo consequat. 
+                              </h5>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+                  <br><br>
+            
+    </section>
+    <br><br>
+
+   
+    <footer-component></footer-component>
+    
+</body>
 </html>
