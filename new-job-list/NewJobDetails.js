@@ -112,6 +112,8 @@ function submit(){
  var country = document.getElementById('country').value;
  var state = document.getElementById('state').value;		
  var jobId = localStorage["jobId"];
+ console.log(descriptions);
+ console.log(keySkills);
  console.log(jobId);
  console.log(localStorage.getItem("jobpage"));
  
@@ -126,16 +128,20 @@ function submit(){
     console.log(this.value2)
     if(wklocation == ''|| keySkills == ''|| wkmode =='' || jobTitle ==''||noOfPost == ''||descriptions== ''|| qualificationRequired ==''||experienceRequired ==''||specializationRequired == ''||
     lastDateToApply == '' || jobType == '' || companyName == '' || email == '' || address == '' || country == '' || state ==''){
+
         swal({
          text: "Please Fill All The Mandatory Fields To Create A Job" ,
          icon: "error",
+
          buttons: "Ok",
          dangerMode: true
        })
     }else if (this.value2 == false){
+
         swal({
          text: "Please Enter Valid Email" ,
          icon: "error",
+
          buttons: "Ok",
          dangerMode: true
        })
@@ -178,12 +184,18 @@ function submit(){
  
     console.log(data.message);
     if(data.message == undefined){
-        swal({
-         text: "Data Uploaded Succefully" ,
-         icon: "success",
-         buttons: "Ok",
-         dangerMode: true
-       })
+
+     
+         swal({
+             text: "Job Edited Successfully" ,
+             icon: "success",
+             buttons: "Ok",
+             dangerMode: true
+           })
+           
+     
+       
+      
 
     }
      
@@ -252,9 +264,10 @@ localStorage["jobId"]  = '';
  
     console.log(data.message);
     if(data.message == undefined){
-        
-        swal({
-         text: "Data Uploaded Succefully" ,
+
+      swal({
+         text: "Job Created Successfully" ,
+
          icon: "success",
          buttons: "Ok",
          dangerMode: true
@@ -399,3 +412,7 @@ document.getElementById('state').value = '';
 
 }
 })
+
+function closeDialog() {
+   
+}

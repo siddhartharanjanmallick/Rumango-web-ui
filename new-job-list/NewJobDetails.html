@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>New Job Details</title>
 
     <link rel="stylesheet" href="./NewJobDetails.css">
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="filter">
         <div>
     <sidenav-component></sidenav-component>
      </div>
@@ -70,7 +71,7 @@
             <div class="post">
                 <p>Experience Required <span style="color: red;">*</span></p>
 
-                <input type="text" ,="" id="experienceRequired" placeholder="Ex: 2 - 5 Years">
+                <input type="text" ,="" id="experienceRequired" placeholder="Ex: 2 - 5 ">
             </div>
 
 
@@ -99,7 +100,7 @@
             <div class="tit">
                 <p>Salary</p>
 
-                <input type="text" ,="" id="salary" placeholder="$1200">
+                <input type="text" ,="" id="salary" placeholder="1200">
             </div>
 
             <div class="post">
@@ -221,7 +222,12 @@
 
     </div>
 </div>
+
+
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
 <script src="./NewJobDetails.js"></script>
 
 </body>

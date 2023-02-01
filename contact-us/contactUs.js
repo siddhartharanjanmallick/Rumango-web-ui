@@ -35,12 +35,24 @@ console.log("hello");
     }
     console.log(message) 
     if(name == ''|| mobile == '' || message == '' || email == ''){
-      alert("Please Fill All the Mandatory Fields")
+      alert("Please Fill All Mendarory Fields")
     }else if(this.value1 == false ) {
-      alert("Not a valid Phone Number");
+      
+      swal({
+        text: "Not a valid Phone Number" ,
+        icon: "error",
+        buttons: "Ok",
+        dangerMode: true
+      })
   
     } else if (this.value2 == false){
-        alert("Please Enter Valid Email");
+       
+        swal({
+          text: "Please Enter Valid Email" ,
+          icon: "error",
+          buttons: "Ok",
+          dangerMode: true
+        })
     }
      else {
     fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/saveMessageInfo', {
@@ -60,7 +72,13 @@ console.log("hello");
           {
             console.log(data)
             if(data){
-              alert('The message is uploaded successfully.');	
+              swal({
+                text: "The message sent successfully." ,
+                icon: "success",
+                buttons: "Ok",
+                dangerMode: true
+              })
+           
               document.getElementById('name').value = '';
   document.getElementById('email').value = '';
   document.getElementById('message').value = '';
