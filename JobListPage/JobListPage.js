@@ -399,7 +399,14 @@ function sort(e)
             //}, 1000);
         // }
     }).catch(error => console.error('Error:', error));
-       alert('All resumes will be downloaded.');		   
+     
+       swal({
+        text: "All resumes will be downloaded." ,
+        icon: "success",
+        buttons: "Ok",
+        dangerMode: true
+      })
+
 }	
 
  function deleteApplicant(i) {
@@ -437,7 +444,12 @@ function sort(e)
      } 
      else
      {
-         alert("Applicant not deleted!")
+         swal({
+            text: "Applicant not deleted!" ,
+            icon: "error",
+            buttons: "Ok",
+            dangerMode: true
+          })
      }
  }   
 

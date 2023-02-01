@@ -128,18 +128,20 @@ function submit(){
     console.log(this.value2)
     if(wklocation == ''|| keySkills == ''|| wkmode =='' || jobTitle ==''||noOfPost == ''||descriptions== ''|| qualificationRequired ==''||experienceRequired ==''||specializationRequired == ''||
     lastDateToApply == '' || jobType == '' || companyName == '' || email == '' || address == '' || country == '' || state ==''){
-      //   alert("Please Fill All Mendatory Fields To Create A Job");
+
         swal({
          text: "Please Fill All Mendatory Fields To Create A Job" ,
-         icon: "success",
+         icon: "error",
+
          buttons: "Ok",
          dangerMode: true
        })
     }else if (this.value2 == false){
-      //   alert("Please Enter Valid Email");
+
         swal({
          text: "Please Enter Valid Email" ,
-         icon: "success",
+         icon: "error",
+
          buttons: "Ok",
          dangerMode: true
        })
@@ -182,6 +184,7 @@ function submit(){
  
     console.log(data.message);
     if(data.message == undefined){
+
      
          swal({
              text: "Job Edited Successfully" ,
@@ -193,6 +196,7 @@ function submit(){
      
        
       
+
     }
      
  
@@ -260,12 +264,15 @@ localStorage["jobId"]  = '';
  
     console.log(data.message);
     if(data.message == undefined){
+
       swal({
          text: "Job Created Successfully" ,
+
          icon: "success",
          buttons: "Ok",
          dangerMode: true
        })
+
     }
      
  

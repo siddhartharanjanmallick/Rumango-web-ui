@@ -114,6 +114,7 @@ select{
   padding-left: 40px;
   padding-right: 40px;
 }
+
 .popUpForEdit{
   visibility: hidden;
   background-color: #ff6700;
@@ -140,3 +141,8 @@ select{
 .swal-button--danger {
   background-color: #ff6700;
 }
+
+.swal-button--danger {
+  background-color: #ff6700;
+}
+

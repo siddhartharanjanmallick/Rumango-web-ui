@@ -197,3 +197,6 @@ th{
   background-color: black !important;
   color: #ff6700 !important;
 }
+.swal-button--danger {
+  background-color: #ff6700;
+}
