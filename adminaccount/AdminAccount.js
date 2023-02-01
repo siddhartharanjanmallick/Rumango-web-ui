@@ -75,7 +75,13 @@ console.log("reached here")
             document.getElementById('userName').value = '';
  document.getElementById('password').value = '';
  document.getElementById('email').value = '';
-       alert("user created successfully")}
+ swal({
+    text: "User Account Created Successfully" ,
+    icon: "success",
+    buttons: "Ok",
+    dangerMode: true
+  })
+}
         }).catch(error => {console.error('Error:', error)
     alert(error)}); 
 		}

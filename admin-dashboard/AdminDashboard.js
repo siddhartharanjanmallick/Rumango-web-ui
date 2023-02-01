@@ -193,7 +193,7 @@ var obj =
   let parent = document.querySelector('.messages');
 //   let node = document.createElement('div');
 
-  if(data.length <= 4){
+  if(data.length <= 3){
     let parent = document.querySelector('.messages');
     for (let index = 0; index < data.length; index++) {
         const element = data[index];
@@ -216,19 +216,29 @@ var obj =
     parent.appendChild(node1);
 
   }else if(data.length > 4){
-    let fector = data.slice(0,5);
+    let fector = data.slice(0,4);
     for (let index = 0; index < fector.length; index++) {
         const element = fector[index];
+        let msgshow;
+        if (data[index].message.length > 25) {
+            msgshow =data[index].message.slice(0,25);
+            msgshow+= '...';
+        }else{
+            msgshow =data[index].message
+        }
         let parent = document.querySelector('.messages');
         let node = document.createElement('div');
         node.className = "msg1";
         node.innerHTML = `
         <img src="../src/assets/085da62b7d1e368ee26e34289a721748.png" alt="">
-        <p class="slc">${data[0].name.slice(0,1)}</p>
-        <div class="text_body4 layout" id="name1">${data[index].name} </div>
-        <p class="mesg">${data[index].message.slice(0,3)} ....</p>
+        <p class="slc">${data[index].name.slice(0,1)}</p>
+        <div class="text_body4 layout" id="name1">${data[index].name} 
+        <p class="mesg">${msgshow} </p></div>
         
                 `
+                node.addEventListener("click", ()=>{
+                    window.location.replace('../contacts-list-page/ContactsListPage.html')
+                })
             parent.appendChild(node);   
         
     }
