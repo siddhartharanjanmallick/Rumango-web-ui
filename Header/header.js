@@ -39,7 +39,7 @@ headerTemplate.innerHTML = `
 <a href="../login/loginPage.html">Admin Login</a>
 
 <h3 class = "partner">Partnership</h3>
-<img src="../src/assets/oracle.png" alt="Oracle Gold Partner" class="animate-intro fadeInUp animated">
+<img src="../src/assets/oracle.png" alt="Oracle Gold Partner" class="animate-intro fadeInUp animated" class = "oracleImg">
 <
 </div>
 </div>
