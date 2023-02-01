@@ -33,14 +33,15 @@ headerTemplate.innerHTML = `
 <a href="https://www.twitter.com/Rumango1" >Twitter</a>
 <a href="https://www.linkedin.com/in/rumango-566a62212/" >LinkedIn</a>
 <a href="#">Terms & Conditions</a>
-<a href="../privacypolicy/privacyPolicy.html" >privacy policy</a>
+<a href="../privacypolicy/privacyPolicy.html" >Privacy policy</a>
 <a href="../company-location/companyLocations.html" >Company Locations</a>
 <a href="../faqs/FAQs.html" >Support Portal</a>
 <a href="../login/loginPage.html">Admin Login</a>
 
 <h3 class = "partner">Partnership</h3>
-<img src="../src/assets/oracle.png" alt="Oracle Gold Partner" class="animate-intro fadeInUp animated" class = "oracleImg">
-<
+
+<img src="../src/assets/oracle.png" alt="Oracle Gold Partner" class="animate-intro fadeInUp animated oracleImg"  >
+
 </div>
 </div>
 

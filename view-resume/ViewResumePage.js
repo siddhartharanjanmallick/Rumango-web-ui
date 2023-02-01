@@ -252,7 +252,14 @@ function search_input_txt()
 
      
      noDataBool=false;
-     searchUserName=data.filter(userName=>userName.firstName.toLowerCase().includes((search_data).toLowerCase()));
+     
+     searchUserName=data.filter(userName=>{
+        if(userName.jobId.toString().includes((search_data).toString())){
+            return userName;
+        }else if(userName.firstName.toLowerCase().includes((search_data).toLowerCase())){
+            return userName;
+        }});
+    //  searchUserName=data.filter(userName=>userName.firstName.toLowerCase().includes((search_data).toLowerCase()));
     
      if(searchUserName.length==0 && search_data!=="")
     {
