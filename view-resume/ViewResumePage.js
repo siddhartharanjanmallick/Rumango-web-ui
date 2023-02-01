@@ -388,8 +388,17 @@ function sort(e)
         deleteRecord=data.filter(applicationID=>applicationID.applicantId == i);
     }
   
-     deleteCnfMsg=confirm("Are you sure you want to delete the applicant " +deleteRecord[0].firstName+"?");
-    if (deleteCnfMsg==true) {
+    //  deleteCnfMsg=confirm("Are you sure you want to delete the applicant " +deleteRecord[0].firstName+"?");
+     
+     swal({
+        text: "Are you sure you want to delete the applicant " +deleteRecord[0].firstName+"?",
+        icon: "warning",
+        buttons: [
+            "No", "Yes"
+        ],
+        dangerMode: true
+      }).then((res)=>{
+    if (res==true) {
             fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/deleteApplicantsInfoById?applicantId='
              +i, {
              method: 'DELETE',         
@@ -423,6 +432,7 @@ function sort(e)
             dangerMode: true
           })
      }
+    })
  }   
  
  

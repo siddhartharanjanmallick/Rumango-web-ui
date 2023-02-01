@@ -23,19 +23,21 @@ let data = [];
               'Content-type': 'application/json; charset=UTF-8',
             }
             }).then(function(response){ 
-        return response.json()}).then((data)=>{
+            return response.json()}).then((data)=>{
             console.log(data);
             if (data.message == 'Upload Message sent successfully.'){
-               
+                localStorage['dta_fromcontactPage'] = '';
                 swal({
-                    text: "Message Sent Succefully" ,
+                    text: "Message Sent Successfully" ,
                     icon: "success",
                     buttons: "Ok",
                     dangerMode: true
+                  }).then(()=>{
+                    location.replace("../contacts-list-page/ContactsListPage.html"); 
                   })
 
-                localStorage['dta_fromcontactPage'] = '';
-                window.location.replace("../contacts-list-page/ContactsListPage.html"); 
+               
+                
             }
         })
         }
