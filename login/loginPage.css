@@ -119,3 +119,7 @@ input::-webkit-input-placeholder {
   margin-left: 6%;
   width: 18%;
 }
+
+.swal-button--danger {
+  background-color: #ff6700;
+}

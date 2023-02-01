@@ -114,3 +114,6 @@ select{
   padding-left: 40px;
   padding-right: 40px;
 }
+.swal-button--danger {
+  background-color: #ff6700;
+}

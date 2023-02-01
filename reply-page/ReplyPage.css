@@ -106,3 +106,6 @@ textarea {
   font-size: 17px;
   margin-top: 4%;
 }
+.swal-button--danger {
+  background-color: #ff6700;
+}
