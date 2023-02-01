@@ -292,8 +292,8 @@ body {
 .mesg{
 
   margin:0px;
-  margin-left: -40px;
-  margin-top: 21px;
+  /* margin-left: -40px;
+  margin-top: 21px; */
 }
 .anch{
 text-align: center;
@@ -302,10 +302,13 @@ text-align: center;
 
 
 .text_body4.layout{
-  align-items: center;
+  
   font: 600 13.5048789978px/1.5 "Plus Jakarta Sans", Helvetica, Arial, serif;
   color: #141522;
   padding-left: 10px;
+  display: flex;
+  flex-flow: column;
+
 }
 
 .anch>a{

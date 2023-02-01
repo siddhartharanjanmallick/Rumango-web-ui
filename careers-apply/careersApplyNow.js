@@ -71,11 +71,29 @@ console.log(jobId);
           if(document.getElementById('ctc').value==='' || document.getElementById('firstName').value==='' || document.getElementById('lastName').value===''
           || document.getElementById('mobile').value==='' || document.getElementById('email').value==='' || document.getElementById('sourceId').value===''
           || document.getElementById('joiningTime').value==='' ){
-          alert('Please fill all te manditory field');
+         
+          swal({
+            text: "Please fill all the mandatory field!" ,
+            icon: "error",
+            buttons: "Ok",
+            dangerMode: true
+          })
           }else if(!emailFlag){
-            alert("please fill valid email address")
+       
+            swal({
+              text: "Please fill valid email address!" ,
+              icon: "error",
+              buttons: "Ok",
+              dangerMode: true
+            })
           }else if(document.getElementById('resumeLink').value===''){
-            alert("please upload resume")
+           
+            swal({
+              text: "Please upload resume!" ,
+              icon: "error",
+              buttons: "Ok",
+              dangerMode: true
+            })
           }
           
           else{
@@ -104,7 +122,12 @@ console.log(jobId);
        return response.json()}).then(function(resumeData)
        {
         console.log(resumeData);
-        alert(resumeData.message);
+        swal({
+          text: resumeData.message ,
+          icon: "success",
+          buttons: "Ok",
+          dangerMode: true
+        })
         resumeURL=resumeData;
         console.log(resumeURL);
         this.resumeLinkForAPi =resumeURL.data;
@@ -137,7 +160,13 @@ console.log(jobId);
             //window.location.replace("AdminDashboard.html");    
             //setTimeout("pageRedirect()", 10000);
             //}
-            alert('The applicant details uploaded successfully.');	
+           
+            swal({
+              text: "The applicant details uploaded successfully" ,
+              icon: "success",
+              buttons: "Ok",
+              dangerMode: true
+            })
             document.getElementById('firstName').value ='';
          document.getElementById('middleName').value='';
          document.getElementById('lastName').value='';

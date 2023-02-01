@@ -114,3 +114,29 @@ select{
   padding-left: 40px;
   padding-right: 40px;
 }
+.popUpForEdit{
+  visibility: hidden;
+  background-color: #ff6700;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  height: 150px;
+  color: white;
+  width: 250px;
+  border-radius: 20px;
+  font: 600 16px/1.2 "Nunito", Helvetica, Arial, serif;
+  box-shadow: 0px 13.5073709488px 27.0147418976px 0px rgb(0 0 0 / 35%);
+  /* filter: blur(8px);*/
+}
+.btn2{
+  margin-left: 72px;
+  margin-top: 20px;
+  height: 53px;
+  width: 92px;
+  outline: 0;
+  background-color: #ff6700;
+  border: 0;
+}
+.swal-button--danger {
+  background-color: #ff6700;
+}
