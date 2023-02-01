@@ -26,7 +26,14 @@ let data = [];
         return response.json()}).then((data)=>{
             console.log(data);
             if (data.message == 'Upload Message sent successfully.'){
-                alert("Message Sent Succefully")
+               
+                swal({
+                    text: "Message Sent Succefully" ,
+                    icon: "success",
+                    buttons: "Ok",
+                    dangerMode: true
+                  })
+
                 localStorage['dta_fromcontactPage'] = '';
                 window.location.replace("../contacts-list-page/ContactsListPage.html"); 
             }

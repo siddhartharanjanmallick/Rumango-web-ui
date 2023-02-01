@@ -13,11 +13,27 @@ var password = document.getElementById('password').value;
 console.log(userName);
 console.log(password);
 if(password==='' && userName===''){
-    alert("Please enter email and Password")
+    swal({
+      text: "Please enter email and Password" ,
+      icon: "error",
+      buttons: "Ok",
+      dangerMode: true
+    })
 } else if(password!=='' && userName===''){
-    alert("Please enter email")
+   
+    swal({
+      text: "Please enter email" ,
+      icon: "error",
+      buttons: "Ok",
+      dangerMode: true
+    })
 } else if(password==='' && userName!==''){
-    alert("Please enter Password")
+    swal({
+      text: "Please enter Password" ,
+      icon: "error",
+      buttons: "Ok",
+      dangerMode: true
+    })
 }else{
 fetch('http://192.168.0.14:8081/RumangoWebsite/login-api/authentication', {
 method: 'POST',
