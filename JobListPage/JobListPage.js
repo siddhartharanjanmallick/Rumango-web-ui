@@ -414,16 +414,29 @@ function sort(e)
     let deleteRecord;
     if(data.length!=0)
     {
-        deleteRecord=data.filter(applicationID=>applicationID.id == i);
+        deleteRecord=data.filter(applicationID=>applicationID.jobId== i);
     }
-  
-     deleteCnfMsg=confirm("Are you sure you want to delete the applicant " +deleteRecord[0].name+"?");
-    if (deleteCnfMsg==true) {
-            fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/deleteMessageInfoById?id='
+    console.log(deleteRecord);
+    swal({
+        text: "Are you sure you want to delete the applicant " +deleteRecord[0].jobTitle+"?" ,
+        icon: "warning",
+        buttons: [
+            "No", "Yes"
+        ],
+        dangerMode: true
+      }) .then(function (result){
+        console.log(result);
+     
+
+    //  deleteCnfMsg=confirm("Are you sure you want to delete the applicant " +deleteRecord[0].jobTitle+"?");
+    if (result==true) {
+            fetch('http://192.168.0.14:8081/RumangoWebsite/jobs-api/deleteJobsInfoById?jobId='
              +i, {
              method: 'DELETE',         
          })
          .then((response)=>{
+            console.log(response);
+           
             if(response)
             {
                 if((search_data!="") && (searchUserName.length>1))
@@ -449,8 +462,11 @@ function sort(e)
             icon: "error",
             buttons: "Ok",
             dangerMode: true
+          }) .then(function (result){
+            console.log(result);
           })
      }
+    })
  }   
 
  function createJob() {

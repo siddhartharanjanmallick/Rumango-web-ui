@@ -35,13 +35,7 @@ console.log("hello");
     }
     console.log(message) 
     if(name == ''|| mobile == '' || message == '' || email == ''){
-     
-      swal({
-        text: "Please Fill All Mendarory Fields" ,
-        icon: "error",
-        buttons: "Ok",
-        dangerMode: true
-      })
+      alert("Please Fill All Mendarory Fields")
     }else if(this.value1 == false ) {
       
       swal({

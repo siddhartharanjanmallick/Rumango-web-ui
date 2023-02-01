@@ -391,8 +391,16 @@ function sort(e)
         deleteRecord=data.filter(applicationID=>applicationID.id == i);
     }
   
-     deleteCnfMsg=confirm("Are you sure you want to delete the applicant " +deleteRecord[0].name+"?");
-    if (deleteCnfMsg==true) {
+    //  deleteCnfMsg=confirm("Are you sure you want to delete the applicant " +deleteRecord[0].name+"?");s
+     swal({
+        text: "Are you sure you want to delete the applicant " +deleteRecord[0].name+"?" ,
+        icon: "warning",
+        buttons: [
+            "No", "Yes"
+        ],
+        dangerMode: true
+      }).then((res)=>{
+    if (res==true) {
             fetch('http://192.168.0.14:8081/RumangoWebsite/contact-api/deleteMessageInfoById?id='
              +i, {
              method: 'DELETE',         
@@ -426,6 +434,7 @@ function sort(e)
           })
          
      }
+    })
  }   
  
  
