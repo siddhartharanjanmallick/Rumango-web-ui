@@ -418,7 +418,7 @@ function sort(e)
     }
     console.log(deleteRecord);
     swal({
-        text: "Are you sure you want to delete the applicant " +deleteRecord[0].jobTitle+"?" ,
+        text: "Are you sure you want to delete the job " +deleteRecord[0].jobTitle+"?" ,
         icon: "warning",
         buttons: [
             "No", "Yes"
@@ -458,7 +458,7 @@ function sort(e)
      else
      {
          swal({
-            text: "Applicant not deleted!" ,
+            text: "job not deleted!" ,
             icon: "error",
             buttons: "Ok",
             dangerMode: true

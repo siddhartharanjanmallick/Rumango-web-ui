@@ -393,7 +393,7 @@ function sort(e)
   
     //  deleteCnfMsg=confirm("Are you sure you want to delete the applicant " +deleteRecord[0].name+"?");s
      swal({
-        text: "Are you sure you want to delete the applicant " +deleteRecord[0].name+"?" ,
+        text: "Are you sure you want to delete the contact " +deleteRecord[0].name+"?" ,
         icon: "warning",
         buttons: [
             "No", "Yes"
@@ -427,7 +427,7 @@ function sort(e)
      else
      {
          swal({
-            text: "Applicant not deleted!" ,
+            text: "Contact not deleted!" ,
             icon: "error",
             buttons: "Ok",
             dangerMode: true

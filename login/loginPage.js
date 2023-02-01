@@ -56,6 +56,13 @@ return response.json()}).then(function(data)
 //passWord=document.getElementById("bd")
 //userName.innerHTML = data.userName
 //password.innerHTML = data.password  
-}).catch(error => alert("Invalid Credentials")); 
+}).catch(error => {
+swal({
+  text: "Invalid Credentials" ,
+  icon: "error",
+  buttons: "Ok",
+  dangerMode: true
+})
+}); 
 }
 }
