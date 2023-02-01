@@ -106,7 +106,7 @@ tr:first-child th:last-child {
 .job-table .table_body tr td, .job-table thead tr th
 {
   text-align: center;
-  padding:20px;
+  padding:17px;
   border-collapse: collapse;
 }
 
