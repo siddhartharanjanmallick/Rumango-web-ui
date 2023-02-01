@@ -127,7 +127,7 @@ function submit(){
     if(wklocation == ''|| keySkills == ''|| wkmode =='' || jobTitle ==''||noOfPost == ''||descriptions== ''|| qualificationRequired ==''||experienceRequired ==''||specializationRequired == ''||
     lastDateToApply == '' || jobType == '' || companyName == '' || email == '' || address == '' || country == '' || state ==''){
         swal({
-         text: "Please Fill All Mendatory Fields To Create A Job" ,
+         text: "Please Fill All The Mandatory Fields To Create A Job" ,
          icon: "error",
          buttons: "Ok",
          dangerMode: true

@@ -35,7 +35,7 @@ console.log("hello");
     }
     console.log(message) 
     if(name == ''|| mobile == '' || message == '' || email == ''){
-      alert("Please Fill All Mendarory Fields")
+      alert("Please Fill All the Mandatory Fields")
     }else if(this.value1 == false ) {
       alert("Not a valid Phone Number");
   
