@@ -123,3 +123,106 @@ input::-webkit-input-placeholder {
 .swal-button--danger {
   background-color: #ff6700;
 }
+
+.frgt{
+  display: flex;
+  margin-left: 15%;
+}
+
+.frgt button{
+  font-size: 15px;
+}
+.close span{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  margin-top: -30px;
+  color: black;
+  transition: 0.3s;
+
+}
+.close>span:hover{
+ font-size: 30px;
+}
+
+.main#blur.active{
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.popup{
+  width: 400px;
+  height: 450px;
+  position:fixed;
+  top: 40%;
+  left: 50%;
+  z-index: 10;
+  background-color:rgb(228, 227, 227);
+  border-radius: 13px;
+  box-shadow: 0 0.255em 3.152em grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  
+}
+
+#popup.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.ins-popup{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10%;
+
+}
+
+.ins-popup input{
+  border-radius: 8px;
+ border: none;
+  height: 30px;
+  margin-top: 5px;
+  color: black;
+ 
+}
+.ins-popup>input:focus{
+  outline-color: #ff6700;
+}
+
+.ins-popup h3{
+  margin: 0px;
+  color: #ff6700;
+}
+
+.chngpswd{
+  width: 40%;
+  height: 30px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: 0.5s;
+  cursor: pointer;
+  color: #ff6700;
+  border: 1px solid white;
+}
+
+.chngpswd:hover{
+  transform: scale(1.25);
+}

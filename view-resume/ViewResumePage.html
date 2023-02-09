@@ -12,7 +12,7 @@
 </head>
 <body>
     <sidenav-component></sidenav-component>
-    <div class="main">
+    <div class="main"  id="blur">
         
         <div class="heading">
             <input type="text" placeholder="Search" id='search_input' onkeyup="search_input_txt()"/>
@@ -30,7 +30,8 @@
 
         <div class="body1">
                 <h2>View resume</h2>
-               
+                <button class="export btn" onclick="ExportToExcel('xlsx')"><span class="fa fa-file-excel-o" style="font-size: 15px;"> Export Data</span></button>
+               <button class="send btn" onclick="sendMail()"><span class="fa fa-paper-plane" style="font-size: 15px;"> Send Email</span></button>
                 <button class="btn" onclick="downloadAllResumes()"><span class="fa fa-download" style="font-size: 15px;"> Download All</span></button>
 
         </div>
@@ -39,7 +40,7 @@
             <table id="job-table" class="job-table">
                 <thead>
                     <tr class="table_header1">
-                        <!--th>SI No</th-->  
+                        <th data-sort="select"> Select</th>
                         <th data-sort="firstName">First Name</th>
                         <th data-sort="jobId">Job ID</th>
                         <th data-sort="email">Email</th>
@@ -71,9 +72,29 @@
     
         </div>
 
+        
 
     </div>
+   
+
+
+    <div id="popup" class="popup">
+
+        <div class="close"><span class="fa fa-times-circle-o" onclick="forgotPswd()"></span></div>
+        
+        <h3>Whom to send mail</h3>
+        <input type="text" class="email1" placeholder="Enter Email Id" id="emailForExcel">
+
+        <h3>Upload the Downloaded Excel file </h3>
+        <input type="file", id="uploadedSheet"  class="excelfile" />
+       
+            
+        <center><button class="send-btn" onclick="sendmailtodepartment()"><span class="fa fa-paper-plane" style="font-size: 15px;"> Send</span></button></center>
+
+        </div>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
 
     <script src="./ViewResumePage.js"></script>
 </body>

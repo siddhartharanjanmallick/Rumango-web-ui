@@ -12,6 +12,7 @@ let noDataBool=false;
 let sortCol;
 let sortAsc = false;
 let deleteBool=false;
+let selectedRowJobIds ;
 
 
 
@@ -148,25 +149,44 @@ function showTableData(pageNum)
                 }) 
         }
 
+       
+
         tableRecord.map((values)=>{
+
+            let emai;
+            if(values.email != null){
+                if(values.email.length > 15){
+                emai = values.email.slice(0,15);
+                emai+="..."
+                }else{
+                emai = values.email
+               }
+            }
+            else{
+                emai = "null";
+            }
+        
              tableData+=` <tr class="addrowproperty">
+             <td data-title='Selected'><input type="checkbox"  id="dataCheck"/></td>
              <td data-title='FirstName'>${values.firstName}</td> 
              <td data-title='Job ID'>${values.jobId}</td> 
-             <td data-title='Email'>${values.email}</td> 
+             <td data-title='Email' class="email">${emai}</td> 
              <td data-title='Mobile'>${values.mobile}</td>
              <td data-title='Application ID'>${values.applicantId}</td>
-             <td data-title='Operation'>`
+             <td data-title='Operation' >`
              if(values.resumeLink!=null)
              {
                  tableData+=`<span class="fa fa-download"  style="font-size:20px"
-                 onClick="javascript:return downloadResume(${values.applicantId})"></span>` 
+                 onClick="javascript:return downloadResume(${values.applicantId})"></span>`
+               
              }
-            
+                                   
              tableData+=`&nbsp &nbsp
              <span  class="fa fa-trash"  style="font-size:20px"
              onClick="javascript:return deleteApplicant(${values.applicantId})"></span>
              </td> 
              </tr>`
+        
          });
 
     }
@@ -180,9 +200,84 @@ function showTableData(pageNum)
     document.getElementById("table_body").innerHTML=tableData;
 }
 
+
+
 document.getElementById('next_button').addEventListener('click', nextPage);
 document.getElementById('prev_button').addEventListener('click', previousPage);
 document.getElementById('select_page_size').addEventListener('change', getPageNumber);
+
+function sendMail(){
+    console.log("inside else");
+console.log(selectedRowJobIds);
+
+var resumElink = [];
+var dataOfSelectedCandidate=[];
+
+    var selectedRow=document.getElementById("job-table");
+    var checkBoxes=document.getElementsByTagName("INPUT");
+    var msg=[];
+    for(var i=0;i<checkBoxes.length;i++)
+    {
+        if(checkBoxes[i].checked){
+        var row=checkBoxes[i].parentNode.parentNode;
+     
+        msg.push(row.cells[5].innerHTML);
+        
+
+        // msg=append(resumeLink);
+    }
+    }
+    msg.forEach(e=>{
+        let dwnResume=data.filter(applicationID=>applicationID.applicantId == e);
+        // console.log(JSON.stringify(dwnResume));
+
+        dataOfSelectedCandidate.push(dwnResume[0])
+        resumElink.push(dwnResume[0].resumeLink)
+    })
+    console.log(msg);
+    console.log(dataOfSelectedCandidate);
+    
+    console.log(resumElink);
+        if(dataOfSelectedCandidate.length != 0 ){
+filename='SelectedResumes.xlsx';
+
+var ws = XLSX.utils.json_to_sheet(dataOfSelectedCandidate);
+var wb = XLSX.utils.book_new();
+XLSX.utils.book_append_sheet(wb, ws, "People");
+XLSX.writeFile(wb,filename);
+   
+forgotPswd();}else{
+    swal({
+        text: "Please Select Candidate" ,
+        icon: "error",
+        buttons: "Ok",
+        dangerMode: true
+      })
+
+}
+}
+
+
+function ExportToExcel(type, fn, dl)
+{
+   
+//    var elt=document.getElementById('job-table');
+//    console.log(elt);
+// //    debuggers
+// //    hideRow(  elt,0);
+//    var wb=XLSX.utils.json_to_sheet(this.data,{sheet:"sheet1" });
+//    return dl ?
+//     XLSX.write(wb, {bookType: type, bookSST:true, type:'base64'}):
+//     XLSX.writeFile(wb,fn || ('Exported_Details.'+(type || 'xlsx')));
+    
+filename='Exported_data_resume.xlsx';
+
+ var ws = XLSX.utils.json_to_sheet(this.data);
+ var wb = XLSX.utils.book_new();
+ XLSX.utils.book_append_sheet(wb, ws, "People");
+ XLSX.writeFile(wb,filename);
+
+}
 
 
 
@@ -388,6 +483,7 @@ function sort(e)
         deleteRecord=data.filter(applicationID=>applicationID.applicantId == i);
     }
   
+  
     //  deleteCnfMsg=confirm("Are you sure you want to delete the applicant " +deleteRecord[0].firstName+"?");
      
      swal({
@@ -436,6 +532,46 @@ function sort(e)
  }   
  
  
+
+ function forgotPswd(){
+    var blur = document.getElementById("blur");
+    blur.classList.toggle('active');
+    
+    var popup = document.getElementById("popup");
+    popup.classList.toggle('active');
+    
+    }
+
+function sendmailtodepartment(){
+    var email = document.getElementById('emailForExcel').value;
+    var formlink = document.getElementById('uploadedSheet');
+    console.log(formlink);
+    let formData = new FormData();
+    formData.append("file", formlink.files[0]);
+    console.log(email);
+    console.log(formlink.files[0]);
+    fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/sendShortlistedData', {
+    method: 'POST',  
+    body:{
+        email:email,
+        files:formData
+    },
+    headers: {
+        'Content-Type': 'multipart/form-data', 
+        
+      }
+
+})
+.then((response)=>{
+    console.log(response);
+})
+.catch((error) => {
+  console.error("Error:", error);
+  alert(error);
+});
+    
+
+}
 
 
 

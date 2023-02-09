@@ -57,7 +57,7 @@
 
     <section class="container">
         <div class="row">
-            <div class="col-lg-9 col-md-12 col-12" style="display: flex; flex-direction: column;">
+            <div class="col-lg-9 col-md-12 col-12" style="display: flex; flex-direction: column; width: 69%;">
                 <div>
                     <h1  class="design2">Job<span class="design3">[Description]</span></h1>
                 <br>
@@ -235,7 +235,7 @@
 
     <section class="container design17" id="myDIV">
         <div class="row">
-            <div class="col-lg-9 col-md-12 col-12">
+            <div class="col-lg-9 col-md-12 col-12" style="width:69%;">
             <div>
                 <h1 class="design2">Submit Your<span class="design3">[Application]</span></h1>
             </div>
@@ -262,51 +262,88 @@
                     </div>
 
                     <div appearance="outline">                    
-                        <input id="mobile" class="form-2" placeholder="Mobile No *" type="number" maxlength="10" required>
+                        <input id="mobile" class="form-2" placeholder="Mobile No *" type="tel" maxlength="10" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
                     </div>
                 </div>
 
-                <div class="form-0">
+                <div class="form-0" style="display: flex; flex-direction: row;">
+                     
+                    
                     <div appearance="outline">                    
-                        <input  class="form-3" type="text" id="sourceId" placeholder="How did you get to know about this job ? *" required>
-                    </div>                    
-                </div>
+                        <input  class="form-31 flow" type="text" id="skills" placeholder="Skills *" required>
+                    </div>   
 
-                <h1 class="design11">Social Network and Web Links</h1>
-                <p class="design12">Provide us with links to see some of your work (Git/ Dribble/ Behance/ Pinterest/ Blog/ M)</p>
-
-                <div class="form-0">
                     <div appearance="outline">                                           
-                        <input class="form-3" id="socialNetworkLink" placeholder="Hyperlink" type="text" required>
-                        <!-- <img class="img4" src="../src/assets/a3bd619bb21285a5f0f4e88546ea3527.png" alt="alt text"> -->
-                    </div>  
+                        <input class="form-3" id="totalExperience" placeholder="Total Experience *" type="text" required>
+                    </div>   
                 </div>
+
+               
                     
                 <!-- <div class="form-5">
                     <h1 class="design18">Employer</h1>
                     <button class="btn8">Add Employer</button>
                 </div> -->
 
-                <div class="form-0">
+                <div class="form-0" style="display: flex; flex-direction: row;">
+                    <div appearance="outline">                    
+                        <input  class="form-3" placeholder="Relevant Experience *" type="text" id="relevantExperience" required>
+                    </div>  
                     <div appearance="outline">                    
                         <input  class="form-3" placeholder="How soon can you join us ? *" type="text" id="joiningTime" required>
                     </div>                    
                 </div>
 
-                <div class="form-0">
-                    <div appearance="outline">   
-                        <select type="text" id="isReadyToRelocate" class="form-3" >
+                <div class="form-01" >
+                    <div>   
+                        <select type="text" id="isReadyToRelocate" class="form-32" >
                             <option value="">Will you be able to travel/relocate to Bangalore?* </option>
                             <option value="True">True</option>
                             <option value="False">False</option>
                         </select>                 
-                    </div>                    
+                    </div>           
+                    
+                     
                 </div>
 
-                <div class="form-0">
+                <div class="form-0"style="display: flex; flex-direction: row;">
+                  
                     <div appearance="outline">                    
-                        <input class="form-3" placeholder="What is your current and expected CTC?" type="number" id="ctc" required>
-                    </div>                    
+                        <input  class="form-3" placeholder="What is your Current CTC ? *" type="number" id="currentCtc" required>
+                    </div> 
+                    
+                    <div appearance="outline">                    
+                        <input class="form-3" placeholder="What is your expected CTC? *" type="number" id="expectedCtc" required>
+                    </div> 
+                    
+                </div>
+
+                <div class="form-0" style="display: flex; flex-direction: row;">
+                    <div appearance="outline">                    
+                        <input  class="form-3" placeholder="Current Location *" type="text" id="currentLocation" required>
+                    </div>  
+                    <div appearance="outline">                    
+                        <input class="form-3" placeholder="Which is your current Organisation? *" type="text" id="currentOrganization" required>
+                    </div> 
+                  
+                                  
+                </div>
+                <h1 class="design11">Social Network and Web Links</h1>
+                <p class="design12">Provide us with links to see some of your work (Git/ Dribble/ Behance/ Pinterest/ Blog/ M)</p>
+
+                <div class="form-0" style="display: flex; flex-direction: row;">
+                     
+
+                    <div appearance="outline">                    
+                        <input  class="form-3" type="text" id="sourceId" placeholder="How did you get to know about this job ? *" required>
+                    </div>
+
+                    <div appearance="outline">                                           
+                        <input class="form-3" id="socialNetworkLink" placeholder="Hyperlink" type="text" required>
+                        <!-- <img class="img4" src="../src/assets/a3bd619bb21285a5f0f4e88546ea3527.png" alt="alt text"> -->
+                    </div> 
+
+                   
                 </div>
 
             </div>
@@ -329,7 +366,7 @@
         </div>
     </section>
     <footer-component></footer-component>
-    <br><br>
+
 
     <script>
         function myFunction() {
