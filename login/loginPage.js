@@ -66,3 +66,104 @@ swal({
 }); 
 }
 }
+
+function forgotPswd(){
+var blur = document.getElementById("blur");
+blur.classList.toggle('active');
+
+var popup = document.getElementById("popup");
+popup.classList.toggle('active');
+
+}
+
+function resetPassword() {
+  var email = document.getElementById("fuser").value;
+  var passWord = document.getElementById("fpassword").value;
+  var cPassword = document.getElementById("cnfPassword").value;
+  console.log(email , passWord,cPassword);
+if(email == '' || passWord == '' || cPassword == '' ){
+  if (email == '') {
+       
+    swal({
+      text: "Please Enter Email" ,
+      icon: "error",
+      buttons: "Ok",
+      dangerMode: true
+    })
+  }
+  else if(passWord == '' || cPassword == ''){
+    swal({
+      text: "Please Enter Password" ,
+      icon: "error",
+      buttons: "Ok",
+      dangerMode: true
+    })
+  }
+}else{
+  if(passWord != cPassword){
+    swal({
+      text: "Password is not matching" ,
+      icon: "error",
+      buttons: "Ok",
+      dangerMode: true
+    })
+  }else{
+    console.log("Calling");
+    fetch('http://192.168.0.14:8081/RumangoWebsite/login-api/forgotPassword', {
+method: 'POST',
+body: JSON.stringify({
+email:email,
+newPassword:cPassword
+}),
+headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    }
+}).then(function(response){ 
+  return response.json()}).then(function(data)
+  {
+      console.log(data.message)
+
+      if( data.message == "Data not Found"){
+        swal({
+          text: "Please Enter valid Email" ,
+          icon: "error",
+          buttons: "Ok",
+          dangerMode: true
+        })
+      }else{
+       swal({
+    text: data.message ,
+    icon: "success",
+    buttons: "Ok",
+    dangerMode: true
+  }).then(()=>{
+    var blur = document.getElementById("blur");
+
+
+var popup = document.getElementById("popup");
+blur.classList.remove("active")
+popup.classList.remove("active")
+email = '' ;
+ passWord = '' ;
+ cPassword = '';
+
+
+
+
+  })
+      }
+  }).catch(error => {
+  // swal({
+  //   text: "Invalid Credentials" ,
+  //   icon: "error",
+  //   buttons: "Ok",
+  //   dangerMode: true
+  // })
+  }); 
+  
+
+  }
+}
+
+  
+}

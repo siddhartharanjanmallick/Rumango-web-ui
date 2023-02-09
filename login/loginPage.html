@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="main">
+    <div class="main" id="blur">
     <div class="body1">
         <img src="../src/assets/rumango.png" alt="rlogo">
 
@@ -20,10 +20,14 @@
             Join our community that have more than our family and learn new things everyday
         </h2>
 
+        <div class="body2">
 
-        <input type="text" name="uname" id="userName" placeholder="EMAIL">
-        <input type="password" name="pswd" id="password" placeholder="PASSWORD">
+            <input type="text" name="uname" id="userName" placeholder="EMAIL">
+            <input type="password" name="pswd" id="password" placeholder="PASSWORD">
+        
+         </div>
 
+        <div class="frgt"><button onclick="forgotPswd()">Forgot Password?</button></div>
         <div class="buton"><button onclick="verifyCredentials()">LOGIN  </button> <img src="../src/assets/login.png" alt="login" onclick="verifyCredentials()"></div>
 
     </div>
@@ -33,6 +37,30 @@
         <img src="../src/assets/9c391dbe2654cfe23956ffdea7a04236.png" alt="dots" class="dot">
     </div>
     </div>
+
+    <div id="popup" class="popup">
+
+        <div class="close"><span class="fa fa-times-circle-o" onclick="forgotPswd()"></span></div>
+        <div class="ins-popup">
+            <h3>Enter Email </h3>
+            <input type="text" placeholder="Enter email" name="email" id="fuser">
+        </div>
+
+        <div class="ins-popup">
+            <h3>Enter Password </h3>
+            <input type="text" placeholder="Enter Password" name="email" id="fpassword">
+        </div>
+
+        <div class="ins-popup">
+            <h3> Confirm Password </h3>
+            <input type="text" placeholder="Enter Confirm Passowrd" name="email" id="cnfPassword">
+        </div>
+
+        <button class="chngpswd" onclick="resetPassword()" >Reset Password</button>
+
+        </div>
+
+   
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

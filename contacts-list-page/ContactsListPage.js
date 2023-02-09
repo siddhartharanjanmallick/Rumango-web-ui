@@ -18,6 +18,7 @@ let deleteBool=false;
 
 
 
+
 this.api_url="http://192.168.0.14:8081/RumangoWebsite/contact-api/fetchAllMessagesInfo";
 
 async function getapi(url) 
@@ -117,6 +118,7 @@ function getData()
    showTableData(pageNum);
 }
 
+
 function showTableData(pageNum)
 {
     let tableData="";
@@ -151,13 +153,27 @@ function showTableData(pageNum)
         }
 
         tableRecord.map((values)=>{
+            let mes;
+            if(values.message != null){
+                if(values.message.length > 15){
+                mes = values.message.slice(0,15);
+                mes+="..."
+                }else{
+                mes = values.message
+               }
+            }
+            else{
+                mes = "null";
+            }
              tableData+=` <tr class="addrowproperty">
+             <td data-title='Selected'><input type="checkbox"  id="dataCheck"/></td>
              <td data-title='FirstName'>${values.name}</td>  
              <td data-title='Email'>${values.email}</td> 
              <td data-title='Mobile'>${values.phoneNumber}</td>
-             <td data-title='Application ID'>${values.message}</td>
+             <td data-title='Message'>${mes}</td>
              <td data-title='Operations'>
              `
+    
              if(values)
              {
                  tableData+=`<span class="fa fa-reply" style="font-size:20px"

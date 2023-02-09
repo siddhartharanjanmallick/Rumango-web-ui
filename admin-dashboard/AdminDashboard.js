@@ -204,8 +204,8 @@ var obj =
         node.innerHTML = `
         <img src="../src/assets/085da62b7d1e368ee26e34289a721748.png" alt="">
         <p class="slc">${data[index].name.slice(0,1)}</p>
-        <div class="text_body4 layout" id="name1">${data[index].name} </div>
-        <p class="mesg">${data[index].message.slice(0,15)} ....</p>
+        <div class="text_body4 layout" id="name1">${data[index].name}
+        <p class="mesg">${data[index].message.slice(0,15)} ....</p> </div>
         
                 `
             parent.appendChild(node);     
