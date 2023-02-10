@@ -195,7 +195,7 @@ th{
 .active{
   border: 0;
   outline: none;
-  color: #ff6700 !important;
+  color: #ff6700;
 }
 .swal-button--danger {
   background-color: #ff6700;
