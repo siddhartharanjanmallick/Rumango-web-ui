@@ -588,7 +588,7 @@ fetch(
                 var popup = document.getElementById("popup");
                 popup.classList.remove('active');
               })
-              document.getElementById('emailForExcel').value = ''.
+              document.getElementById('emailForExcel').value = '';
               document.getElementById('uploadedSheet').value = '';
     
         }

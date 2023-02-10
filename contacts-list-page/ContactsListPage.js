@@ -486,7 +486,7 @@ var dataOfSelectedCandidate=[];
     
     // console.log(resumElink);
         if(dataOfSelectedCandidate.length != 0 ){
-filename='SelectedResumes.xlsx';
+filename='SelectedMsg.xlsx';
 
 var ws = XLSX.utils.json_to_sheet(dataOfSelectedCandidate);
 var wb = XLSX.utils.book_new();
@@ -520,27 +520,44 @@ function sendmailtodepartment(){
     var formlink = document.getElementById('uploadedSheet');
     console.log(formlink);
     let formData = new FormData();
-    formData.append("file", formlink.files[0]);
+    formData.append("email" , email)
+    formData.append("files", formlink.files[0]);
+    console.log(formData);
     console.log(email);
     console.log(formlink.files[0]);
-    fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/sendShortlistedData', {
-    method: 'POST',  
-    body:{
-        email:email,
-        files:formData
-    },
-    headers: {
-        'Content-Type': 'multipart/form-data', 
-      }
-
-})
-.then((response)=>{
-    console.log(response); 
-})
-.catch((error) => {
-  console.error("Error:", error);
-  alert(error);
-});
+    fetch(
+        "http://192.168.0.14:8081/RumangoWebsite/applicant-api/sendShortlistedData",
+        {
+          method: "POST",
+          body: formData,
+        }
+      )
+        .then(function (response) {
+          return response.json();
+        }).then((data)=>{
+            console.log(data);
+            if(data.message == "File sent successfully"){
+                swal({
+                    text: "File sent successfully" ,
+                    icon: "success",
+                    buttons: "Ok",
+                    dangerMode: true
+                  }).then(()=>{
+                    var blur = document.getElementById("blur");
+                    blur.classList.remove('active');
+                    
+                    var popup = document.getElementById("popup");
+                    popup.classList.remove('active');
+                  })
+                  document.getElementById('emailForExcel').value = '';
+                  document.getElementById('uploadedSheet').value = '';
+        
+            }
+        }).catch((error) => {
+            console.error("Error:", error);
+            alert(error);
+    
+         });
     
 
 }
