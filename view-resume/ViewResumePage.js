@@ -558,12 +558,11 @@ function sendmailtodepartment(){
     },
     headers: {
         'Content-Type': 'multipart/form-data', 
-        
       }
 
 })
 .then((response)=>{
-    console.log(response);
+    console.log(response); 
 })
 .catch((error) => {
   console.error("Error:", error);

@@ -183,8 +183,9 @@ function showTableData(pageNum)
              tableData+=`&nbsp &nbsp &nbsp &nbsp
              <span class="fa fa-trash" style="font-size:20px" 
              onClick="javascript:return deleteApplicant(${values.id})"> </span>
-             </td> 
-             </tr>`
+             </td> `
+             tableData+=`<td data-titile="id" style="display:none;">${values.id}</td></tr>`
+             
 
            
          });
@@ -451,8 +452,102 @@ function sort(e)
          
      }
     })
- }   
+ }  
+
+ function sendMail(){
+    console.log("inside else");
+// console.log(selectedRowJobIds);
+
+// var resumElink = [];
+var dataOfSelectedCandidate=[];
+
+    var selectedRow=document.getElementById("job-table");
+    var checkBoxes=document.getElementsByTagName("INPUT");
+    var msg=[];
+    for(var i=0;i<checkBoxes.length;i++)
+    {
+        if(checkBoxes[i].checked){
+        var row=checkBoxes[i].parentNode.parentNode;
+     
+        msg.push(row.cells[2].innerHTML);
+        
+
+        // msg=append(resumeLink);
+    }
+    }
+    msg.forEach(e=>{
+        let dwnResume=data.filter(id=>id.email == e);
+        // console.log(JSON.stringify(dwnResume));
+
+        dataOfSelectedCandidate.push(dwnResume[0])
+        // resumElink.push(dwnResume[0].resumeLink)
+    })
+    console.log(msg);
+    console.log(dataOfSelectedCandidate);
+    
+    // console.log(resumElink);
+        if(dataOfSelectedCandidate.length != 0 ){
+filename='SelectedResumes.xlsx';
+
+var ws = XLSX.utils.json_to_sheet(dataOfSelectedCandidate);
+var wb = XLSX.utils.book_new();
+XLSX.utils.book_append_sheet(wb, ws, "People");
+XLSX.writeFile(wb,filename);
+   
+forgotPswd();}else{
+    swal({
+        text: "Please Select Candidate" ,
+        icon: "error",
+        buttons: "Ok",
+        dangerMode: true
+      })
+
+}
+}
+
  
+ 
+ function forgotPswd(){
+    var blur = document.getElementById("blur");
+    blur.classList.toggle('active');
+    
+    var popup = document.getElementById("popup");
+    popup.classList.toggle('active');
+    
+    }
+
+function sendmailtodepartment(){
+    var email = document.getElementById('emailForExcel').value;
+    var formlink = document.getElementById('uploadedSheet');
+    console.log(formlink);
+    let formData = new FormData();
+    formData.append("file", formlink.files[0]);
+    console.log(email);
+    console.log(formlink.files[0]);
+    fetch('http://192.168.0.14:8081/RumangoWebsite/applicant-api/sendShortlistedData', {
+    method: 'POST',  
+    body:{
+        email:email,
+        files:formData
+    },
+    headers: {
+        'Content-Type': 'multipart/form-data', 
+      }
+
+})
+.then((response)=>{
+    console.log(response); 
+})
+.catch((error) => {
+  console.error("Error:", error);
+  alert(error);
+});
+    
+
+}
+
+
+
  
 
 
