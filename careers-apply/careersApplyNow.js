@@ -207,13 +207,13 @@ function submit() {
             document.getElementById("joiningTime").value = "";
             document.getElementById("isReadyToRelocate").value = "";
             //  document.getElementById('ctc').value='';
-            skills = "";
-            totalExperience = "";
-            relevantExperience = "";
-            currentCtc = "";
-            expectedCtc = "";
-            currentLocation = "";
-            currentOrganization = "";
+            document.getElementById("skills").value = '';
+            document.getElementById("totalExperience").value = '';
+            document.getElementById("relevantExperience").value = '';
+            document.getElementById("currentCtc").value = '';
+            document.getElementById("expectedCtc").value = '';
+            document.getElementById("currentLocation").value = '';
+            document.getElementById("currentOrganization").value = '';
           })
           .catch((error) => {
             console.error("Error:", error);
