@@ -103,7 +103,7 @@ function getData()
     buttonNumbers =paginationNumber.getElementsByTagName("button");
     if(buttonCount!==1)
     {
-        buttonNumbers[count - 1].classList.add("active");
+        buttonNumbers[count - 1].classList.add("active11");
         for(i=0;i<buttonNumbers.length;i++)
         {
             buttonNumbers[i].addEventListener('click',buttonClick);
@@ -111,7 +111,7 @@ function getData()
     }
     else
     {
-        buttonNumbers[count - 1].classList.remove("active");
+        buttonNumbers[count - 1].classList.remove("active11");
     }
    showTableData(pageNum);
 }
@@ -283,7 +283,7 @@ filename='Exported_data_resume.xlsx';
 
 function buttonClick()
 {   
-    buttonNumbers[count - 1].classList.remove("active");
+    buttonNumbers[count - 1].classList.remove("active11");
     count=this.innerHTML;
    if(this.innerHTML==buttonCount)
     {
@@ -300,7 +300,7 @@ function buttonClick()
         document.getElementById("prev_button").removeAttribute("disabled");
     }
     showTableData(count);
-    this.classList.add("active");
+    this.classList.add("active11");
 }
 
 function nextPage()
@@ -308,8 +308,8 @@ function nextPage()
     document.getElementById('prev_button').removeAttribute("disabled");
     if(count!=buttonCount)
     {
-        buttonNumbers[count-1].classList.remove("active");
-        buttonNumbers[count].classList.add("active");
+        buttonNumbers[count-1].classList.remove("active11");
+        buttonNumbers[count].classList.add("active11");
         count++;
     }
     if(count==buttonCount)
@@ -321,8 +321,8 @@ function nextPage()
 }
 function previousPage()
 {
-    buttonNumbers[count-1].classList.remove("active");
-    buttonNumbers[count-2].classList.add("active");
+    buttonNumbers[count-1].classList.remove("active11");
+    buttonNumbers[count-2].classList.add("active11");
     document.getElementById("next_button").removeAttribute("disabled");
     
     if(count !== 1)
@@ -575,7 +575,7 @@ fetch(
       return response.json();
     }).then((data)=>{
         console.log(data);
-        if(data.message == "File sent successfully"){
+        if(data.message == "ShortListedDetails File sent successfully"){
             swal({
                 text: "File sent successfully" ,
                 icon: "success",
