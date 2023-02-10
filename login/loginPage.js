@@ -12,14 +12,14 @@ var password = document.getElementById('password').value;
 
 console.log(userName);
 console.log(password);
-if(password==='' && userName===''){
+if(password==='' && email===''){
     swal({
       text: "Please enter email and Password" ,
       icon: "error",
       buttons: "Ok",
       dangerMode: true
     })
-} else if(password!=='' && userName===''){
+} else if(password!=='' && email===''){
    
     swal({
       text: "Please enter email" ,
@@ -27,7 +27,7 @@ if(password==='' && userName===''){
       buttons: "Ok",
       dangerMode: true
     })
-} else if(password==='' && userName!==''){
+} else if(password==='' && email!==''){
     swal({
       text: "Please enter Password" ,
       icon: "error",
