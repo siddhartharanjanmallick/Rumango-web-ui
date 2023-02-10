@@ -166,7 +166,6 @@ function showTableData(pageNum)
                 mes = "null";
             }
              tableData+=` <tr class="addrowproperty">
-             <td data-title='Selected'><input type="checkbox"  id="dataCheck"/></td>
              <td data-title='FirstName'>${values.name}</td>  
              <td data-title='Email'>${values.email}</td> 
              <td data-title='Mobile'>${values.phoneNumber}</td>
@@ -454,7 +453,7 @@ function sort(e)
  }  
 
  function sendMail(){
-    console.log("inside else");
+    // console.log("inside else");
 // console.log(selectedRowJobIds);
 
 // var resumElink = [];
@@ -462,46 +461,38 @@ var dataOfSelectedCandidate=[];
 
     var selectedRow=document.getElementById("job-table");
     var checkBoxes=document.getElementsByTagName("INPUT");
-    var msg=[];
-    for(var i=0;i<checkBoxes.length;i++)
-    {
-        if(checkBoxes[i].checked){
-        var row=checkBoxes[i].parentNode.parentNode;
+    // var msg=[];
+    // for(var i=0;i<checkBoxes.length;i++)
+    // {
+    //     if(checkBoxes[i].checked){
+    //     var row=checkBoxes[i].parentNode.parentNode;
      
-        msg.push(row.cells[2].innerHTML);
+    //     msg.push(row.cells[2].innerHTML);
         
 
-        // msg=append(resumeLink);
-    }
-    }
-    msg.forEach(e=>{
-        let dwnResume=data.filter(id=>id.email == e);
-        // console.log(JSON.stringify(dwnResume));
+    //     // msg=append(resumeLink);
+    // }
+    // }
+    // msg.forEach(e=>{
+    //     let dwnResume=data.filter(id=>id.email == e);
+    //     // console.log(JSON.stringify(dwnResume));
 
-        dataOfSelectedCandidate.push(dwnResume[0])
-        // resumElink.push(dwnResume[0].resumeLink)
-    })
-    console.log(msg);
-    console.log(dataOfSelectedCandidate);
+    //     dataOfSelectedCandidate.push(dwnResume[0])
+    //     // resumElink.push(dwnResume[0].resumeLink)
+    // })
+    // console.log(msg);
+    // console.log(dataOfSelectedCandidate);
     
     // console.log(resumElink);
-        if(dataOfSelectedCandidate.length != 0 ){
-filename='SelectedMsg.xlsx';
+        
+// filename='SelectedMsg.xlsx';
 
-var ws = XLSX.utils.json_to_sheet(dataOfSelectedCandidate);
-var wb = XLSX.utils.book_new();
-XLSX.utils.book_append_sheet(wb, ws, "People");
-XLSX.writeFile(wb,filename);
+// var ws = XLSX.utils.json_to_sheet(dataOfSelectedCandidate);
+// var wb = XLSX.utils.book_new();
+// XLSX.utils.book_append_sheet(wb, ws, "People");
+// XLSX.writeFile(wb,filename);
    
-forgotPswd();}else{
-    swal({
-        text: "Please Select Candidate" ,
-        icon: "error",
-        buttons: "Ok",
-        dangerMode: true
-      })
-
-}
+forgotPswd();
 }
 
  
@@ -515,30 +506,29 @@ forgotPswd();}else{
     
     }
 
-function sendmailtodepartment(){
+function sendmailtodepartmentcontact(){
     var email = document.getElementById('emailForExcel').value;
-    var formlink = document.getElementById('uploadedSheet');
-    console.log(formlink);
-    let formData = new FormData();
-    formData.append("email" , email)
-    formData.append("files", formlink.files[0]);
-    console.log(formData);
-    console.log(email);
-    console.log(formlink.files[0]);
+    // var formlink = document.getElementById('uploadedSheet');
+    // console.log(formlink);
+    // let formData = new FormData();
+    // formData.append("email" , email)
+    // formData.append("files", formlink.files[0]);
+    // console.log(formData);
+    // console.log(email);
+    // console.log(formlink.files[0]);
     fetch(
-        "http://192.168.0.14:8081/RumangoWebsite/applicant-api/sendShortlistedData",
+        "http://192.168.0.14:8081/RumangoWebsite/contact-api/sendContactMessageInfo?email="+email,
         {
           method: "POST",
-          body: formData,
         }
       )
         .then(function (response) {
           return response.json();
         }).then((data)=>{
             console.log(data);
-            if(data.message == "File sent successfully"){
+            if(data.message == "sendContactMessageInfo Mail sent successfully"){
                 swal({
-                    text: "File sent successfully" ,
+                    text: "Mail sent successfully" ,
                     icon: "success",
                     buttons: "Ok",
                     dangerMode: true
@@ -550,8 +540,15 @@ function sendmailtodepartment(){
                     popup.classList.remove('active');
                   })
                   document.getElementById('emailForExcel').value = '';
-                  document.getElementById('uploadedSheet').value = '';
+                
         
+            }else{
+                swal({
+                    text: "No data found" ,
+                    icon: "error",
+                    buttons: "Ok",
+                    dangerMode: true
+                  })
             }
         }).catch((error) => {
             console.error("Error:", error);
