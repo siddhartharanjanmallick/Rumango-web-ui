@@ -127,6 +127,7 @@ function submit() {
     console.log(this.dateForValidation);
     var resumeLinkForAPi;
     var resumeLink = document.getElementById("resumeLink");
+    let resumeFileName;
     let formData = new FormData();
     formData.append("file", resumeLink.files[0]);
     fetch(
@@ -147,10 +148,10 @@ function submit() {
           buttons: "Ok",
           dangerMode: true,
         });
-        resumeURL = resumeData;
-        console.log(resumeURL);
-        this.resumeLinkForAPi = resumeURL.data;
-        console.log(resumeURL.data);
+        console.log(resumeData.data.resumeLink);
+        resumeFileName = resumeData.data.resumeFileName;
+        this.resumeLinkForAPi = resumeData.data.resumeLink;
+       
         fetch("http://192.168.0.14:8081/RumangoWebsite/applicant-api/saving", {
           method: "POST",
           body: JSON.stringify({
@@ -171,9 +172,10 @@ function submit() {
             appliedDate: this.dateForValidation,
             sourceId: sourceId,
             socialNetworkLink: socialNetworkLink,
-            resumeLink: resumeURL.data,
+            resumeLink:this.resumeLinkForAPi,
             joiningTime: joiningTime,
             isReadyToRelocate: isReadyToRelocate,
+            resumeFileName:resumeFileName
             
           }),
           headers: {

@@ -1,4 +1,6 @@
+// const { jsPDF } = window.jspdf;
 
+// const { jsPDF } = window.jspdf;
 let display=3;
 let count=1;
 let buttonCount;
@@ -13,6 +15,7 @@ let sortCol;
 let sortAsc = false;
 let deleteBool=false;
 let selectedRowJobIds ;
+var msg=[];
 
 
 
@@ -215,7 +218,7 @@ var dataOfSelectedCandidate=[];
 
     var selectedRow=document.getElementById("job-table");
     var checkBoxes=document.getElementsByTagName("INPUT");
-    var msg=[];
+    
     for(var i=0;i<checkBoxes.length;i++)
     {
         if(checkBoxes[i].checked){
@@ -239,12 +242,45 @@ var dataOfSelectedCandidate=[];
     
     console.log(resumElink);
         if(dataOfSelectedCandidate.length != 0 ){
-filename='SelectedResumes.xlsx';
+// filename='SelectedResumes.xlsx';
 
-var ws = XLSX.utils.json_to_sheet(dataOfSelectedCandidate);
-var wb = XLSX.utils.book_new();
-XLSX.utils.book_append_sheet(wb, ws, "People");
-XLSX.writeFile(wb,filename);
+// var ws = XLSX.utils.json_to_sheet(dataOfSelectedCandidate);
+// var wb = XLSX.utils.book_new();
+// XLSX.utils.book_append_sheet(wb, ws, "People");
+// XLSX.writeFile(wb,filename);
+
+// var doc = new jsPDF();
+// window.jsPDF = window.jspdf.jsPDF;
+// window.autoTable = window.autoTable;
+// var doc = window.jsPDF;
+
+// const head = [['Name','Contact Number','Email','Skills','Total Experience', 'Relevent Experience','Current Ctc', 'Expected Ctc','Current Organization','Current Location','Interested To Relocate']];
+// const body = [];
+// dataOfSelectedCandidate.forEach(u=>{
+//     var name = u.firstName + " " + u.lastName;
+//   var row = [];
+//   row.push(name);
+//   row.push(u.mobile);
+//   row.push(u.email);
+//   row.push(u.skills);
+//   row .push(u.totalExperience);
+//   row .push(u.relevantExperience);
+//   row .push(u.currentCtc);
+//   row .push(u.expectedCtc);
+//   row .push(u.currentOrganization);
+//   row .push(u.currentLocation);
+//   row .push(u.isReadyToRelocate);
+//   body.push(row);
+// });
+// console.log(body);
+// autoTable(doc, {
+//   head: head,
+//   body: body,
+//   didDrawCell: (prepare) => { },
+// });
+// doc.save('Details_of_selected_candidate.pdf');
+
+
    
 forgotPswd();}else{
     swal({
@@ -544,14 +580,16 @@ function sort(e)
 
 function sendmailtodepartment(){
     var email = document.getElementById('emailForExcel').value;
-    var formlink = document.getElementById('uploadedSheet');
-    console.log(formlink);
+    // var formlink = document.getElementById('uploadedSheet');
+    // console.log(formlink);
     let formData = new FormData();
     formData.append("email" , email)
-    formData.append("files", formlink.files[0]);
+    formData.append("applicantId" , msg)
+
+    // formData.append("files", formlink.files[0]);
     console.log(formData);
     console.log(email);
-    console.log(formlink.files[0]);
+    // console.log(formlink.files[0]);
 //     fetch("http://192.168.0.14:8081/RumangoWebsite/applicant-api/sendShortlistedData", {
 //           method: "POST",
 //           body:formData,
@@ -565,6 +603,7 @@ function sendmailtodepartment(){
 //     console.log(response);
 // })
 fetch(
+    // "http://localhost:7172/applicant-api/sendShortlistedData",
     "http://192.168.0.14:8081/RumangoWebsite/applicant-api/sendShortlistedData",
     {
       method: "POST",
@@ -587,9 +626,11 @@ fetch(
                 
                 var popup = document.getElementById("popup");
                 popup.classList.remove('active');
+                window.location.reload();
               })
               document.getElementById('emailForExcel').value = '';
-              document.getElementById('uploadedSheet').value = '';
+            //   document.getElementById('uploadedSheet').value = '';
+             
     
         }
     }).catch((error) => {
